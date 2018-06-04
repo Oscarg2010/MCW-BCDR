@@ -1,3 +1,27 @@
+# Abstract
+
+## Workshop
+
+In this workshop, the student will gain experience designing solutions using Azure business continuity and disaster recovery (BCDR) technologies. Three different types of environments will be examined. The first will consist of on-premises VMs running applications that will be migrated to Azure IaaS. Next, Azure IaaS applications that need to be failed over from either on-premises to Azure or between two Azure Regions. Finally, the use of automated failover technologies built into Azure PaaS services App Service and SQL Database will be used for PaaS applications.
+
+Learning Objectives:
+
+-   Understanding the different use cases for implementing Azure Site Recovery (ASR), for on-premises VM migration to Azure IaaS
+
+-   Determine how to leverage various Azure technologies together to build a complex and robust IaaS BCDR plan this consists of using Azure Site Recovery, Azure Automation, Traffic Manager and SQL Server Always On Availability Groups (VMs), to failover and failback an Azure IaaS IIS application and database from one Azure Region to another
+
+-   Design for high-availability and using BCDR techniques with Azure PaaS including Traffic Manager, SQL Database Failover Groups with Azure App Services
+
+
+## Whiteboard Design Session
+TBD
+
+## Hand-on Lab
+TBD
+
+
+## Azure services and related products
+TBD
 
 # Contributing
 
@@ -13,19 +37,3 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
-# Legal Notices
-
-Microsoft and any contributors grant you a license to the Microsoft documentation and other content
-in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode),
-see the [LICENSE](LICENSE) file, and grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the
-[LICENSE-CODE](LICENSE-CODE) file.
-
-Microsoft, Windows, Microsoft Azure and/or other Microsoft products and services referenced in the documentation
-may be either trademarks or registered trademarks of Microsoft in the United States and/or other countries.
-The licenses for this project do not grant you rights to use any Microsoft names, logos, or trademarks.
-Microsoft's general trademark guidelines can be found at http://go.microsoft.com/fwlink/?LinkID=254653.
-
-Privacy information can be found at https://privacy.microsoft.com/en-us/
-
-Microsoft and any contributors reserve all others rights, whether under their respective copyrights, patents,
-or trademarks, whether by implication, estoppel or otherwise.
