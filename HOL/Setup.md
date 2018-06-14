@@ -14,7 +14,7 @@ Duration: 20 minutes
 
 1.  Launch a browser and navigate to the Azure Global portal at <https://portal.azure.com>. Once prompted, login with your Microsoft Azure credentials. If prompted, choose whether your account is an organization account or just a Microsoft Account.
 
-2.  Select on **+NEW**, and in the search box enter **Visual Studio Community 2017 on Windows Server 2016 (x64)** and press enter. Select the Visual Studio Community 2017 image running on Windows Server 2016 and with the latest update.
+2.  Select on **+Create a resource**, and in the search box enter **Visual Studio Community 2017 on Windows Server 2016 (x64)** and press enter. Select the Visual Studio Community 2017 image running on Windows Server 2016 and with the latest update.
 
 3.  In the returned search results select the image name
 
@@ -44,27 +44,30 @@ Duration: 20 minutes
 
 **Note:** If the Azure Subscription you are using has limits on the number of cores you may wish to choose DS1\_V2.
 
-7.  On the **Settings** blade, accept the defaults and select **OK**
+7.  On the **Settings** blade, choose RDP (3389) from the **Select public inbound ports dropdown**
+    ![Select public inbound ports dropdown](images/Setup/image27.png "Select public inbound ports dropdown")
+
+8. Accept the remaining defaults and Select **OK**
 
     ![OK button](images/Setup/image7.png "OK button")
 
-8.  Select **Summary** blade select **Create**
+9.  Select **Summary** blade select **Create**
 
 > ![Create button](images/Setup/image8.png "Create button")
 
-9.  Accept the remaining default values on the Settings blade and select **OK**. On the Summary page select **Create**. The deployment should begin provisioning. It may take 10+ minutes for the virtual machine to complete provisioning.
+    The deployment should begin provisioning. It may take 10+ minutes for the virtual machine to complete provisioning.
 
     ![Screenshot of the Deploying Visual Studio Community 2017 icon.](images/Setup/image9.png "Deploying Visual Studio icon")
 
 **Note:** Please wait for the LABVM to be provisioned prior to moving to the next step.
 
-10. Move back to the Portal page on your local machine and wait for **LABVM** to show the Status of **Running**. Select **Connect** to establish a new Remote Desktop Session
+11. Move back to the Portal page on your local machine and wait for **LABVM** to show the Status of **Running**. Select **Connect** to establish a new Remote Desktop Session
 
     ![The Connect button is called out on the LABVM Virtual Machine blade top menu.](images/Setup/image10.png "LABVM Virtual Machine blade")
 
-11. Depending on your remote desktop protocol client and browser configuration you will either be prompted to open an RDP file, or you will need to download it and then open it separately to connect
+12. Depending on your remote desktop protocol client and browser configuration you will either be prompted to open an RDP file, or you will need to download it and then open it separately to connect
 
-12. Log in with the credentials specified during creation:
+13. Log in with the credentials specified during creation:
 
     -   **User**: mcwadmin
 
@@ -72,23 +75,23 @@ Duration: 20 minutes
 
     ![Credentials fields are called out in the Windows Security Credentials section.](images/Setup/image11.png "Windows Security Credentials section")
 
-13. You will be presented with a Remote Desktop Connection warning because of a certificate trust issue. Select **Yes** to continue with the connection.
+14. You will be presented with a Remote Desktop Connection warning because of a certificate trust issue. Select **Yes** to continue with the connection.
 
     ![The Remote Desktop Connection Warning dialog box displays, letting you know that the remote computer\'s identity cannot be verified, and asking if you want to connect anyway.](images/Setup/image12.png "Remote Desktop Connection Warning dialog box")
 
-14. When logging on for the first time, you will see a prompt on the right asking about network discovery. Select **No**.
+15. When logging on for the first time, you will see a prompt on the right asking about network discovery. Select **No**.
 
     ![The Networks pop-up displays, asking if you want to turn on network discovery.](images/Setup/image13.png "Networks pop-up")
 
-15. Notice that Server Manager opens by default. On the left, select **Local Server**.
+16. Notice that Server Manager opens by default. On the left, select **Local Server**.
 
     ![On the Server Manager menu, Local Server is selected.](images/Setup/image14.png "Server Manager menu")
 
-16. On the right side of the pane, select **On** by **IE Enhanced Security Configuration**
+17. On the right side of the pane, select **On** by **IE Enhanced Security Configuration**
 
     ![IE Enhanced Security Configuration is set to On, and is selected.](images/Setup/image15.png "IE Enhanced Security Configuration option")
 
-17. Change to **Off** for Administrators and select **OK**
+18. Change to **Off** for Administrators and select **OK**
 
     ![In the Internet Explorer Enhanced Security Configuration dialog box, Administrators is set to Off, and Users is set to On.](images/Setup/image16.png "Internet Explorer Enhanced Security Configuration dialog box")
 
