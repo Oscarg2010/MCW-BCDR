@@ -96,11 +96,11 @@ Duration: 20 minutes
 
 ### Task 2: Download hands-on support files to LABVM
 
-1.  After the reboot has completed, download the zipped Hands-on Lab Step by Step student files by clicking on this link:
+1.  Download the zipped Hands-on Lab Step by Step student files by clicking on this link:
 
     <https://www.dropbox.com/s/sx91sjcn63t980j/StudentFiles.zip?dl=1>
 
-2.  Extract the downloaded files into the directory **C:\\HOL**
+2.  Copy the zip file to a new directory **C:\\HOL** on LABVM and then extract the files.
 
 ### Task 3: Install SQL Server Express on LABVM
 
