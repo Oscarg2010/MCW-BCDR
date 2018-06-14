@@ -45,7 +45,7 @@ Duration: 20 minutes
 **Note:** If the Azure Subscription you are using has limits on the number of cores you may wish to choose DS1\_V2.
 
 7.  On the **Settings** blade, choose RDP (3389) from the **Select public inbound ports dropdown**
-    ![Select public inbound ports dropdown](images/Setup/image27.png "Select public inbound ports dropdown")
+    ![Select public inbound ports dropdown with RDP (3389) selected](images/Setup/image27.png "Select public inbound ports dropdown")
 
 8. Accept the remaining defaults and Select **OK**
 
@@ -56,8 +56,7 @@ Duration: 20 minutes
 > ![Create button](images/Setup/image8.png "Create button")
 
     The deployment should begin provisioning. It may take 10+ minutes for the virtual machine to complete provisioning.
-
-    ![Screenshot of the Deploying Visual Studio Community 2017 icon.](images/Setup/image9.png "Deploying Visual Studio icon")
+   ![Screenshot of the Deploying Visual Studio Community 2017 icon.](images/Setup/image9.png "Deploying Visual Studio icon")
 
 **Note:** Please wait for the LABVM to be provisioned prior to moving to the next step.
 
@@ -87,9 +86,9 @@ Duration: 20 minutes
 
     ![On the Server Manager menu, Local Server is selected.](images/Setup/image14.png "Server Manager menu")
 
-17. On the right side of the pane, select **On** by **IE Enhanced Security Configuration**
+17. On the right side of the pane, select **Off** by **IE Enhanced Security Configuration**
 
-    ![IE Enhanced Security Configuration is set to On, and is selected.](images/Setup/image15.png "IE Enhanced Security Configuration option")
+    ![IE Enhanced Security Configuration is set to Off, and is selected.](images/Setup/image15.png "IE Enhanced Security Configuration option")
 
 18. Change to **Off** for Administrators and select **OK**
 
