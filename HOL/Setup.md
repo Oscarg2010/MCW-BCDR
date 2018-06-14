@@ -90,17 +90,17 @@ Duration: 20 minutes
 
     ![IE Enhanced Security Configuration is set to Off, and is selected.](images/Setup/image15.png "IE Enhanced Security Configuration option")
 
-18. Change to **Off** for Administrators and select **OK**
+18. Change to **Off** for Administrators and  Users then select **OK**
 
-    ![In the Internet Explorer Enhanced Security Configuration dialog box, Administrators is set to Off, and Users is set to On.](images/Setup/image16.png "Internet Explorer Enhanced Security Configuration dialog box")
+    ![In the Internet Explorer Enhanced Security Configuration dialog box, Administrators is set to Off, and Users is set to Off.](images/Setup/image16.png "Internet Explorer Enhanced Security Configuration dialog box")
 
 ### Task 2: Download hands-on support files to LABVM
 
-1.  Download the zipped Hands-on Lab Step by Step student files by clicking on this link:
+1.  Download the zipped Hands-on Lab Step by Step student files at this link:
 
     <https://www.dropbox.com/s/sx91sjcn63t980j/StudentFiles.zip?dl=1>
 
-2.  Copy the zip file to a new directory **C:\\HOL** on LABVM and then extract the files.
+2.  Extract the files to a directory here **C:\\HOL** on LABVM.
 
 ### Task 3: Install SQL Server Express on LABVM
 
@@ -188,16 +188,7 @@ In this task, you will select a **Primary** and **Secondary** Azure Region that 
 7.  Once all the resource groups have been created, you should review all the resource groups for this HOL. **It is critical to ensure that the spelling is correct and that they are in the correct Azure Regions (Primary or Secondary).**
 
 **Note:** If for some reason there is an error, you should delete the resource group with the error and recreate it.
-|    |            |       
-|----------|:-------------:|
-| **Resource Group Name** | **Location** |
-| **BCDRAzureAutomation** | Any available site other than your Primary or Secondary |
-| **BCDRAzureSiteRecovery** | Secondary |
-| **BCDRIaaSPrimarySite** | Primary |
-| **BCDRIaaSSecondarySite** | Secondary |
-| **BCDROnPremPrimarySite** | Primary | 
-| **BCDRPaaSPrimarySite** | Primary |
-| **BCDRPaaSSecondarySite** | Secondary | 
+
 
 8.  Here is the Azure Portal with each of the resource groups created in the correct Azure Region
 
