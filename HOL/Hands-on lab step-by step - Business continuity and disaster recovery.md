@@ -531,7 +531,7 @@ In this task, the **OnPremVM** will be configured to replicate to Azure and be r
 
 21. Open Internet Explorer on **HYPERVHOST** and browse to the following URL. This will download the Azure Site Recovery Provider for Hyper-V
 
-http://aka.ms/downloaddra\_cus
+http://aka.ms/downloaddra_cus
 
 22. Select **Run**
 
@@ -729,7 +729,7 @@ Once complete select **OK**
 
     ![Enable replication is selected on the Enable replication blade.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image130.png "Enable replication blade")
 
-61. The deployment will be submitted. You can select **Jobs**, Site Recovery Jobs to review the process
+61. The deployment will be submitted. You can select **Site Recovery Jobs** to review the process
 
     ![In the Recovery Services vault blade, Jobs and Site Recovery Jobs are selected. The Site Recovery jobs blade displays process status.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image131.png "Recovery Services vault and Site Recovery jobs blade")
 
