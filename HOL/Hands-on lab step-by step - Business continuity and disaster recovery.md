@@ -794,9 +794,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
     -   **Performance**: Standard
 
     -   **Replication**: Locally-redundant storage (LRS)
-
-    -   **Access tier**: Hot
-
+   
     -   **Resource group**: Use existing / BCDRAzureSiteRecovery
 
     -   **Location**: any location in your area that is NOT your Primary or Secondary Site
@@ -813,7 +811,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     ![Notepad displays the copied information.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image146.png "Notepad")
 
-8.  From the **LABVM**, connect to the Azure portal and locate the **BCDRIaaSPrimarySite**
+8.  From the **LABVM**, connect to the Azure portal and locate the **BCDRIaaSPrimarySite** Resource group
 
     ![In the Resource groups blade, under Name, BCDRIaaSPrimarySite is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image147.png "Resource groups blade")
 
@@ -1095,7 +1093,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
 ![An Error message displays stating that an error occurred while processing your request.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image212.png "Error message")
 
-72. Once you have verified that the application is up and running, you will need to build a Traffic Manager to direct traffic to the edge of your Primary and Secondary Site. Select **+NEW, Networking then Traffic Manager profile** in the Azure portal.
+72. Once you have verified that the application is up and running, you will need to build a Traffic Manager to direct traffic to the edge of your Primary and Secondary Site. Select **+Create a resource, Networking then Traffic Manager profile** in the Azure portal.
 
     ![In the Azure Portal, under Azure Marketplace, Networking and Traffic Manager profile are both selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image213.png "Azure Portal")
 
@@ -1191,7 +1189,7 @@ In this task the WEBVM1 and WEBVM2 will be configured to replicate from the Prim
 
 4.  On **Step 1 Source** select the following inputs and then select **OK**:
 
--   **Source**: Azure-PREVIEW
+-   **Source**: Azure
 
 -   **Source Location**: Your Primary Region
 
