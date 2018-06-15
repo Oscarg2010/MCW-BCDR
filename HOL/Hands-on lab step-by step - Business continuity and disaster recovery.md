@@ -123,7 +123,7 @@ In this exercise, you will use Azure ARM Templates to deploy the following envir
 
 1.  From the **LABVM**, open Internet Explorer and connect to the Azure portal at: <https://portal.azure.com>
 
-2.  Select **+New** and then search for **Template Deployment**
+2.  Select **+Create a resource** and then search for **Template Deployment**
 
     ![Template Deployment is typed in the New blade search field.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image27.png "Azure Portal New blade")
 
@@ -163,7 +163,7 @@ In this exercise, you will use Azure ARM Templates to deploy the following envir
 
 1.  From the **LABVM**, open Internet Explorer and connect to the Azure portal at: <https://portal.azure.com>
 
-2.  Select **+New** and then search for **Template Deployment**
+2.  Select **+Create a resource** and then search for **Template Deployment**
 
     ![In the Azure portal New blade, Template Deployment is in the search field.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image27.png "Azure portal, New blade")
 
@@ -201,7 +201,7 @@ In this exercise, you will use Azure ARM Templates to deploy the following envir
 
 1.  From the **LABVM**, open Internet Explorer and connect to the Azure portal at <https://portal.azure.com>
 
-2.  Select **+New** and then search for **Template Deployment**
+2.  Select **+Create a resource** and then search for **Template Deployment**
 
     ![In the Azure Portal New blade, Template Deployment is in the Search field.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image27.png "Azure Portal, New blade")
 
@@ -243,9 +243,9 @@ In this exercise, you will create and configure the services that will make it p
 
 1.  Using the **LABVM** connect to the Azure portal using your web browser at <https://portal.azure.com>
 
-2.  Select **+New**, **Monitoring + Management** and then **Backup and Site Recovery (OMS)**
+2.  Select **+Create a resource**, then enter **Backup and Site Recovery (OMS)**, Click **Create**
 
-    ![Screenshot of the Backup and Site Recovery (OMS) button.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image39.png "Backup and Site Recovery (OMS) button")
+    ![Screenshot of the Backup and Site Recovery (OMS) Screen with the Create button clicked.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image39.png "Backup and Site Recovery (OMS) Screen Create Button")
 
 3.  Complete the **Recovery Services vault** blade using the following inputs, then select **Create**
 
@@ -267,7 +267,7 @@ In this exercise, you will create and configure the services that will make it p
 
 1.  Open the Azure portal at: <https://portal.azure.com>
 
-2.  Select **+New** and then enter **Automation** in the search box
+2.  Select **+Create a resource** and then enter **Automation** in the search box
 
     ![In the Azure Portal New blade, Automation is typed in the search field.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image42.png "Azure Portal, New blade")
 
@@ -405,7 +405,7 @@ In this exercise, you will create and configure the services that will make it p
 
     ![Screenshot of the Windows PowerShell ISE button.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image71.png "Windows PowerShell ISE button")
 
-33. Open the file **C:\\HOL\\Deployments\\ASRRunBookVariable.ps1.** Review the script and then select the green play button to execute the script. You will need to authenticate to Azure.
+33. Open the file **C:\\HOL\\Deployments\\ASRRunBookVariable.ps1.** Review the script and enter the automation account name you creatred earlier . Then select the green play button to execute the script. You will need to authenticate to Azure.
 
     ![In the Windows PowerShell ISE window, the green play button is selected, and a callout points to \"Your-Automation-Account-Name-Here\" in the script window.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image72.png "Windows PowerShell ISE window")
 
