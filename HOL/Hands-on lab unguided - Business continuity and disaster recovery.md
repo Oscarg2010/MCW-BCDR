@@ -295,7 +295,7 @@ In this task, the **OnPremVM** will be configured to replicate to Azure and be r
 
 -   **Password**: demo\@pass123
 
-    http://aka.ms/downloaddra\_cus
+    http://aka.ms/downloaddra_cus
 
 6.  Open Hyper-V Manager, select the Server name in the left pane, and then you will see that the **OnPremVM** virtual machine is running on your **HYPERVHOST**. This is an Ubuntu 16.04.3 LTS server running Apache, PHP and MySQL. Double-click on the VM to open.
 
@@ -653,7 +653,7 @@ In this task, the **WEBVM1** and **WEBVM2** will be configured to replicate from
 
 2.  Use the **Replicate Application** in the **For On-Premises Machines and Azure VMs** section using the following inputs:
 
--   **Source:** Azure-PREVIEW
+-   **Source:** Azure
 
 -   **Source Location**: Your Primary Region
 
