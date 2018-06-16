@@ -1639,7 +1639,7 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     -   **Target resource**: Choose an app service
 
-    -   **Resource:** BCDRPrimarySiteContosoInsurancexxx in the BCDRPaaSPrimarySite
+    -   **Resource:** BCDRSecondarySiteContosoInsurancexxx in the BCDRPaaSSecondarySite
 
         ![In the Add endpoint blade, fields display the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image313.png "Add endpoint blade")
 
@@ -1693,7 +1693,7 @@ Now, that your applications have been made ready for high-availability and BCDR 
 
     ![Callouts in the Failover blade point to the From and To fields.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image323.png "Failover blade")
 
-8.  After the Failover is initiated close the blade and move to **Jobs**, then **Site Recovery Jobs**. Select the **Failover** job to monitor the progress.
+8.  After the Failover is initiated close the blade and move to **Site Recovery Jobs**. Select the **Failover** job to monitor the progress.
 
     ![Failover is selected in the Site Recover jobs blade.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image324.png "Site Recover jobs blade")
 
@@ -1781,7 +1781,7 @@ Now, that your applications have been made ready for high-availability and BCDR 
 
     ![A Submitting deployment, and deployment in progress messages display.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image344.png "Submitting deployment, and deployment in progress")
 
-**Note:** You will perform the Failback later in the HOL, so it is safe to move on to the next task. You can check the status of the Re-protect using the Jobs, Site Recovery Jobs area of the BCDRSRV.
+**Note:** You will perform the Failback later in the HOL, so it is safe to move on to the next task. You can check the status of the Re-protect using the Site Recovery Jobs area of the BCDRSRV.
 
 ![In the Recovery blade, Reprotect has a status of In progress.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image345.png "Recovery blade")
 
@@ -1811,11 +1811,11 @@ Now, that your applications have been made ready for high-availability and BCDR 
 
     ![The Starting Failover notification explains that the operation is in progress.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image351.png "Starting Failover notification")
 
-6.  Using Jobs, Site Recovery Jobs, you can watch the progress of the failover
+6.  Using Site Recovery Jobs, you can watch the progress of the failover
 
     ![In the Properties section, the status of the various jobs display.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image352.png "Properties section")
 
-7.  Move back to **Replicated Items** in the **BCDRSRV** and right-click **OnPremVM**. Select **Complete Migration**.
+7.  After the Failover Status is Successful, move back to **Replicated Items** in the **BCDRSRV** and right-click **OnPremVM**. Select **Complete Migration**.
 
     ![The OnPremVM Healthy status right-click menu has Complete Migration selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image353.png "Complete Migration option")
 
@@ -1825,11 +1825,11 @@ Now, that your applications have been made ready for high-availability and BCDR 
 
     ![The Completing Migration notification explains that the operation is in progress.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image355.png "Completing Migration notification")
 
-9.  Wait for this process finish prior to continuing
+9.  Wait for this process to finish prior to continuing
 
     ![In the Recovery group blade, OnPremVM is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image356.png "Recovery group blade")
 
-10. Once the Migration is completed, you can move over to the **BCDRIaaSecondarySite** Resource group and locate and select the **OnPremVM**.
+10. Once the Migration is completed, you can move over to the **BCDRIaaSSecondarySite** Resource group and locate and select the **OnPremVM**.
 
     ![In the Resource group blade OnPremVM is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image357.png "Resource group blade")
 
