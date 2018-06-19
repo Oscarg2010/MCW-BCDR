@@ -1549,41 +1549,35 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![The Index webpage displays the insurance options.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image302.png "Index webpage")
 
-46. Close Visual Studio
-
-47. Start Visual Studio
-
-48. Re-open the **ContosoInsurance.sln** Solution
-
-49. Right-click the **ContosoInsurance** Application and select **Publish**
+46. Right-click the ContosoInsurance Application and select Publish
 
     ![In Solution Explorer, the right-click menu for ContosoInsurance displays, and Publish is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image298.png "Solution Explorer")
 
-50. On the **Publish** screen select **Delete profile**
+47. On the publish screen select **New Profile**
 
-    ![The Delete profile linked is selected on the Publish Screen.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image303.png "Publish screen") ![The Yes button is selected on the Confirm Delete Profile pop-up.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image304.png "Confirm Delete Profile pop-up")
+  ![On the Publish screen, New Profile is Selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image299.0.png "Publish screen New Profile")
 
-51. Select **Microsoft Azure App Service** and then **Select Existing** and finally **Publish**
+48. On the **Publish** screen select **Microsoft Azure App Service** and then **Select Existing** and finally **Publish**
 
     ![On the Publish screen, Microsoft Azure App Service is selected. The radio button for Select Existing is selected as well.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image299.png "Publish screen")
 
-52. This time choose the Web App from the **Secondary** Site running in the **BCDRPaaSSecondarySite**. Select **OK**.
+49. This time choose the Web App from the **Secondary** Site running in the **BCDRPaaSSecondarySite**. Select **OK**.
 
     ![On the App Service screen, the web app under BCDRPaaSSecondarySite is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image305.png "App Service screen")
 
-53. Visual Studio will build the app and then publish to your Web App. The browser should open to the application.
+50. Visual Studio will build the app and then publish to your Web App. The browser should open to the application.
 
     ![The Contoso Insurance PolicyConnect webpage displays.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image306.png "Contoso Insurance PolicyConnect webpage")
 
-54. Select the **Current Policy Offerings** button, and the page should load with data showing. This means that you have successfully implemented the Web App, and it has connected to the Failover Group database.
+51. Select the **Current Policy Offerings** button, and the page should load with data showing. This means that you have successfully implemented the Web App, and it has connected to the Failover Group database.
 
     ![The Index webpage displays the insurance options.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image307.png "Index webpage")
 
-55. Close Visual Studio and move back to the Azure Portal. The next step will be to deploy a Traffic Manager for this PaaS implementation. Select **+Create a resource, Networking then Traffic Manager profile** in the Azure portal.
+52. Close Visual Studio and move back to the Azure Portal. The next step will be to deploy a Traffic Manager for this PaaS implementation. Select **+Create a resource, Networking then Traffic Manager profile** in the Azure portal.
 
     ![In the Azure Portal, under Azure Marketplace, Networking and Traffic Manager profile are both selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image213.png "Azure Portal")
 
-56. Complete the **Create Traffic Manager profile** using the following inputs, then select **Create**:
+53. Complete the **Create Traffic Manager profile** using the following inputs, then select **Create**:
 
     -   **Name:** unique name all lowercase using bcdrpaasxxx
 
@@ -1595,23 +1589,23 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
         ![In the Create Traffic Manager profile blade, fields display the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image308.png "Create Traffic Manager profile blade")
 
-57. Once the Traffic Manager profile is created, open it in the Azure portal. Notice the DNS name. This is the URL that you will use to connect to the application. Once configured this DNS name will always respond and doesn't matter which location is responding or where if the current primary database is located. Since the **Performance** routing method was selected the closest site to the end users will be calculated and they will be sent to that location. If for some reason one of the sites is down the other will service all requests.
+54. Once the Traffic Manager profile is created, open it in the Azure portal. Notice the DNS name. This is the URL that you will use to connect to the application. Once configured this DNS name will always respond and doesn't matter which location is responding or where if the current primary database is located. Since the **Performance** routing method was selected the closest site to the end users will be calculated and they will be sent to that location. If for some reason one of the sites is down the other will service all requests.
 
     ![The Routing method of Performance has a callout pointing to it.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image309.png "Routing method")
 
-58. Select **Configuration** and review the configurations
+55. Select **Configuration** and review the configurations
 
     ![Under Settings, Configuration is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image216.png "Settings section")
 
-59. Next select **Endpoints**. This is where you will configure the two external load balancers that are located your **Primary** and **Secondary** sites.
+56. Next select **Endpoints**. This is where you will configure the two external load balancers that are located your **Primary** and **Secondary** sites.
 
     ![Under Settings, Endpoints is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image217.png "Settings section")
 
-60. Select **+Add**
+57. Select **+Add**
 
     ![In the Traffic Manager profile blade, the Add button ](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image310.png "Traffic Manager profile blade")
 
-61. Complete the **Add endpoint** using the following inputs and then select **OK**
+58. Complete the **Add endpoint** using the following inputs and then select **OK**
 
     -   **Type:** Azure endpoint
 
@@ -1625,11 +1619,11 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![In the Add endpoint blade, fields display the following settings: Type, Azure endpoint; Name, BCDRPaaSPrimarySite; Target resource type, App Service; Target resource, Choose an app service. In the Resource blade, the BCDRPaaSPrimarySite is called out.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image311.png "Add endpointand Resource blades")
 
-62. Select**+Add**. Notice that the Primary endpoint was created as **"Enabled"**
+59. Select**+Add**. Notice that the Primary endpoint was created as **"Enabled"**
 
     ![The Add button is selected in the Traffic Manager profile blade.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image312.png "Traffic Manager profile blade")
 
-63. Complete the **Add endpoint** using the following inputs and then select **OK**:
+60. Complete the **Add endpoint** using the following inputs and then select **OK**:
 
     -   **Type:** Azure endpoint
 
@@ -1643,13 +1637,13 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
         ![In the Add endpoint blade, fields display the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image313.png "Add endpoint blade")
 
-64. Once the second endpoint has been added select **Overview**. The Traffic Manager will monitor the Endpoints and if the **Primary** or **Secondary** site moves to a **Monitor Status** of **Degraded**, then the Traffic Manager will direct traffic only to the other site until the service is restored. The current **Monitor Status** shows that the **Primary** site and the **Secondary** site are **Online**. If there was an outage at the web layer for one of these sites then the site will move to **Degraded,** and the other site will service all requests.
+61. Once the second endpoint has been added select **Overview**. The Traffic Manager will monitor the Endpoints and if the **Primary** or **Secondary** site moves to a **Monitor Status** of **Degraded**, then the Traffic Manager will direct traffic only to the other site until the service is restored. The current **Monitor Status** shows that the **Primary** site and the **Secondary** site are **Online**. If there was an outage at the web layer for one of these sites then the site will move to **Degraded,** and the other site will service all requests.
 
     ![In the Overview section, a callout points to the status of enabled for the Primary and Secondary sites.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image314.png "Overview section")
 
 **Note:** All of this is automatic and easily configured with a vanity domain by adding a C NAME record in DNS to point to the DNS name of the Traffic manager. This would allow for a site like [www.contoso.com](http://www.contoso.com) to resolve to the DNS name of the traffic manager. The users will never know that the site is failed over or failed back as long as one site is up and the database is active in the Failover group.
 
-65. Select the DNS name of the Traffic manager the Policy Connect web application will load. This is connecting to one of the two Web Apps running in the **Primary** Site or **Secondary** Site and talking to the Azure SQL Database Failover Group primary replica using the SQL FOG Listener.
+62. Select the DNS name of the Traffic manager the Policy Connect web application will load. This is connecting to one of the two Web Apps running in the **Primary** Site or **Secondary** Site and talking to the Azure SQL Database Failover Group primary replica using the SQL FOG Listener.
 
     ![The DNS name link is called out.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image315.png "DNS name")
 
