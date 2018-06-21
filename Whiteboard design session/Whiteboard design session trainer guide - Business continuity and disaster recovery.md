@@ -377,43 +377,43 @@ Time frame: 15 minutes
 
 ## Step 1: Review the customer case study
 
--   Check in with your table participants to introduce yourself as the trainer.
+-   Check in with your table participants to introduce yourself as the trainer
 
 -   Ask, "What questions do you have about the customer case study?"
 
--   Briefly review the steps and time frames of the whiteboard design session.
+-   Briefly review the steps and time frames of the whiteboard design session
 
--   Ready, set, go! Let the table participants begin.
+-   Ready, set, go! Let the table participants begin
 
 ## Step 2: Design a proof of concept solution
 
--   Check in with your tables to ensure that they are transitioning from step to step on time.
+-   Check in with your tables to ensure that they are transitioning from step to step on time
 
--   Provide some feedback on their responses to the business needs and design.
+-   Provide some feedback on their responses to the business needs and design
 
-    -   Try asking questions first that will lead the participants to discover the answers on their own.
+    -   Try asking questions first that will lead the participants to discover the answers on their own
 
--   Provide feedback for their responses to the customer's objections.
+-   Provide feedback for their responses to the customer's objections
 
-    -   Try asking questions first that will lead the participants to discover the answers on their own.
+    -   Try asking questions first that will lead the participants to discover the answers on their own
 
 ## Step 3: Present the solution
 
--   Determine which table will be paired with your table before Step 3 begins.
+-   Determine which table will be paired with your table before Step 3 begins
 
--   For the first round, assign one table as the Microsoft team and the other table as the customer.
+-   For the first round, assign one table as the Microsoft team and the other table as the customer
 
--   Have the Microsoft team present their solution to the customer team.
+-   Have the Microsoft team present their solution to the customer team
 
-    -   Have the customer team provide one objection for the Microsoft team to respond to.
+    -   Have the customer team provide one objection for the Microsoft team to respond to
 
-    -   The presentation and objections should be no longer than 10 minutes.
+    -   The presentation and objections should be no longer than 10 minutes
 
--   Have participants on the customer team give feedback to the Microsoft team.
+-   Have participants on the customer team give feedback to the Microsoft team
 
-    -   The feedback should be no longer than 5 minutes.
+    -   The feedback should be no longer than 5 minutes
 
-    -   If needed, the trainer may also provide feedback.
+    -   If needed, the trainer may also provide feedback
 
 ## Wrap-up
 
@@ -459,7 +459,7 @@ Time frame: 15 minutes
 
     -   IaaS: These deployments will be backed up using an Azure implementation of their third-party backup
 
-    -   PaaS: Azure App Service and SQL Database have built in Backup services that must be implemented. These are robust solutions, but their features are dependent upon the select and SKUs that CI selects during the provisioning of these services
+    -   PaaS: Azure App Service and SQL Database have built in Backup services that must be implemented. These are robust solutions, but their features are dependent upon the select and SKUs that CI selects during the provisioning of these services.
 
 -   How can they sunset the use of tape archive?
 
@@ -485,13 +485,13 @@ Time frame: 15 minutes
 
 -   How will you migrate these VMs to Azure?
 
-    -   The VMs will be migrated to Azure using ASR. This is a one direction failover, and once the VM is up and running a verified that all is working properly the migration will be completed with just one click in the Azure portal.
+    -   The VMs will be migrated to Azure using ASR. This is a one direction failover, and once the VM is up and running and there is verification that all is working properly, the migration will be completed with just one selection in the Azure portal.
 
-    -   Once they are migrated to Azure they will be re-protected to failover to the region pair that is assigned to their area of the world
+    -   Once they are migrated to Azure, they will be re-protected to failover to the region pair that is assigned to their area of the world
 
 -   Can you test the migration before going live?
 
-    -   Once the VM is protected ASR provides the ability to do a test failover to a disconnected Azure virtual network. This meets the requirements of the COB team.
+    -   Once the VM is protected, ASR provides the ability to do a test failover to a disconnected Azure virtual network. This meets the requirements of the COB team.
 
 -   Given this will be an IaaS implementation, provide details of how you will provide HA and Failover capabilities to these VMs once they are in Azure
 
@@ -551,9 +551,9 @@ Time frame: 15 minutes
 
 -   How will SQL Database be set up to support both of these scenarios?
 
-    -   The SQL Database will be implemented using Failover Groups. This allows for geo-replication with a single listener name like the SQL Always On Availability Groups. This dramatically simplifies issues of connection strings within the App Services Application Settings. By pointing at the Listener rather than a server there should never be an issue if a Database is failed over.
+    -   The SQL Database will be implemented using Failover Groups. This allows for geo-replication with a single listener name like the SQL Always On Availability Groups. This dramatically simplifies issues of connection strings within the App Services Application Settings. By pointing at the Listener rather than a server, there should never be an issue if a Database is failed over.
 
--   What Azure technology and/or DevOps tools, will you implement to deal with application specific tasks such as Pre-Actions and Post-Actions during a failover?
+-   What Azure technology and/or DevOps tools will you implement to deal with application specific tasks, such as Pre-Actions and Post-Actions during a failover?
 
     -   Azure Automation could be used again if the application required some type of custom configuration changes during a failure. The Runbooks could be designed to be triggered with a webhook, so that event could fire when there is a failure. Other CI/CD tools could be implemented to deal with issues that arise or to perform automated tests based on failovers.
 
