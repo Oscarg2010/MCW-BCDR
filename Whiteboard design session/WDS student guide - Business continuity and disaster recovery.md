@@ -58,8 +58,11 @@ Learning Objectives:
 **Outcome** 
 
 Analyze your customer’s needs.
-Time frame: 15 minutes 
+
+Timeframe: 15 minutes 
+
 Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
+
 1.  Meet your table participants and trainer 
 2.  Read all of the directions for steps 1–3 in the student guide 
 3.  As a table team, review the following customer case study
@@ -90,17 +93,17 @@ CI has completed a cloud assessment of their applications and have classified th
 
 4.  CI has struggled with DR solutions with respect to the Data tier of their application. They need to understand how this will work with IaaS and PaaS solutions for SQL Server and SQL DB.
 
-5.  They have new solutions they are building, and they want to set standards for how they are designed with BCDR in mind.
+5.  They have new solutions they are building, and they want to set standards for how they are designed with BCDR in mind
 
 6.  CI's corporate datacenter in the US is in a hurricane-prone region, and they need a backup datacenter that mirrors the core functions they have here. They don't want to build another datacenter.
 
 ### Customer objections 
 
-1.  With the move to the cloud, they are uncomfortable with any situation that assumes the cloud provider will handle their fail-over.
+1.  With the move to the cloud, they are uncomfortable with any situation that assumes the cloud provider will handle their fail-over
 
-2.  They have many systems that need to be accounted for and they aren't sure if the tools really exist to give them the business continuity they desire.
+2.  They have many systems that need to be accounted for and they aren't sure if the tools really exist to give them the business continuity they desire
 
-3.  They want to know their BCDR solution is secure.
+3.  They want to know their BCDR solution is secure
 
 4.  CI has heavily invested in a third-party backup solution but want to use Azure as their archive. Does Azure support this?
 
@@ -119,17 +122,20 @@ CI has completed a cloud assessment of their applications and have classified th
 ## Step 2: Design a proof of concept solution
 
 **Outcome** 
-Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format. 
 
-Time frame: 60 minutes
+Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.  
+
+Timeframe: 60 minutes
 
 **Business needs**
 
 Directions: With all participants at your table, answer the following questions and list the answers on a flip chart. 
+
 1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers? 
 2.  What customer business needs do you need to address with your solution?
 
 **Design** 
+
 Directions: With all participants at your table, respond to the following questions on a flip chart.
 
 *Provide an overview of the technologies and the implementation at a high-level. How will you use Azure's BCDR technologies to meet the Customer's needs?*
@@ -202,9 +208,9 @@ Directions: With all participants at your table, respond to the following questi
 
 Directions: With all participants at your table: 
 
-1.  Identify any customer needs that are not addressed with the proposed solution. 
-2.  Identify the benefits of your solution. 
-3.  Determine how you will respond to the customer’s objections. 
+1.  Identify any customer needs that are not addressed with the proposed solution 
+2.  Identify the benefits of your solution
+3.  Determine how you will respond to the customer’s objections
 
 Prepare a 15-minute chalk-talk style presentation to the customer. 
 
@@ -214,24 +220,25 @@ Prepare a 15-minute chalk-talk style presentation to the customer.
  
 Present a solution to the target customer audience in a 15-minute chalk-talk format.
 
-Time frame: 30 minutes
+Timeframe: 30 minutes
 
 **Presentation** 
 
 Directions:
-1.  Pair with another table.
-2.  One table is the Microsoft team and the other table is the customer.
-3.  The Microsoft team presents their proposed solution to the customer.
-4.  The customer makes one of the objections from the list of objections.
-5.  The Microsoft team responds to the objection.
-6.  The customer team gives feedback to the Microsoft team. 
-7.  Tables switch roles and repeat Steps 2–6.
+
+1.  Pair with another table
+2.  One table is the Microsoft team and the other table is the customer
+3.  The Microsoft team presents their proposed solution to the customer
+4.  The customer makes one of the objections from the list of objections
+5.  The Microsoft team responds to the objection
+6.  The customer team gives feedback to the Microsoft team 
+7.  Tables switch roles and repeat Steps 2–6
 
 ##  Wrap-up 
 
-Time frame: 15 minutes
+Timeframe: 15 minutes
 
--   Tables reconvene with the larger group to hear an SME share the preferred solution for the case study.
+Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study. 
 
 ##  Additional references
 |    |            |       
@@ -250,3 +257,4 @@ Time frame: 15 minutes
 | Traffic Manager Routing Methods | <https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-routing-methods/> |
 | Traffic Manager Endpoints | <https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-endpoint-types/> |
 | Backup Solution Architectures | <https://azure.microsoft.com/en-us/solutions/architecture/backup-archive-on-premises-applications/> |
+
