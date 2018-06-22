@@ -25,7 +25,7 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 <!-- TOC -->
 
-- [Trainer information](#trainer-information)
+- [Trainer information](#trainer-information)    
     - [Role of the trainer](#role-of-the-trainer)
     - [Whiteboard design session flow](#whiteboard-design-session-flow)
     - [Before the whiteboard design session: How to prepare](#before-the-whiteboard-design-session-how-to-prepare)
@@ -62,25 +62,25 @@ Thank you for taking time to support the whiteboard design sessions as a trainer
 
 An amazing trainer:
 
--   Creates a safe environment in which learning can take place.
+-   Creates a safe environment in which learning can take place
 
--   Stimulates the participant's thinking.
+-   Stimulates the participant's thinking
 
--   Involves the participant in the learning process.
+-   Involves the participant in the learning process
 
--   Manages the learning process (on time, on topic, and adjusting to benefit participants).
+-   Manages the learning process (on time, on topic, and adjusting to benefit participants)
 
--   Ensures individual participant accountability.
+-   Ensures individual participant accountability
 
--   Ties it all together for the participant.
+-   Ties it all together for the participant
 
--   Provides insight and experience to the learning process.
+-   Provides insight and experience to the learning process
 
--   Effectively leads the whiteboard design session discussion.
+-   Effectively leads the whiteboard design session discussion
 
--   Monitors quality and appropriateness of participant deliverables.
+-   Monitors quality and appropriateness of participant deliverables
 
--   Effectively leads the feedback process.
+-   Effectively leads the feedback process
 
 ## Whiteboard design session flow 
 
@@ -100,41 +100,41 @@ Outcome: Analyze your customer's needs
 
 Outcome: Prepare to present a solution for your target customer audience.
 
--   Determine your target customer audience.
+-   Determine your target customer audience
 
--   Determine customer's business needs to address your solution.
+-   Determine customer's business needs to address your solution
 
--   Design and diagram your solution.
+-   Design and diagram your solution
 
--   Prepare to present your solution.
+-   Prepare to present your solution
 
 **Step 3: Present the solution (30 minutes)**
 
-Outcome: Present solution to your customer
+Outcome: Present solution to your customer.
 
--   Present solution.
+-   Present solution
 
--   Respond to customer objections.
+-   Respond to customer objections
 
--   Receive feedback.
+-   Receive feedback
 
 **Wrap-up (15 minutes)**
 
--   Review preferred solution.
+-   Review preferred solution
 
 ## Before the whiteboard design session: How to prepare
 
 Before conducting your first whiteboard design session:
 
--   Read the Student guide (including the case study) and Trainer guide.
+-   Read the Student guide (including the case study) and Trainer guide
 
--   Become familiar with all key points and activities.
+-   Become familiar with all key points and activities
 
--   Plan the point you want to stress, which questions you want to drive, transitions, and be ready to answer questions.
+-   Plan the point you want to stress, which questions you want to drive, transitions, and be ready to answer questions
 
--   Prior to the whiteboard design session, discuss the case study to pick up more ideas.
+-   Prior to the whiteboard design session, discuss the case study to pick up more ideas
 
--   Make notes for later.
+-   Make notes for later
 
 ## During the whiteboard design session: Tips for an effective whiteboard design session
 
@@ -144,7 +144,7 @@ Before conducting your first whiteboard design session:
 
 When participants are doing activities, you can **look ahead to refresh your memory**.
 
--   **Adjust activity and whiteboard design session pace** as needed to allow time for presenting, feedback, and sharing.
+-   **Adjust activity and whiteboard design session pace** as needed to allow time for presenting, feedback, and sharing
 
 -   **Add examples, points, and stories** from your own experience. Think about stories you can share that help you make your points clearly and effectively.
 
@@ -179,8 +179,11 @@ Learning Objectives:
 **Outcome** 
 
 Analyze your customer’s needs.
-Time frame: 15 minutes 
+
+Timeframe: 15 minutes 
+
 Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
+
 1.  Meet your table participants and trainer 
 2.  Read all of the directions for steps 1–3 in the student guide 
 3.  As a table team, review the following customer case study
@@ -211,17 +214,17 @@ CI has completed a cloud assessment of their applications and have classified th
 
 4.  CI has struggled with DR solutions with respect to the Data tier of their application. They need to understand how this will work with IaaS and PaaS solutions for SQL Server and SQL DB.
 
-5.  They have new solutions they are building, and they want to set standards for how they are designed with BCDR in mind.
+5.  They have new solutions they are building, and they want to set standards for how they are designed with BCDR in mind
 
 6.  CI's corporate datacenter in the US is in a hurricane-prone region, and they need a backup datacenter that mirrors the core functions they have here. They don't want to build another datacenter.
 
 ### Customer objections 
 
-1.  With the move to the cloud, they are uncomfortable with any situation that assumes the cloud provider will handle their fail-over.
+1.  With the move to the cloud, they are uncomfortable with any situation that assumes the cloud provider will handle their fail-over
 
-2.  They have many systems that need to be accounted for and they aren't sure if the tools really exist to give them the business continuity they desire.
+2.  They have many systems that need to be accounted for and they aren't sure if the tools really exist to give them the business continuity they desire
 
-3.  They want to know their BCDR solution is secure.
+3.  They want to know their BCDR solution is secure
 
 4.  CI has heavily invested in a third-party backup solution but want to use Azure as their archive. Does Azure support this?
 
@@ -240,17 +243,20 @@ CI has completed a cloud assessment of their applications and have classified th
 ## Step 2: Design a proof of concept solution
 
 **Outcome** 
-Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format. 
 
-Time frame: 60 minutes
+Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.  
+
+Timeframe: 60 minutes
 
 **Business needs**
 
 Directions: With all participants at your table, answer the following questions and list the answers on a flip chart. 
+
 1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers? 
 2.  What customer business needs do you need to address with your solution?
 
 **Design** 
+
 Directions: With all participants at your table, respond to the following questions on a flip chart.
 
 *Provide an overview of the technologies and the implementation at a high-level. How will you use Azure's BCDR technologies to meet the Customer's needs?*
@@ -323,9 +329,9 @@ Directions: With all participants at your table, respond to the following questi
 
 Directions: With all participants at your table: 
 
-1.  Identify any customer needs that are not addressed with the proposed solution. 
-2.  Identify the benefits of your solution. 
-3.  Determine how you will respond to the customer’s objections. 
+1.  Identify any customer needs that are not addressed with the proposed solution 
+2.  Identify the benefits of your solution
+3.  Determine how you will respond to the customer’s objections
 
 Prepare a 15-minute chalk-talk style presentation to the customer. 
 
@@ -335,24 +341,25 @@ Prepare a 15-minute chalk-talk style presentation to the customer.
  
 Present a solution to the target customer audience in a 15-minute chalk-talk format.
 
-Time frame: 30 minutes
+Timeframe: 30 minutes
 
 **Presentation** 
 
 Directions:
-1.  Pair with another table.
-2.  One table is the Microsoft team and the other table is the customer.
-3.  The Microsoft team presents their proposed solution to the customer.
-4.  The customer makes one of the objections from the list of objections.
-5.  The Microsoft team responds to the objection.
-6.  The customer team gives feedback to the Microsoft team. 
-7.  Tables switch roles and repeat Steps 2–6.
+
+1.  Pair with another table
+2.  One table is the Microsoft team and the other table is the customer
+3.  The Microsoft team presents their proposed solution to the customer
+4.  The customer makes one of the objections from the list of objections
+5.  The Microsoft team responds to the objection
+6.  The customer team gives feedback to the Microsoft team 
+7.  Tables switch roles and repeat Steps 2–6
 
 ##  Wrap-up 
 
 Time frame: 15 minutes
 
--   Tables reconvene with the larger group to hear an SME share the preferred solution for the case study.
+Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study. 
 
 ##  Additional references
 |    |            |       
@@ -401,23 +408,19 @@ Time frame: 15 minutes
 
 -   Determine which table will be paired with your table before Step 3 begins
 
--   For the first round, assign one table as the Microsoft team and the other table as the customer
+-   For the first round, assign one table as the presenting team and the other table as the customer
 
--   Have the Microsoft team present their solution to the customer team
+-   Have the presenting team present their solution to the customer team
 
-    -   Have the customer team provide one objection for the Microsoft team to respond to
+    -   Have the customer team provide one objection for the presenting team to respond to
 
-    -   The presentation and objections should be no longer than 10 minutes
-
--   Have participants on the customer team give feedback to the Microsoft team
-
-    -   The feedback should be no longer than 5 minutes
-
-    -   If needed, the trainer may also provide feedback
+    -   The presentation, objections, and feedback should take no longer than 15 minutes
 
 ## Wrap-up
 
--   Have the table participants reconvene with the larger session group to hear an SME share the following preferred solution.
+Timeframe: 15 minutes
+
+Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
 
 ##  Preferred target audience
 
@@ -563,13 +566,13 @@ Time frame: 15 minutes
 
 ##  Checklist of preferred objection handling
 
-1.  With the move to the cloud, they are uncomfortable with any situation that assumes the cloud provider will handle their fail-over.
+1.  With the move to the cloud, they are uncomfortable with any situation that assumes the cloud provider will handle their fail-over
 
 *Potential Answer:*
 
 Using ASR CI will be able to handle all of their own DR. They will be using familiar tools with the Azure Portal and Hyper-V.
 
-2.  They have many systems that need to be accounted for and they aren't sure if the tools really exist to give them the business continuity they desire.
+2.  They have many systems that need to be accounted for, and they aren't sure if the tools really exist to give them the business continuity they desire
 
 *Potential Answer:*
 
