@@ -80,7 +80,7 @@ Below are diagrams of the solution architecture you will build in this lab. Plea
 
 ### Environment: On-premises (migrate to Azure)
 
--   **Background:** This environment will deploy a Hyper-V Host that will host a Linux VM to simulate a Linux, Apache, PHP and MySQL (LAMP), based web application deployed into an on-premises datacenter on a single VM
+-   **Background:** This environment will deploy a Hyper-V Host that will host a Linux VM to simulate a Linux, Apache, PHP, and MySQL (LAMP) based web application deployed into an on-premises datacenter on a single VM
 
 -   **Goal using Azure BCDR:** Your goal for this environment will be to migrate this application to Azure IaaS with a one-direction failover
 
@@ -243,7 +243,7 @@ In this exercise, you will create and configure the services that will make it p
 
 1.  Using the **LABVM** connect to the Azure portal using your web browser at <https://portal.azure.com>
 
-2.  Select **+Create a resource**, then enter **Backup and Site Recovery (OMS)**, Click **Create**
+2.  Select **+Create a resource**, then enter **Backup and Site Recovery (OMS)**, and select **Create**
 
     ![Screenshot of the Backup and Site Recovery (OMS) Screen with the Create button clicked.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image39.png "Backup and Site Recovery (OMS) Screen Create Button")
 
@@ -255,7 +255,7 @@ In this exercise, you will create and configure the services that will make it p
 
     -   **Location**: Secondary Site (should be automatically selected based on your resource group)
 
-4.  Once the **BCDRRSV** Recovery Service Vault has been created, open it in the Azure portal. Toggle the switch that selects Backup / Site Recovery
+4.  Once the **BCDRRSV** Recovery Service Vault has been created, open it in the Azure portal. Toggle the switch that selects Backup / Site Recovery.
 
     ![Screenshot of the Backup / Site Recovery toggle switch with Site Recovery selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image40.png "Backup / Site Recovery toggle switch")
 
@@ -343,7 +343,7 @@ In this exercise, you will create and configure the services that will make it p
 
     ![Fields in the Import blade are set to the previously defined settings. A callout points to the Name field.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image58.png "Import blade")
 
-19. Once the Runbook is imported select **ASRSQLFailover** to open the runbook
+19. Once the Runbook is imported, select **ASRSQLFailover** to open the runbook
 
     ![Under name, a callout points to the ASRQLFailover option.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image59.png "ASRQLFailover option")
 
@@ -387,17 +387,17 @@ In this exercise, you will create and configure the services that will make it p
 
     ![In the Runbook blade top menu, Edit is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image67.png "Runbook blade")
 
-29. The PowerShell runbook will load. If you wish, you can review the comments to better understand the runbook. Once completed select **Publish** to make the code available for use in the portal.
+29. The PowerShell runbook will load. If you wish, you can review the comments to better understand the runbook. Once completed, select **Publish** to make the code available for use in the portal.
 
     ![On the top menu of the Edit PowerShell Workflow Runbook blade, Publish is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image68.png "Edit PowerShell Workflow Runbook blade")
 
-30. Select **Yes**, to configure that this Runbook will be published
+30. Select **Yes** to configure that this Runbook will be published
 
     ![In the Publish Runbook section, a message asks if you want to proceed, and the Yes button is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image62.png "Publish Runbook section")
 
     ![Screenshot of the Published runbook message.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image69.png "Published runbook message")
 
-31. Navigate back to **Runbooks**, make sure that both Runbooks show as "**Published"**
+31. Navigate back to **Runbooks**, and make sure that both Runbooks show as "**Published"**
 
     ![Two runbooks have authoring status as published: ASRSQLFailover, and ASRWEBFailover.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image70.png "Runbooks")
 
@@ -473,7 +473,7 @@ In this task, the **OnPremVM** will be configured to replicate to Azure and be r
 
     ![In the top menu of the Prepare source blade, Hyper-V Site is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image80.png "Prepare source blade")
 
-7.  On the **Create Hyper-V site** blade, enter the name: **OnPremHyperVSite** and select **OK**
+7.  On the **Create Hyper-V site** blade, enter the name: **OnPremHyperVSite**. Select **OK**.
 
     ![OnPremHyperVSite is in the Name field in the Create Hyper-V site blade.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image81.png "Create Hyper-V site blade")
 
@@ -501,7 +501,7 @@ In this task, the **OnPremVM** will be configured to replicate to Azure and be r
 
     ![The HyperVHost button displays.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image87.png "HyperVHost button")
 
-14. Select Connect and open the RDP file that is downloaded
+14. Select **Connect** and open the RDP file that is downloaded
 
     ![In the HyperVHost blade, the Connect button is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image88.png "HyperVHost blade")
 
@@ -515,7 +515,7 @@ In this task, the **OnPremVM** will be configured to replicate to Azure and be r
 
     ![In the Remote Desktop Connection dialog box, the Yes button is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image89.png "Remote Desktop Connection dialog box")
 
-17. Select **Yes**, on the Networks prompt
+17. Select **Yes** on the Networks prompt
 
     ![Screenshot of the Networks prompt.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image90.png "Networks prompt")
 
@@ -529,7 +529,7 @@ In this task, the **OnPremVM** will be configured to replicate to Azure and be r
 
 20. Change to **Off** for Administrators and select **OK**
 
-21. Open Internet Explorer on **HYPERVHOST** and browse to the following URL. This will download the Azure Site Recovery Provider for Hyper-V
+21. Open Internet Explorer on **HYPERVHOST** and browse to the following URL. This will download the Azure Site Recovery Provider for Hyper-V.
 
 http://aka.ms/downloaddra_cus
 
@@ -585,7 +585,7 @@ http://aka.ms/downloaddra_cus
 
     ![Screenshot of the Hyper-V Manager icon.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image105.png "Hyper-V Manager icon")
 
-35. When the Hyper-V Manager opens select the Server name in the left pane and then you will see that the **OnPremVM** virtual machine is running on your **HYPERVHOST**. This is an Ubuntu 16.04.3 LTS server running Apache, PHP and MySQL. Double-click on the VM to open.
+35. When the Hyper-V Manager opens, select the Server name in the left pane and then you will see that the **OnPremVM** virtual machine is running on your **HYPERVHOST**. This is an Ubuntu 16.04.3 LTS server running Apache, PHP and MySQL. Double-click on the VM to open.
 
     ![In Hyper-V Manager, HyperVHOST is selected, and the OnPremVM virtual machine data displays.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image106.png "Hyper-V Manager")
 
@@ -622,7 +622,7 @@ http://aka.ms/downloaddra_cus
 
     ![In the OnPremVM virtual machine console, the previous command is called out.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image110.png "OnPremVM virtual machine console")
 
-41. After the updates complete, install the Azure Guest Agent for Linux on the VM using the following commands
+41. After the updates complete, install the Azure Guest Agent for Linux on the VM using the following commands:
     ```
     sudo apt-get install walinuxagent -y
     ```
@@ -639,7 +639,7 @@ http://aka.ms/downloaddra_cus
 
     ![Hyper-V Server is selected in the Prepare source blade.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image112.png "Prepare source blade")
 
-45. Once the Server appears simply select **OK**
+45. Once the Server appears, select **OK**
 
     ![In the Prepare source blade, a callout points to HYPERVHOST under Step 2.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image113.png "Prepare source blade")
 
@@ -655,7 +655,7 @@ http://aka.ms/downloaddra_cus
 
     ![Screenshot of the Deployment succeeded message.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image116.png "Deployment succeeded message")
 
-49. You will be failing the **OnPremVM** into the **Secondary** site that was deployed with your IaaS installation, so as a result you already have a Virtual Network created. Select **OK** on the Target blade to continue.
+49. You will be failing the **OnPremVM** into the **Secondary** site that was deployed with your IaaS installation, so you already have a Virtual Network created. Select **OK** on the Target blade to continue.
 
     ![Add storage account is selected in the Target blade.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image117.png "Target blade")
 
@@ -663,7 +663,7 @@ http://aka.ms/downloaddra_cus
 
     ![Create and Associate is selected in the Replication Policy blade.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image118.png "Replication Policy blade")
 
-51. Enter the Name: **OnPremVM-POL**, review the settings that you can configure and then select **OK**
+51. Enter the name: **OnPremVM-POL**. Review the settings that you can configure and then select **OK**
 
     ![In the Create and Associate blade, the Name field is set to OnPremVM-POL.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image119.png "Create and Associate blade")
 
@@ -733,7 +733,7 @@ Once complete select **OK**
 
     ![In the Recovery Services vault blade, Jobs and Site Recovery Jobs are selected. The Site Recovery jobs blade displays process status.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image131.png "Recovery Services vault and Site Recovery jobs blade")
 
-62. After a few minutes, the Enable replication will move to Successful. Select **Overview** on the **BCDRRSV,** and you should now see that there is 1 Healthy Replicated Item.
+62. After a few minutes, the Enable replication will move to Successful. Select **Overview** on the **BCDRRSV**. You should now see that there is 1 Healthy Replicated Item.
 
     ![In the Recovery Services vault blade, a callout points to the healthy replicated item.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image132.png "Recovery Services vault blade")
 
@@ -741,13 +741,13 @@ Once complete select **OK**
 
     ![In the Replicated items blade, a callout points to the status of 0 percent synchronized.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image133.png "Replicated items blade")
 
-64. Select **OnPremVM**. Review the Replication details for **OnPremVM**. Once the VM has replicated the selections across the top menu bar of the dashboard will allow you to work with this VM.
+64. Select **OnPremVM**. Review the Replication details for **OnPremVM**. Once the VM has replicated, the selections across the top menu bar of the dashboard will allow you to work with this VM.
 
     ![In the Replicated items blade, a callout points to the status of Protected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image134.png "Replicated items blade")
 
 **Note**: It will take about 15 minutes for the VM to replicate, so you can move on and come back to review the environment later.
 
-65. Scroll down and review the Infrastructure view of the BCDR environment you have created for **OnPremVM**. You can select **Hyper-V Virtual Machine** review what is protected.
+65. Scroll down and review the Infrastructure view of the BCDR environment you have created for **OnPremVM**. You can select **Hyper-V Virtual Machine** to review what is protected.
 
     ![In the Infrastructure view, Hyper-V Virtual machine and Log storage accounts are in On-premises, and connect to Azure Site Recovery and Storage accounts in Azure.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image135.png "Infrastructure view")
 
@@ -819,7 +819,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     ![In the top menu of the Virtual Machine blade, Connect is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image148.png "Virtual Machine blade")
 
-10. Once in the RDP session to **BCDRDC1**, select **Start** and then **Remote Desktop**. You will need to connect to **SQLVM1** for the next steps
+10. Once in the RDP session to **BCDRDC1**, select **Start** and then **Remote Desktop**. You will need to connect to **SQLVM1** for the next steps.
 
     ![Screenshot of the Remote Desktop icon.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image149.png "Remote Desktop icon")
 
@@ -855,7 +855,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     ![In Failover Cluster Manager, Nodes is selected in the tree view, and three nodes display in the details pane.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image155.png "Failover Cluster Manager")
 
-17. If you select **Roles**, you will notice there currently there aren't any roles assigned to the cluster
+17. If you select **Roles**, you will notice that currently, there aren't any roles assigned to the cluster
 
     ![In Failover Cluster Manager, Roles is selected in the tree view, and zero roles display in the details pane.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image156.png "Failover Cluster Manager")
 
@@ -901,15 +901,15 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     ![In SQL Server 2017 Configuration Manager, in the left pane, SQL Server Services is selected. In the right pane, SQL Server (MSSQLSERVER) is selected, and from its right-click menu, Properties is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image167.png "SQL Server 2017 Configuration Manager")
 
-28. Select the **AlwaysOn High Availability** tab and check the box for **Enable AlwaysOn Availability Groups**, then select **Apply**, then select **OK** on the message that changes won't take effect until after the server is restarted
+28. Select the **AlwaysOn High Availability** tab and check the box for **Enable AlwaysOn Availability Groups**. Select **Apply** and then select **OK** on the message that notifies you that changes won't take effect until after the server is restarted.
 
     ![In the SQL Server Properties dialog box, on the Always On High Availability tab, the Enable AlwaysOn Availability Groups checkbox is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image168.png "SQL Server Properties dialog box")![A pop-up warns that any changes made will not take effect until the service stops and restarts.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image169.png "Warning pop-up")
 
-29. On the **Log On** tab. Change the service account to **contoso\\mcwadmin**, with the password **demo\@pass123**. Select **OK** to accept the changes, and then select **Yes** to confirm the restart of the server.
+29. On the **Log On** tab, change the service account to **contoso\\mcwadmin** with the password **demo\@pass123**. Select **OK** to accept the changes, and then select **Yes** to confirm the restart of the server.
 
     ![In the SQL Server Properties dialog box, on the Log On tab, fields are set to the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image170.png "SQL Server Properties dialog box")![A pop-up asks you to confirm that you want to make the changes and restart the service.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image171.png "Confirm Account Change pop-up")
 
-30. Open a new Remote desktop session (this can be done from within SQLVM1), and repeat these steps to **Enable SQL Always On** and change the User name to **contoso\\mcwadmin** on each of the other nodes **SQLVM2**, and **SQLVM3.** Make sure that you have restarted the SQL Service on each node prior to moving to the next node.
+30. Open a new Remote desktop session (this can be done from within SQLVM1), and repeat these steps to **Enable SQL Always On**. Change the username to **contoso\\mcwadmin** on each of the other nodes **SQLVM2**, and **SQLVM3.** Make sure that you have restarted the SQL Service on each node prior to moving to the next node.
 
 **Note:** If you get confused what server you are on open a command prompt and simply enter the command *hostname.*
 
@@ -921,7 +921,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     ![Screenshot of Microsoft SQL Server Management Studio 17 on the Start menu.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image172.png "Microsoft SQL Server Management Studio 17")
 
-33. Select **Connect** to Sign On to **SQLVM1**
+33. Select **Connect** to sign on to **SQLVM1**
 
     ![Screenshot of the Connect to Server dialog box.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image173.png "Connect to Server dialog box")
 
@@ -941,7 +941,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     ![ContosoInsurance is selected on the Select Databases page.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image177.png "Select Databases page")
 
-38. On the Specify Replicas screen next to **SQLVM1** select **Automatic Failover**
+38. On the Specify Replicas screen next to **SQLVM1**, select **Automatic Failover**
 
     ![On the Replicas tab, for SQLVM1, the checkbox for Automatic Failover (Up to 3) is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image178.png "Specify Replicas screen")
 
@@ -953,7 +953,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     ![Screenshot of the Connect to Server dialog box for SQLVM2.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image180.png "Connect to Server dialog box")
 
-41. For **SQLVM2** select Automatic Failover and Availability Mode of Synchronous commit
+41. For **SQLVM2**, select Automatic Failover and Availability Mode of Synchronous commit
 
     ![On the Replicas tab, for SQLVM2, the checkbox for Automatic Failover (Up to 3) is selected, and availability mode is set to synchronous commit.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image181.png "Specify Replicase Screen")
 
@@ -973,7 +973,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     ![On the Endpoints tab, the three servers are listed.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image184.png "Specify Endpoints screen")
 
-46. Next, select **Listener**. Then select the **Create an availability group listener**
+46. Next, select **Listener**. Then select the **Create an availability group listener**.
 
     ![On the Listener tab, the radio button for Create an availability group listener is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image185.png "Specify Listener screen")
 
@@ -1011,7 +1011,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     ![On the Select Initial Data Synchronization screen, the radio button for Automatic seeding is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image192.png "Select Initial Data Synchronization screen")
 
-54. On the Validation screen, you should see all green. Select **Next**
+54. On the Validation screen, you should see all green. Select **Next**.
 
     ![The Validation screen displays a list of everything it is checking, and the results for each, which currently are success.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image193.png "Validation screen")
 
@@ -1045,7 +1045,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     ![In the Connect to Server Dialog box, Server name is BCDRAOG, and the connect button is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image201.png "Connect to Server Dialog box")
 
-62. Once connected to the **BCDRAOG** you can select **Databases** and will be able to see the database there. Notice that you have no knowledge directly of which server this is running on.
+62. Once connected to the **BCDRAOG**, you can select **Databases** and will be able to see the database there. Notice that you have no knowledge directly of which server this is running on.
 
     ![A callout points to ContosoInsurance (Synchronized) in SQL Management Studio.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image202.png "SQL Management Studio")
 
@@ -1059,11 +1059,11 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     ![In Object Explorer, Connect / Database Engine is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image200.png "Object Explorer")
 
-65. This time put in the IP address of the Internal Load balancer of the **Primary** Site AOG Load Balancer: **10.0.2.100**. You again will be able to connect to the server which is up and running as the master.
+65. This time, put the following into the IP address of the Internal Load balancer of the **Primary** Site AOG Load Balancer: **10.0.2.100**. You again will be able to connect to the server which is up and running as the master.
 
     ![Fields in the Connect to Server dialog box are set to the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image205.png "Connect to Server dialog box")
 
-66. Once connected to **10.0.2.100** you can select **Databases** and will be able to see the database there. Notice that you have no knowledge directly of which server this is running on.
+66. Once connected to **10.0.2.100**, you can select **Databases** and will be able to see the database there. Notice that you have no knowledge directly of which server this is running on.
 
     ![A callout points to the Databases folder in Object Explorer.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image206.png "Object Explorer")
 
@@ -1117,7 +1117,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     ![Under Settings, Configuration is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image216.png "Settings section")
 
-76. Next select **Endpoints**. This is where you will configure the two external load balancers that are located your **Primary** and **Secondary** sites
+76. Next select **Endpoints**. This is where you will configure the two external load balancers that are located your **Primary** and **Secondary** sites.
 
     ![Under Settings, Endpoints is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image217.png "Settings section")
 
@@ -1177,7 +1177,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
 In this task the WEBVM1 and WEBVM2 will be configured to replicate from the Primary Site to the Secondary site to support an Azure region to region failover. This will consist of configuring the VMs to replicate and integrating with the Azure Automation to failover the SQL Always On group from the Primary Site to the Secondary. Once the failover is complete the website will again answer to the Traffic Manager DNS name.
 
-1.  From the Azure portal on **LABVM**, open the **BCDRRSV** Recovery Services Vault located in the **BCDRAzureSiteRecovery** resource group.
+1.  From the Azure portal on **LABVM**, open the **BCDRRSV** Recovery Services Vault located in the **BCDRAzureSiteRecovery** resource group
 
 2.  Select **Site Recovery** in the **Getting Started** area of **BCDRRSV** blade
 
@@ -1237,7 +1237,7 @@ In this task the WEBVM1 and WEBVM2 will be configured to replicate from the Prim
 
     ![Screenshot of the Enable replication button.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image233.png "Enable replication button")
 
-11. The Azure portal will start the deployment. This will take about 10 minutes to complete and you will receive a notification once it has
+11. The Azure portal will start the deployment. This will take about 10 minutes to complete and you will receive a notification once it has deployed. 
 
     ![The message Enabling replication for two vm(s) says it has successfully completed.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image234.png "Enabling replication for two vm(s)")
 
@@ -1251,7 +1251,7 @@ In this task the WEBVM1 and WEBVM2 will be configured to replicate from the Prim
 
     ![Under Protected Items, Replicated items is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image237.png "Protected Items section")
 
-14. You should see three items: **OnPremVM**, **WEBVM1** and **WEBVM2**. The **OnPremVM** will show as protected and the others may still need to synchronize a bit more
+14. You should see three items: **OnPremVM**, **WEBVM1** and **WEBVM2**. The **OnPremVM** will show as protected and the others may still need to synchronize a bit more.
 
     ![Under Replicated Items, the status for WEBVM1, WEBVM2 shows 93 percent synchronized, while the status for OnPremVM is Protected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image238.png "Replicated Items section")
 
@@ -1371,11 +1371,11 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![In the Select backup devices dialog box, a callout points to the Backup media location.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image263.png "Select backup devices dialog box")
 
-12. Select OK, to restore the ContosoInsurance database
+12. Select **OK** to restore the ContosoInsurance database
 
     ![Screenshot of the Restore Database - ContosoInsurance dialog box.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image264.png "Restore Database - ContosoInsurance dialog box")
 
-13. Select OK at the restored successfully prompt
+13. Select **OK** at the restored successfully prompt
 
     ![The Microsoft SQL Server Management Studio pop-up shows that the ContosoInsurance database was successfully restored.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image265.png "Microsoft SQL Server Management Studio pop-up")
 
@@ -1383,7 +1383,7 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![In the Object Explorer tree view, ContosoInsurance is selected, and in its right-click menu, Deploy Database to Microsoft Azure SQL Database is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image266.png "Object Explorer")
 
-15. Select Next, on the Introduction screen
+15. Select **Next** on the Introduction screen
 
     ![Screenshot of the Deploy Database to Microsoft Azure SQL Database introduction.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image267.png "Deploy Database to Microsoft Azure SQL Database introduction screen")
 
@@ -1415,7 +1415,7 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![An Importing database progress bar displays with individual steps below showing their progress.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image272.png "Importing database progress")
 
-20. Select Close, once the database has been migrated to Azure SQL Database
+20. Select **Close** once the database has been migrated to Azure SQL Database
 
     ![On the Operation Complete screen, under Summary, all steps in the database import process have results of Success.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image273.png "Operation Complete screen")
 
@@ -1483,7 +1483,7 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![The New Connection String for the Web App is called out.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image288.png "New Connection String")
 
-33. Select the **URL**. The empty Web App will appear
+33. Select the **URL**. The empty Web App will appear.
 
     ![The new URL link is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image289.png "URL")
 
@@ -1549,11 +1549,11 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![The Index webpage displays the insurance options.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image302.png "Index webpage")
 
-46. Right-click the ContosoInsurance Application and select Publish
+46. Right-click the **ContosoInsurance** Application and select **Publish**
 
     ![In Solution Explorer, the right-click menu for ContosoInsurance displays, and Publish is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image298.png "Solution Explorer")
 
-47. On the publish screen select **New Profile**
+47. On the publish screen select **Create new profile**
 
   ![On the Publish screen, New Profile is Selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image299.0.png "Publish screen New Profile")
 
@@ -1619,7 +1619,7 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![In the Add endpoint blade, fields display the following settings: Type, Azure endpoint; Name, BCDRPaaSPrimarySite; Target resource type, App Service; Target resource, Choose an app service. In the Resource blade, the BCDRPaaSPrimarySite is called out.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image311.png "Add endpointand Resource blades")
 
-59. Select**+Add**. Notice that the Primary endpoint was created as **"Enabled"**
+59. Select **+Add**. Notice that the Primary endpoint was created as **"Enabled"**.
 
     ![The Add button is selected in the Traffic Manager profile blade.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image312.png "Traffic Manager profile blade")
 
@@ -1745,7 +1745,7 @@ Now, that your applications have been made ready for high-availability and BCDR 
 
     ![In the Traffic Manager profile blade, a callout points to the degraded status of the primary site.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image337.png "Traffic Manager profile blade")
 
-1. Select **DNS Name URL**. The site load immediately and is failed over. The users will always be using this DNS URL, so they there is no change in how they access the site even though it is failed over. There **will** be downtime as the failover happens, but once the site is back online the experience for them will be no different than when it is running in the **Primary** site.
+21. Select **DNS Name URL**. The site load immediately and is failed over. The users will always be using this DNS URL, so there is no change in how they access the site even though it is failed over. There **will** be downtime as the failover happens, but once the site is back online the experience for them will be no different than when it is running in the **Primary** site.
 
     ![The Contoso Insurance PolicyConnect webpage displays with a callout pointing to the URL in the address bar.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image338.png "Contoso Insurance PolicyConnect webpage")
 
@@ -1755,7 +1755,7 @@ Now, that your applications have been made ready for high-availability and BCDR 
 
     ![The Recovery Plans tile displays 1.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image339.png "Recovery Plans tile")
 
-23. The BCDRIaaSPlan will show as **Failover completed.** Select the Plan
+23. The BCDRIaaSPlan will show as **Failover completed.** Select the Plan.
 
     ![In the Recovery Plans blade, BCDIaaSPlan has the current job status of failover completed.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image340.png "Recovery Plans blade")
 
@@ -1827,11 +1827,11 @@ Now, that your applications have been made ready for high-availability and BCDR 
 
     ![In the Resource group blade OnPremVM is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image357.png "Resource group blade")
 
-11. Review the details of the VM. Notice that it is running in the **BCDRFOVNET** virtual network in the **WEB** Subnet
+11. Review the details of the VM. Notice that it is running in the **BCDRFOVNET** virtual network in the **WEB** Subnet.
 
     ![In the Virtual Machine blade, a callout points to the status of OnPremVM, which is running, and the Virtual network/subnet link is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image358.png "Virtual Machine blade")
 
-12. Select the **Networking** link. Notice the IP address of the VM
+12. Select the **Networking** link. Notice the IP address of the VM.
 
     ![In the Virtual machine blade, under Settings, Networking is selected, and a callout is pointing to the Private IP address.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image359.png "Virtual machine blade")
 
@@ -1839,7 +1839,7 @@ Now, that your applications have been made ready for high-availability and BCDR 
 
     ![In the Internet Explorer Enhanced Security Configuration dialog box, Administrators and Users are both set to Off.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image360.png "Internet Explorer Enhanced Security Configuration dialog box")
 
-14. Point the browser of BCDRDC1 at the IP address of the **OnPremVM**. And it should load the sample web application
+14. Point the browser of BCDRDC1 at the IP address of the **OnPremVM**. And it should load the sample web application.
 
 http://172.16.1.?/bcdr.php
 
@@ -1957,11 +1957,11 @@ snip![Diagram of the Azure IaaS region to region failback solution. At this time
 
     ![Screenshot of the BCDRIaaSPlan option.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image384.png "BCDRIaaSPlan option")
 
-4.  Notice that the VMs are still at the Target, since they are Failed over to the Secondary Site. Select **More**, **Failover.**
+4.  Notice that the VMs are still at the Target, since they are Failed over to the Secondary Site. Select **More**, and then **Failover**.
 
     ![In the BCDRSRV blade, the right-click ellipses menu has Failover selected. Under Items in recovery plan, a callout points to the Target tile, with 2.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image385.png "BCDRSRV blade")
 
-5.  On the warning about No Test Failover, select **I understand the risk, Skip test failover.**
+5.  On the warning about No Test Failover, select **I understand the risk, Skip test failover**
 
     ![A warning displays that no test failover has been done in the past 180 days, and recommends that you do one before a failover. At the bottom, the I understand and skip test failover checkbox is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image322.png "Failover warning")
 
@@ -2029,11 +2029,11 @@ snip![Diagram of the Azure IaaS region to region failback solution. At this time
 
     ![A Recovery Plans tile with the number 1 displays.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image339.png "Recovery Plans tile")
 
-21. The BCDRIaaSPlan will show as **Failover completed.** Select the Plan.
+21. The BCDRIaaSPlan will show as **Failover completed**. Select the Plan.
 
     ![In the BCDRSRV blade a callout points to the failover completed message.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image340.png "BCDRSRV blade")
 
-22. Notice that now 2 VMs are show in the **Source**
+22. Notice that now 2 VMs are shown in the **Source**
 
 23. Select **More**, then select **Re-protect**
 
@@ -2071,7 +2071,7 @@ snip![Diagram of the Azure IaaS region to region failback solution. At this time
 
     ![The Availability group dashboard displays, with SQLVM3 and its properties called out.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image403.png "Availability group dashboard")
 
-**Note:** This task could have been done using the Azure Automation script during Failback, but more DBAs would prefer a good clean failback and then do this manually once they are comfortable with the failback.
+**Note:** This task could have been done using the Azure Automation script during Failback, but more DBAs would prefer a good, clean failback and then do this manually once they are comfortable with the failback.
 
 ## After the hands-on lab 
 
@@ -2085,7 +2085,7 @@ There are many items that were created as a part of this lab, and they should be
 
     ![Under Protected items, Replicated items is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image404.png "Protected items section")
 
-2.  Select the **Ellipse** next to each replicated item and then select **Disable Replication**. On the following screen select **OK**
+2.  Select the **Ellipse** next to each replicated item and then select **Disable Replication**. On the following screen select **OK**.
 
     ![From the ellipses menu, Disable Replication is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image405.png "Disable Replication option")
 
@@ -2108,7 +2108,6 @@ There are many items that were created as a part of this lab, and they should be
 | **BCDROnPremPrimarySite-asr-1** | Primary |
 | **BCDRPaaSPrimarySite** | Primary |
 | **BCDRPaaSSecondarySite** | Secondary |
-|
 
 You should follow all steps provided *after* attending the Hands-on lab.
 
