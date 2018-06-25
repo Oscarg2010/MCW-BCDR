@@ -72,7 +72,7 @@ Learning Objectives:
 
 ## Overview
 
-In this hands-on lab (HOL), attendees will implement three different environments and use Azure BCDR technologies to achieve three distinct goals for each environment type. These will include a migration to Azure, Azure region to region failover using Azure Site Recovery (ASR) and a PaaS implementation using BCDR technologies to ensure high availably of an application.
+In this hands-on lab (HOL), attendees will implement three different environments and use Azure BCDR technologies to achieve three distinct goals for each environment type. These will include a migration to Azure, Azure region to region failover using Azure Site Recovery (ASR), and a PaaS implementation using BCDR technologies to ensure high availably of an application.
 
 ## Solution architecture
 
