@@ -98,7 +98,7 @@ Outcome: Analyze your customer's needs
 
 **Step 2: Design a proof of concept solution (60 minutes)**
 
-Outcome: Prepare to present a solution for your target customer audience.
+Outcome: Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
 -   Determine your target customer audience
 
@@ -323,7 +323,7 @@ Directions: With all participants at your table, respond to the following questi
 
 **Customer Objections**
 
-1.  Provide details on how you will address each of the objections that were put forward by the client
+Provide details on how you will address each of the objections that were put forward by the client.
 
 **Prepare**
 
