@@ -569,7 +569,7 @@ http://aka.ms/downloaddra_cus
 
     ![On the Proxy Settings screen, the radio button is selected for Connect directly to Azure Site Recovery without a proxy server.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image101.png "Proxy Settings screen")
 
-31. The provider will then connect and configure the Azure Site Recovery registration for the Hyper-V Server.
+31. The provider will then connect and configure the Azure Site Recovery registration for the Hyper-V Server
 
     ![On the Registration screen, a message indicates that azure site recovery is being configured for registration.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image102.png "Registration screen")
 
