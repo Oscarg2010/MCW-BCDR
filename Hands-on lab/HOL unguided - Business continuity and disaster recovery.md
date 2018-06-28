@@ -26,8 +26,7 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 <!-- TOC -->
 
 - [1. Business continuity and disaster recovery hands-on lab unguided](#1-business-continuity-and-disaster-recovery-hands-on-lab-unguided)
-    - [1.1. Abstract and learning objectives](#11-abstract-and-learning-objectives)
-    - [1.2. Abstract and learning objectives](#12-abstract-and-learning-objectives)
+    - [1.1. Abstract](#11-abstract)
     - [1.3. Overview](#13-overview)
     - [1.4. Solution architecture](#14-solution-architecture)
         - [1.4.1. Environment: On-premises (migrate to Azure)](#141-environment-on-premises-migrate-to-azure)
@@ -85,9 +84,7 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 # 1. Business continuity and disaster recovery hands-on lab unguided 
 
-## 1.1. Abstract and learning objectives 
-
-## 1.2. Abstract and learning objectives 
+## 1.1. Abstract
 
 In this hands-on lab, you will implement three different environments and use Azure BCDR technologies to achieve three distinct goals for each environment type. These will include a migration to Azure, Azure region to region failover, and a PaaS implementation using BCDR technologies to ensure high availability of an application.
 
