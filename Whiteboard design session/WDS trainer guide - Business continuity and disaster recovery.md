@@ -25,13 +25,13 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 <!-- TOC -->
 
-- [Trainer information](#trainer-information)    
+- [Trainer information](#trainer-information)
     - [Role of the trainer](#role-of-the-trainer)
     - [Whiteboard design session flow](#whiteboard-design-session-flow)
     - [Before the whiteboard design session: How to prepare](#before-the-whiteboard-design-session-how-to-prepare)
     - [During the whiteboard design session: Tips for an effective whiteboard design session](#during-the-whiteboard-design-session-tips-for-an-effective-whiteboard-design-session)
 - [Business continuity and disaster recovery whiteboard design session student guide](#business-continuity-and-disaster-recovery-whiteboard-design-session-student-guide)
-    - [Abstract and learning objectives](#abstract-and-learning-objectives)
+    - [Abstract](#abstract)
     - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
         - [Customer situation](#customer-situation)
         - [Customer needs](#customer-needs)
@@ -162,17 +162,11 @@ When participants are doing activities, you can **look ahead to refresh your mem
 
 #  Business continuity and disaster recovery whiteboard design session student guide
 
-## Abstract and learning objectives 
+## Abstract
 
-In this workshop, the student will gain experience designing solutions using Azure business continuity and disaster recovery (BCDR) technologies. Three different types of environments will be examined. The first will consist of on-premises VMs running applications that will be migrated to Azure IaaS. Next, Azure IaaS applications that need to be failed over from either on-premises to Azure or between two Azure Regions. Finally, the use of automated failover technologies built into Azure PaaS services App Service and SQL Database will be used for PaaS applications.
+In this whiteboard design session, you will you will work in a group to design a solution using Azure business continuity and disaster recovery (BCDR) technologies. Your solution  will consider three different types of environments. The first will consist of on-premises VMs running applications that will be migrated to Azure IaaS. Next, Azure IaaS applications that need to be failed over from either on-premises to Azure or between two Azure Regions. Finally, the use of automated failover technologies built into Azure PaaS services App Service and SQL Database will be used for PaaS applications.
 
-Learning Objectives:
-
--   Understanding the different use cases for implementing Azure Site Recovery (ASR), for on-premises VM migration to Azure IaaS
-
--   Determine how to leverage various Azure technologies together to build a complex and robust IaaS BCDR plan this consists of using Azure Site Recovery, Azure Automation, Traffic Manager and SQL Server Always On Availability Groups (VMs), to failover and failback an Azure IaaS IIS application and database from one Azure Region to another
-
--   Design for high-availability and using BCDR techniques with Azure PaaS including Traffic Manager, SQL Database Failover Groups with Azure App Services
+At the end of this whiteboard design session, you will be better able to design a solution that leverages various Azure technologies together to build a complex and robust IaaS BCDR plan. 
 
 ## Step 1: Review the customer case study 
 

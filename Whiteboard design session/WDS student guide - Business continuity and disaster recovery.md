@@ -26,7 +26,7 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 <!-- TOC -->
 
 - [Business continuity and disaster recovery whiteboard design session student guide](#business-continuity-and-disaster-recovery-whiteboard-design-session-student-guide)
-    - [Abstract and learning objectives](#abstract-and-learning-objectives)
+    - [Abstract](#abstract)
     - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
         - [Customer situation](#customer-situation)
         - [Customer needs](#customer-needs)
@@ -41,17 +41,11 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 #  Business continuity and disaster recovery whiteboard design session student guide
 
-## Abstract and learning objectives 
+## Abstract
 
-In this workshop, the student will gain experience designing solutions using Azure business continuity and disaster recovery (BCDR) technologies. Three different types of environments will be examined. The first will consist of on-premises VMs running applications that will be migrated to Azure IaaS. Next, Azure IaaS applications that need to be failed over from either on-premises to Azure or between two Azure Regions. Finally, the use of automated failover technologies built into Azure PaaS services App Service and SQL Database will be used for PaaS applications.
+In this whiteboard design session, you will you will work in a group to design a solution using Azure business continuity and disaster recovery (BCDR) technologies. Your solution  will consider three different types of environments. The first will consist of on-premises VMs running applications that will be migrated to Azure IaaS. Next, Azure IaaS applications that need to be failed over from either on-premises to Azure or between two Azure Regions. Finally, the use of automated failover technologies built into Azure PaaS services App Service and SQL Database will be used for PaaS applications.
 
-Learning Objectives:
-
--   Understanding the different use cases for implementing Azure Site Recovery (ASR), for on-premises VM migration to Azure IaaS
-
--   Determine how to leverage various Azure technologies together to build a complex and robust IaaS BCDR plan this consists of using Azure Site Recovery, Azure Automation, Traffic Manager and SQL Server Always On Availability Groups (VMs), to failover and failback an Azure IaaS IIS application and database from one Azure Region to another
-
--   Design for high-availability and using BCDR techniques with Azure PaaS including Traffic Manager, SQL Database Failover Groups with Azure App Services
+At the end of this whiteboard design session, you will be better able to design a solution that leverages various Azure technologies together to build a complex and robust IaaS BCDR plan. 
 
 ## Step 1: Review the customer case study 
 
@@ -69,7 +63,7 @@ Directions: With all participants in the session, the facilitator/SME presents a
 
 ### Customer situation
 
-Contoso Insurance (CI), is a multinational corporation, headquartered in Miami providing insurance solutions in North America, Europe, and Australia. Its products include accident and health insurance, life insurance, travel, home, and auto coverage. CI manages data collection services by sending mobile agents directly to the insured to gather information as part of the data collection process for claims from an insured individual. These mobile agents are based all over the world and are residents of the region in which they work. Mobile agents are managed remotely, and each regional corporate office has a support staff responsible for scheduling their time based on requests that arrive to the system.??
+Contoso Insurance (CI), is a multinational corporation, headquartered in Miami providing insurance solutions in North America, Europe, and Australia. Its products include accident and health insurance, life insurance, travel, home, and auto coverage. CI manages data collection services by sending mobile agents directly to the insured to gather information as part of the data collection process for claims from an insured individual. These mobile agents are based all over the world and are residents of the region in which they work. Mobile agents are managed remotely, and each regional corporate office has a support staff responsible for scheduling their time based on requests that arrive to the system.
 
 CI currently hosts their primary corporate systems at co-locations facilities within each geo-political region and manage all IT operations for the system. These sites include Miami, London, and Sydney all of which are connected to the Internet and each other via a combination of VPNs and private WANs.
 
