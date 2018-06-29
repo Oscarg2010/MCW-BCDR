@@ -1,4 +1,4 @@
-![](images/HeaderPic.png "Microsoft Cloud Workshops")
+![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
 Business continuity and disaster recovery
@@ -562,27 +562,27 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 1.  With the move to the cloud, they are uncomfortable with any situation that assumes the cloud provider will handle their fail-over
 
-*Potential Answer:*
+    *Potential Answer:*
 
-Using ASR CI will be able to handle all of their own DR. They will be using familiar tools with the Azure Portal and Hyper-V.
+    Using ASR CI will be able to handle all of their own DR. They will be using familiar tools with the Azure Portal and Hyper-V.
 
 2.  They have many systems that need to be accounted for, and they aren't sure if the tools really exist to give them the business continuity they desire
 
-*Potential Answer:*
+    *Potential Answer:*
 
-There are BCDR tools built into the all of the different application classification they have at CI, including Linux.
+    There are BCDR tools built into the all of the different application classification they have at CI, including Linux.
 
 3.  They want to know their BCDR solution is secure.
 
-*Potential Answer:*
+    *Potential Answer:*
 
-All of the traffic and data used for all Azure BCDR features is secured both at rest and in-transit. As a result, there is no difference in this data and any other data that is running or stored in Azure.
+    All of the traffic and data used for all Azure BCDR features is secured both at rest and in-transit. As a result, there is no difference in this data and any other data that is running or stored in Azure.
 
 4.  They have heavily invested in a third-party backup solution but want to use Azure as their archive. Does Azure support this?
 
-*Potential Answer:*
+    *Potential Answer:*
 
-Azure has support for third-party backup providers through the Azure Marketplace. It's possible to both backup VMs using these tools by deploying them to Azure IaaS or by extending the backup infrastructure to use the Azure cloud as an archive target.
+    Azure has support for third-party backup providers through the Azure Marketplace. It's possible to both backup VMs using these tools by deploying them to Azure IaaS or by extending the backup infrastructure to use the Azure cloud as an archive target.
 
 ## Customer quote (to be read back to the attendees at the end)
 
