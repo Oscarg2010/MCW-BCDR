@@ -1,4 +1,4 @@
-# App Business continuity and disaster recovery
+# Business continuity and disaster recovery
 
 [Download Cloud Workshop](https://github.com/Microsoft/MCW-Business-continuity-and-disaster-recovery/archive/master.zip)
 
