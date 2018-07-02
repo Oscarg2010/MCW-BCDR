@@ -1,16 +1,8 @@
 ![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
-<div class="MCWHeader1">
-Business continuity and disaster recovery
-</div>
-
-<div class="MCWHeader2">
-Hands-on lab step-by-step
-</div>
-
-<div class="MCWHeader3">
-March 2018
-</div>
+# Business continuity and disaster recovery    
+## Hands-on lab step-by step    
+May 2018
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
 
@@ -25,56 +17,56 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 <!-- TOC -->
 
-- [1. Business continuity and disaster recovery hands-on lab step-by-step](#1-business-continuity-and-disaster-recovery-hands-on-lab-step-by-step)
-    - [1.1. Abstract](#11-abstract)
-    - [1.2. Overview](#12-overview)
-    - [1.3. Solution architecture](#13-solution-architecture)
-        - [1.3.1. Environment: On-premises (migrate to Azure)](#131-environment-on-premises-migrate-to-azure)
-        - [1.3.2. Environment: Azure IaaS (failover region to region)](#132-environment-azure-iaas-failover-region-to-region)
-        - [1.3.3. Environment: Azure PaaS (high-availably with seamless failover)](#133-environment-azure-paas-high-availably-with-seamless-failover)
-    - [1.4. Requirements](#14-requirements)
-    - [1.5. Exercise 1: Deploy Azure environments](#15-exercise-1-deploy-azure-environments)
-        - [1.5.1. Task 1: Deploy Azure IaaS](#151-task-1-deploy-azure-iaas)
-        - [1.5.2. Task 2: Deploy on-premises environment](#152-task-2-deploy-on-premises-environment)
-        - [1.5.3. Task 3: Deploy Azure PaaS environment](#153-task-3-deploy-azure-paas-environment)
-    - [1.6. Exercise 2: Configure BCDR services](#16-exercise-2-configure-bcdr-services)
-        - [1.6.1. Task 1: Create Azure recovery services vault](#161-task-1-create-azure-recovery-services-vault)
-        - [1.6.2. Task 2: Deploy Azure automation](#162-task-2-deploy-azure-automation)
-    - [1.7. Exercise 3: Configure environments for failover](#17-exercise-3-configure-environments-for-failover)
+- [Business continuity and disaster recovery hands-on lab step-by-step](#1-business-continuity-and-disaster-recovery-hands-on-lab-step-by-step)
+    - [Abstract](#11-abstract)
+    - [Overview](#12-overview)
+    - [Solution architecture](#13-solution-architecture)
+        - [Environment: On-premises (migrate to Azure)](#131-environment-on-premises-migrate-to-azure)
+        - [Environment: Azure IaaS (failover region to region)](#132-environment-azure-iaas-failover-region-to-region)
+        - [Environment: Azure PaaS (high-availably with seamless failover)](#133-environment-azure-paas-high-availably-with-seamless-failover)
+    - [Requirements](#14-requirements)
+    - [Exercise 1: Deploy Azure environments](#15-exercise-1-deploy-azure-environments)
+        - [Task 1: Deploy Azure IaaS](#151-task-1-deploy-azure-iaas)
+        - [Task 2: Deploy on-premises environment](#152-task-2-deploy-on-premises-environment)
+        - [Task 3: Deploy Azure PaaS environment](#153-task-3-deploy-azure-paas-environment)
+    - [Exercise 2: Configure BCDR services](#16-exercise-2-configure-bcdr-services)
+        - [Task 1: Create Azure recovery services vault](#161-task-1-create-azure-recovery-services-vault)
+        - [Task 2: Deploy Azure automation](#162-task-2-deploy-azure-automation)
+    - [Exercise 3: Configure environments for failover](#17-exercise-3-configure-environments-for-failover)
         - [1.7.1. Task 1: Configure on-premises to Azure IaaS failover for migration](#171-task-1-configure-on-premises-to-azure-iaas-failover-for-migration)
-        - [1.7.2. Task 2: Configure IaaS SQL Always On availability groups for region to region failover](#172-task-2-configure-iaas-sql-always-on-availability-groups-for-region-to-region-failover)
-        - [1.7.3. Task 3: Configure IaaS for region to region failover](#173-task-3-configure-iaas-for-region-to-region-failover)
-        - [1.7.4. Task 4: Configure PaaS for region to region failover](#174-task-4-configure-paas-for-region-to-region-failover)
-    - [1.8. Exercise 4: Simulate failovers](#18-exercise-4-simulate-failovers)
-        - [1.8.1. Task 1: Failover Azure IaaS region to region](#181-task-1-failover-azure-iaas-region-to-region)
-        - [1.8.2. Task 2: Migrate the on-premises VM to Azure IaaS](#182-task-2-migrate-the-on-premises-vm-to-azure-iaas)
-        - [1.8.3. Task 3: Failover and failback Azure PaaS](#183-task-3-failover-and-failback-azure-paas)
-        - [1.8.4. Task 4: Failback Azure IaaS region to region](#184-task-4-failback-azure-iaas-region-to-region)
-    - [1.9. After the hands-on lab](#19-after-the-hands-on-lab)
-        - [1.9.1. Task 1: Disable replication in the recovery services vault](#191-task-1-disable-replication-in-the-recovery-services-vault)
-        - [1.9.2. Task 2: Delete all BCDR resource groups](#192-task-2-delete-all-bcdr-resource-groups)
+        - [Task 2: Configure IaaS SQL Always On availability groups for region to region failover](#172-task-2-configure-iaas-sql-always-on-availability-groups-for-region-to-region-failover)
+        - [Task 3: Configure IaaS for region to region failover](#173-task-3-configure-iaas-for-region-to-region-failover)
+        - [Task 4: Configure PaaS for region to region failover](#174-task-4-configure-paas-for-region-to-region-failover)
+    - [Exercise 4: Simulate failovers](#18-exercise-4-simulate-failovers)
+        - [Task 1: Failover Azure IaaS region to region](#181-task-1-failover-azure-iaas-region-to-region)
+        - [Task 2: Migrate the on-premises VM to Azure IaaS](#182-task-2-migrate-the-on-premises-vm-to-azure-iaas)
+        - [Task 3: Failover and failback Azure PaaS](#183-task-3-failover-and-failback-azure-paas)
+        - [Task 4: Failback Azure IaaS region to region](#184-task-4-failback-azure-iaas-region-to-region)
+    - [After the hands-on lab](#19-after-the-hands-on-lab)
+        - [Task 1: Disable replication in the recovery services vault](#191-task-1-disable-replication-in-the-recovery-services-vault)
+        - [Task 2: Delete all BCDR resource groups](#192-task-2-delete-all-bcdr-resource-groups)
 
 <!-- /TOC -->
 
-# 1. Business continuity and disaster recovery hands-on lab step-by-step 
+# Business continuity and disaster recovery hands-on lab step-by-step 
 
-## 1.1. Abstract 
+## Abstract 
 
 In this hands-on lab, you will implement three different environments and use Azure BCDR technologies to achieve three distinct goals for each environment type. These will include a migration to Azure, Azure region to region failover, and a PaaS implementation using BCDR technologies to ensure high availability of an application.
 
 At the end of this hands-on lab, you will be better able to build a complex and robust IaaS BCDR solution.
 
-## 1.2. Overview
+## Overview
 
 The Business continuity and disaster recovery hands-on lab is an exercise that will challenge you to implement a BCDR solution that includes three different environments and uses Azure BCDR technologies to achieve three distinct goals for each environment type. These will include a migration to Azure, Azure region to region failover using Azure Site Recovery (ASR), and a PaaS implementation using BCDR technologies to ensure high availability of an application.
 
 The hands-on lab can be implemented on your own, but it is highly recommended to pair up with other members at the lab to model a real-world experience and to allow each member to share their expertise for the overall solution.
 
-## 1.3. Solution architecture
+## Solution architecture
 
 Below are diagrams of the solution architecture you will build in this lab. Please study this carefully, so you understand the whole of the solution as you are working on the various components.
 
-### 1.3.1. Environment: On-premises (migrate to Azure)
+### Environment: On-premises (migrate to Azure)
 
 -   **Background:** This environment will deploy a Hyper-V Host that will host a Linux VM to simulate a Linux, Apache, PHP, and MySQL (LAMP) based web application deployed into an on-premises datacenter on a single VM
 
@@ -82,7 +74,7 @@ Below are diagrams of the solution architecture you will build in this lab. Plea
 
     ![The On-premises migration diagram has on-premises, azure platform, and secondary region sections. On-premises has a hyper-v host and a linux on-premises virtual machine. Azure Platform uses Azure Site Recovery. The secondary region has an on-premises Linux VM as well.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image2.png "On-premises migration diagram")
 
-### 1.3.2. Environment: Azure IaaS (failover region to region)
+### Environment: Azure IaaS (failover region to region)
 
 -   **Background:** This environment will consist of two Virtual Networks deployed to your Primary and Secondary site with an AD Domain, IIS Web Servers and Microsoft SQL Servers that you will configure into a SQL Always On Availability Group
 
@@ -90,7 +82,7 @@ Below are diagrams of the solution architecture you will build in this lab. Plea
 
     ![Diagram of the Azure IaaS failover region to region solution. At this time, we are unable to capture all of the information in the diagram. Future versions of this course should address this.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image3.png "Azure IaaS failover region to region solution")
 
-### 1.3.3. Environment: Azure PaaS (high-availably with seamless failover)
+### Environment: Azure PaaS (high-availably with seamless failover)
 
 -   **Background:** This environment will deploy an Azure Web App and Azure SQL Server in both the Primary and Secondary locations. You will configure SQL Database Failover groups to allow for seamless failover of the database.
 
@@ -98,12 +90,12 @@ Below are diagrams of the solution architecture you will build in this lab. Plea
 
 ![Diagram of the Azure PaaS high availability with seamless failover solution. At this time, we are unable to capture all of the information in the diagram. Future versions of this course should address this.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image4.png "Azure PaaS high availability with seamless failover diagram")
 
-## 1.4. Requirements
+## Requirements
 
 1.  Azure Subscription with full access to the environment
 
 
-## 1.5. Exercise 1: Deploy Azure environments
+## Exercise 1: Deploy Azure environments
 
 Duration: 15 minutes (Deployments can take as long as 75 minutes)
 
@@ -115,7 +107,7 @@ In this exercise, you will use Azure ARM Templates to deploy the following envir
 
 -   **Azure PaaS:** This environment will deploy an Azure Web App and Azure SQL Server in both the Primary and Secondary locations
 
-### 1.5.1. Task 1: Deploy Azure IaaS
+### Task 1: Deploy Azure IaaS
 
 1.  From the **LABVM**, open Internet Explorer and connect to the Azure portal at: <https://portal.azure.com>
 
@@ -155,7 +147,7 @@ In this exercise, you will use Azure ARM Templates to deploy the following envir
 
 **Note:** This deployment will take at least 60 minutes, but you can continue to the next task.
 
-### 1.5.2. Task 2: Deploy on-premises environment
+### Task 2: Deploy on-premises environment
 
 1.  From the **LABVM**, open Internet Explorer and connect to the Azure portal at: <https://portal.azure.com>
 
@@ -193,7 +185,7 @@ In this exercise, you will use Azure ARM Templates to deploy the following envir
 
 **Note:** This deployment will take at least 20 minutes, but you can continue to the next task.
 
-### 1.5.3. Task 3: Deploy Azure PaaS environment
+### Task 3: Deploy Azure PaaS environment
 
 1.  From the **LABVM**, open Internet Explorer and connect to the Azure portal at <https://portal.azure.com>
 
@@ -227,7 +219,7 @@ In this exercise, you will use Azure ARM Templates to deploy the following envir
 
 **Note:** This deployment will take at least 10 minutes, but you can continue to the next task.
 
-## 1.6. Exercise 2: Configure BCDR services
+## Exercise 2: Configure BCDR services
 
 Duration: 30 minutes
 
@@ -235,7 +227,7 @@ In this exercise, you will create and configure the services that will make it p
 
 ![The Automation region contains an Azure automation account, and two PowerShell scripts: ASRRunBookSQL, and ASRRunBookWEB. The Secondary region has an Azure Site Recovery, and a recovery services vault.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image38.png "Automation and Secondary Regions")
 
-### 1.6.1. Task 1: Create Azure recovery services vault
+### Task 1: Create Azure recovery services vault
 
 1.  Using the **LABVM** connect to the Azure portal using your web browser at <https://portal.azure.com>
 
@@ -259,7 +251,7 @@ In this exercise, you will create and configure the services that will make it p
 
     ![The Azure Site Recovery dashboard displays.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image41.png "Azure Site Recovery dashboard")
 
-### 1.6.2. Task 2: Deploy Azure automation
+### Task 2: Deploy Azure automation
 
 1.  Open the Azure portal at: <https://portal.azure.com>
 
@@ -421,7 +413,7 @@ In this exercise, you will create and configure the services that will make it p
 
 **Note:** When you configure the ASR Recovery Plan for the IaaS deployment you will use the SQL Runbook as a Pre-Failover Action and the Web Runbook as a Post-Failover action. They will run both ways and have been written to take the "Direction," of the failover into account when running.
 
-## 1.7. Exercise 3: Configure environments for failover
+## Exercise 3: Configure environments for failover
 
 Duration: 90 minutes
 
@@ -429,7 +421,7 @@ In this exercise, you will configure the three environments to use BCDR technolo
 
 **Note**: Make sure prior to starting each task that the deployment that you started in Exercise 1 has completed for each as you come to that task. This can be determined, but reviewing the deployments for each Resource group in the Azure portal. If it says Succeeded, then you can begin the task.
 
-### 1.7.1. Task 1: Configure on-premises to Azure IaaS failover for migration
+### Task 1: Configure on-premises to Azure IaaS failover for migration
 
 In this task, the **OnPremVM** will be configured to replicate to Azure and be ready to failover to the **BCDRIaaSSecondarySite**. This will consist of configuring your Hyper-V host with the ASR provider and then enabling replication of the VM to the Recovery Service Vault.
 
@@ -759,7 +751,7 @@ Once complete select **OK**
 
 **Note**: It could take a few minutes for these screens to populate, so be patient. You can come back to this step later to adjust the size if you wish.
 
-### 1.7.2. Task 2: Configure IaaS SQL Always On availability groups for region to region failover
+### Task 2: Configure IaaS SQL Always On availability groups for region to region failover
 
 In this task, you will build a Windows Failover Cluster and configure SQL Always On Availability Groups. This will be in place to ensure that if there is an issue in the **Primary** site in Azure you can failover to the **Secondary** site and have access to the data for the application. You will also configure the Traffic Manager to ensure that the Web Application will always answer to the same DNS name even when it is failed over to the **Secondary** site.
 
@@ -1169,7 +1161,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     ![The Contoso Insurance PolicyConnect webpage displays with a callout pointing to the DNS name trafficmanager.net.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image224.png "Contoso Insurance PolicyConnect webpage ")
 
-### 1.7.3. Task 3: Configure IaaS for region to region failover
+### Task 3: Configure IaaS for region to region failover
 
 In this task the WEBVM1 and WEBVM2 will be configured to replicate from the Primary Site to the Secondary site to support an Azure region to region failover. This will consist of configuring the VMs to replicate and integrating with the Azure Automation to failover the SQL Always On group from the Primary Site to the Secondary. Once the failover is complete the website will again answer to the Traffic Manager DNS name.
 
@@ -1319,7 +1311,7 @@ In this task the WEBVM1 and WEBVM2 will be configured to replicate from the Prim
 
     ![The Updating recovery plan message shows that the update was successfully completed.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image253.png "Updating recovery plan message")
 
-### 1.7.4. Task 4: Configure PaaS for region to region failover
+### Task 4: Configure PaaS for region to region failover
 
 In this task you will deploy the website to App Services using Visual Studio, migrate a database to Azure SQL Database and configure it for high-availability using an Azure SQL Database Failover Group. The Traffic Manager will be used to direct traffic to the closest front end to the user. If there is a failover of the database it will happen transparently, and the users will never know there was an outage. There is no reconfiguration required for this to function properly.
 
@@ -1645,13 +1637,13 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![The Contoso Insurance PolicyConnect webpage displays with a callout pointing to the URL in the address bar.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image316.png "Contoso Insurance PolicyConnect webpage")
 
-## 1.8. Exercise 4: Simulate failovers 
+## Exercise 4: Simulate failovers 
 
 Duration: 75 minutes
 
 Now, that your applications have been made ready for high-availability and BCDR you will now simulate their capabilities. First, you will Failover the **Azure IaaS environment** from your **Primary** to **Secondary** Region. Next, you will migrate the **On-Premises** environment to Azure. The **PaaS** environment will be tested to ensure that failing over the database doesn't cause an outage to the application. Finally, you will failback the Azure IaaS environment from the **Secondary** site to the **Primary** site.
 
-### 1.8.1. Task 1: Failover Azure IaaS region to region
+### Task 1: Failover Azure IaaS region to region
 
 ![The Azure IaaS region to region failover diagram displays. At this time, we are unable to capture all of the information in the diagram. Future versions of this course should address this.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image317.png "Azure IaaS region to region failover diagram")
 
@@ -1775,7 +1767,7 @@ Now, that your applications have been made ready for high-availability and BCDR 
 
 ![In the Recovery blade, Reprotect has a status of In progress.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image345.png "Recovery blade")
 
-### 1.8.2. Task 2: Migrate the on-premises VM to Azure IaaS
+### Task 2: Migrate the on-premises VM to Azure IaaS
 
 ![The On-premises VM to Azure IaaS migration solution has on-premises, azure platform, and secondary region sections. On-premises has a hyper-v host and a linux on-premises virtual machine. Azure Platform uses Azure Site Recovery. The secondary region has an on-premises Linux VM as well.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image346.png "On-premises VM to Azure IaaS migration solution")
 
@@ -1845,7 +1837,7 @@ http://172.16.1.?/bcdr.php
 
 **Option Task**: If you wish you can Remote Desktop back to the HYPERVHOST, and you will see that the migrated VM has shutdown.
 
-### 1.8.3. Task 3: Failover and failback Azure PaaS
+### Task 3: Failover and failback Azure PaaS
 
 ![Diagram of the Azure PaaS failover and failback solution. At this time, we are unable to capture all of the information in the diagram. Future versions of this course should address this.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image361.png "Azure PaaS failover and failback solution")
 
@@ -1935,7 +1927,7 @@ http://172.16.1.?/bcdr.php
 
     ![A list of servers display, with the primary server name called out.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image381.png "Servers")
 
-### 1.8.4. Task 4: Failback Azure IaaS region to region
+### Task 4: Failback Azure IaaS region to region
 
 snip![Diagram of the Azure IaaS region to region failback solution. At this time, we are unable to capture all of the information in the diagram. Future versions of this course should address this.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image3.png "Azure IaaS region to region failback solution")
 
@@ -2069,13 +2061,13 @@ snip![Diagram of the Azure IaaS region to region failback solution. At this time
 
 **Note:** This task could have been done using the Azure Automation script during Failback, but more DBAs would prefer a good, clean failback and then do this manually once they are comfortable with the failback.
 
-## 1.9. After the hands-on lab 
+## After the hands-on lab 
 
 Duration: 15 minutes
 
 There are many items that were created as a part of this lab, and they should be deleted once you no longer desire to retain the environments.
 
-### 1.9.1. Task 1: Disable replication in the recovery services vault
+### Task 1: Disable replication in the recovery services vault
 
 1.  To clean up the environment, you must first disable the replication of the **WEBVM1, WEBVM2** and **OnPremVM** in the **BCDRSRV** Recovery Service Vault. Open **BCDRSRV** in the Azure portal and select **Replicated Items** in the **Protected Items** area.
 
@@ -2087,7 +2079,7 @@ There are many items that were created as a part of this lab, and they should be
 
 3.  After this process is completed you can move on to the next task
 
-### 1.9.2. Task 2: Delete all BCDR resource groups
+### Task 2: Delete all BCDR resource groups
 
 1.  Using the Azure Portal delete each of the BCDR Resource Groups that you created
 
