@@ -18,8 +18,8 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 <!-- TOC -->
 
 - [Business continuity and disaster recovery hands-on lab step-by-step](#1-business-continuity-and-disaster-recovery-hands-on-lab-step-by-step)
-    - [Abstract](#11-abstract)
-    - [Overview](#12-overview)
+    - [Abstract](#abstract)
+    - [Overview](#overview)
     - [Solution architecture](#13-solution-architecture)
         - [Environment: On-premises (migrate to Azure)](#131-environment-on-premises-migrate-to-azure)
         - [Environment: Azure IaaS (failover region to region)](#132-environment-azure-iaas-failover-region-to-region)
