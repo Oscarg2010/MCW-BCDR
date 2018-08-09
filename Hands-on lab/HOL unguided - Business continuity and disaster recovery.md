@@ -88,7 +88,7 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 In this hands-on lab, you will implement three different environments and use Azure BCDR technologies to achieve three distinct goals for each environment type. These will include a migration to Azure, Azure region to region failover, and a PaaS implementation using BCDR technologies to ensure high availability of an application.
 
-At the end of this hands-on lab, you will be better able to build a complex and robust IaaS BCDR solution.
+At the end of this hands-on lab, you will be better able to build a complex and robust IaaS BCDR solution.  
 
 ## Overview
 
