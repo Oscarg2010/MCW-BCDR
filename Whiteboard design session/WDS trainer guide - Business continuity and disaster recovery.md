@@ -164,9 +164,9 @@ When participants are doing activities, you can **look ahead to refresh your mem
 
 ## Abstract
 
-In this whiteboard design session, you will you will work in a group to design a solution using Azure business continuity and disaster recovery (BCDR) technologies. Your solution  will consider three different types of environments. The first will consist of on-premises VMs running applications that will be migrated to Azure IaaS. Next, Azure IaaS applications that need to be failed over from either on-premises to Azure or between two Azure Regions. Finally, the use of automated failover technologies built into Azure PaaS services App Service and SQL Database will be used for PaaS applications.
+In this whiteboard design session, you will work in a group to design a solution using Azure business continuity and disaster recovery (BCDR) technologies. Your solution will consider three different types of environments. The first will consist of on-premises VMs running applications that will be migrated to Azure IaaS. Next, Azure IaaS applications that need to be failed over from either on-premises to Azure, or between two Azure Regions. Finally, the use of automated failover technologies built into Azure PaaS services, App Service, and SQL Database will be used for PaaS applications.
 
-At the end of this whiteboard design session, you will be better able to design a solution that leverages various Azure technologies together to build a complex and robust IaaS BCDR plan. 
+At the end of this whiteboard design session, you will be better able to design a solution that leverages various Azure technologies together to build a complex and robust IaaS BCDR plan.
 
 ## Step 1: Review the customer case study 
 
