@@ -1,7 +1,5 @@
 # Business continuity and disaster recovery
 
-[Download Cloud Workshop](https://github.com/Microsoft/MCW-Business-continuity-and-disaster-recovery/archive/master.zip)
-
 Contoso Insurance, is a multi-national corporation, headquartered in Miami providing insurance solutions in North America, Europe, and Australia. Its products include accident and health insurance, life insurance, travel, home, and auto coverage. Contoso needs to automate their backup and recovery of their solutions, not just individual components.
 
 Contoso also wants to insure they have the right breadth and depth of continuity protection. In the case of a lights-out event, they want to be able to control how the systems failover.
