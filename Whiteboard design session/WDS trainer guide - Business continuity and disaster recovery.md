@@ -126,15 +126,15 @@ Outcome: Present solution to your customer.
 
 Before conducting your first whiteboard design session:
 
--   Read the Student guide (including the case study) and Trainer guide
+-   Read the Student guide (including the case study) and Trainer guide.
 
--   Become familiar with all key points and activities
+-   Become familiar with all key points and activities.
 
--   Plan the point you want to stress, which questions you want to drive, transitions, and be ready to answer questions
+-   Plan the point you want to stress, which questions you want to drive, transitions, and be ready to answer questions.
 
--   Prior to the whiteboard design session, discuss the case study to pick up more ideas
+-   Prior to the whiteboard design session, discuss the case study to pick up more ideas.
 
--   Make notes for later
+-   Make notes for later.
 
 ## During the whiteboard design session: Tips for an effective whiteboard design session
 
@@ -178,9 +178,9 @@ Timeframe: 15 minutes
 
 Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
 
-1.  Meet your table participants and trainer 
-2.  Read all of the directions for steps 1–3 in the student guide 
-3.  As a table team, review the following customer case study
+1.  Meet your table participants and trainer.
+2.  Read all of the directions for steps 1–3 in the student guide.
+3.  As a table team, review the following customer case study.
 
 ### Customer situation
 
@@ -196,7 +196,7 @@ CI has completed a cloud assessment of their applications and have classified th
 
 **Enterprise Applications:** The applications in this classification are mission critical to the business and have been developed using ASP.NET and SQL Server Enterprise over many years. They are deployed using Windows Clustering and SQL Always On Availability Groups (AOG), to ensure failover of databases during an outage. These applications are running in the various datacenters around the world but currently, have no DR capabilities. They are backed up using a third-party software with a mix of online disk backup and ultimately then archived to tape and sent offsite for storage. Given their status as core to the business, they require complex DR failover and failback capabilities whether they are running in an Azure region or one of the colocation facilities. "There is critical concern about the Miami datacenter given how hurricane-prone the area is and the intensity of the storms which could cause outages lasting weeks," says Clifton Quinlan Director of Continuity of Business (COB). "With only a few months until the next hurricane season, we need to get these applications protected in Azure. Some will be migrated immediately, and others will need to be extended to failover to the cloud but will need to allow for failback to the on-premises."
 
-**Global, Mobile, and API Web Applications:** CI has leveraged their experience with ASP.NET and SQL Server to build applications that are Azure PaaS ready. These applications primarily service their external customers and the mobile agents. These include applications for consumers and their employees in the field dealing with claims. "We have prototyped these applications in Azure App Services and SQL Database with success but need a plan for how they will be implemented for high-availability and automatic failover," says Mrs. Kamakshi. "These applications are global, so we want to make sure that they are distributed around the world and that users will be directed to the closest point of presence (POP) but will never get an error if there is a local issue."
+**Global, Mobile, and API Web Applications:** CI has leveraged their experience with ASP.NET and SQL Server to build applications that are Azure PaaS ready. These applications primarily service their external customers and the mobile agents. These include applications for consumers and their employees in the field dealing with claims. "We have prototyped these applications in Azure App Services and SQL Database with success but need a plan for how they will be implemented for high-availability and automatic failover," says Mrs. Simmons. "These applications are global, so we want to make sure that they are distributed around the world and that users will be directed to the closest point of presence (POP) but will never get an error if there is a local issue."
 
 ### Customer needs
 
@@ -212,11 +212,11 @@ CI has completed a cloud assessment of their applications and have classified th
 
 ### Customer objections 
 
-1.  With the move to the cloud, they are uncomfortable with any situation that assumes the cloud provider will handle their fail-over
+1.  With the move to the cloud, they are uncomfortable with any situation that assumes the cloud provider will handle their fail-over.
 
-2.  They have many systems that need to be accounted for and they aren't sure if the tools really exist to give them the business continuity they desire
+2.  They have many systems that need to be accounted for and they aren't sure if the tools really exist to give them the business continuity they desire.
 
-3.  They want to know their BCDR solution is secure
+3.  They want to know their BCDR solution is secure.
 
 4.  CI has heavily invested in a third-party backup solution but want to use Azure as their archive. Does Azure support this?
 
@@ -244,7 +244,8 @@ Timeframe: 60 minutes
 
 Directions: With all participants at your table, answer the following questions and list the answers on a flip chart. 
 
-1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers? 
+1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers?
+
 2.  What customer business needs do you need to address with your solution?
 
 **Design** 
@@ -289,15 +290,15 @@ Directions: With all participants at your table, respond to the following questi
 
     -   Document how you will implement both types of implementations:
 
-        1.  Migrate to Azure and support Azure Region to Region Failover
+        1.  Migrate to Azure and support Azure Region to Region Failover.
 
-        2.  Remain on-premises for primary, but support Hyper-V to Azure Region Failover
+        2.  Remain on-premises for primary, but support Hyper-V to Azure Region Failover.
 
     -   How will SQL Always On Availability Groups be set up in order to support both of these scenarios?
 
     -   What Azure technology, which is commentary to DR, will you implement to deal with application specific tasks such as Pre-Actions and Post-Actions during a failover?
 
-    -   Given this will be an IaaS implementation, provide details of how you will provide HA and Failover capabilities to these VMs once they are in Azure
+    -   Given this will be an IaaS implementation, provide details of how you will provide HA and Failover capabilities to these VMs once they are in Azure?
 
     -   How will you direct web traffic to the active site?
 
@@ -305,7 +306,7 @@ Directions: With all participants at your table, respond to the following questi
 
     -   What Azure BCDR technologies will you implement for this classification?
 
-    -   Given this will be a PaaS implementation, provide details of how you will provide HA and Failover capabilities to these VMs once they are in Azure
+    -   Given this will be a PaaS implementation, provide details of how you will provide HA and Failover capabilities to these VMs once they are in Azure.
 
     -   How will SQL Database be set up to support both scenarios?
 
@@ -321,9 +322,9 @@ Provide details on how you will address each of the objections that were put for
 
 Directions: With all participants at your table: 
 
-1.  Identify any customer needs that are not addressed with the proposed solution 
-2.  Identify the benefits of your solution
-3.  Determine how you will respond to the customer’s objections
+1.  Identify any customer needs that are not addressed with the proposed solution. 
+2.  Identify the benefits of your solution.
+3.  Determine how you will respond to the customer’s objections.
 
 Prepare a 15-minute chalk-talk style presentation to the customer. 
 
@@ -339,13 +340,13 @@ Timeframe: 30 minutes
 
 Directions:
 
-1.  Pair with another table
-2.  One table is the Microsoft team and the other table is the customer
-3.  The Microsoft team presents their proposed solution to the customer
-4.  The customer makes one of the objections from the list of objections
-5.  The Microsoft team responds to the objection
-6.  The customer team gives feedback to the Microsoft team 
-7.  Tables switch roles and repeat Steps 2–6
+1.  Pair with another table.
+2.  One table is the Microsoft team and the other table is the customer.
+3.  The Microsoft team presents their proposed solution to the customer.
+4.  The customer makes one of the objections from the list of objections.
+5.  The Microsoft team responds to the objection.
+6.  The customer team gives feedback to the Microsoft team.
+7.  Tables switch roles and repeat Steps 2–6.
 
 ##  Wrap-up 
 
@@ -376,25 +377,25 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 ## Step 1: Review the customer case study
 
--   Check in with your table participants to introduce yourself as the trainer
+-   Check in with your table participants to introduce yourself as the trainer.
 
 -   Ask, "What questions do you have about the customer case study?"
 
--   Briefly review the steps and time frames of the whiteboard design session
+-   Briefly review the steps and time frames of the whiteboard design session.
 
--   Ready, set, go! Let the table participants begin
+-   Ready, set, go! Let the table participants begin.
 
 ## Step 2: Design a proof of concept solution
 
--   Check in with your tables to ensure that they are transitioning from step to step on time
+-   Check in with your tables to ensure that they are transitioning from step to step on time.
 
--   Provide some feedback on their responses to the business needs and design
+-   Provide some feedback on their responses to the business needs and design.
 
-    -   Try asking questions first that will lead the participants to discover the answers on their own
+    -   Try asking questions first that will lead the participants to discover the answers on their own.
 
--   Provide feedback for their responses to the customer's objections
+-   Provide feedback for their responses to the customer's objections.
 
-    -   Try asking questions first that will lead the participants to discover the answers on their own
+    -   Try asking questions first that will lead the participants to discover the answers on their own.
 
 ## Step 3: Present the solution
 
@@ -402,11 +403,11 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 -   For the first round, assign one table as the presenting team and the other table as the customer
 
--   Have the presenting team present their solution to the customer team
+-   Have the presenting team present their solution to the customer team.
 
-    -   Have the customer team provide one objection for the presenting team to respond to
+    -   Have the customer team provide one objection for the presenting team to respond to.
 
-    -   The presentation, objections, and feedback should take no longer than 15 minutes
+    -   The presentation, objections, and feedback should take no longer than 15 minutes.
 
 ## Wrap-up
 
@@ -452,7 +453,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 -   How can each part of their solution be backed up?
 
-    -   IaaS: These deployments will be backed up using an Azure implementation of their third-party backup
+    -   IaaS: These deployments will be backed up using an Azure implementation of their third-party backup.
 
     -   PaaS: Azure App Service and SQL Database have built in Backup services that must be implemented. These are robust solutions, but their features are dependent upon the select and SKUs that CI selects during the provisioning of these services.
 
@@ -482,13 +483,13 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
     -   The VMs will be migrated to Azure using ASR. This is a one direction failover, and once the VM is up and running and there is verification that all is working properly, the migration will be completed with just one selection in the Azure portal.
 
-    -   Once they are migrated to Azure, they will be re-protected to failover to the region pair that is assigned to their area of the world
+    -   Once they are migrated to Azure, they will be re-protected to failover to the region pair that is assigned to their area of the world.
 
 -   Can you test the migration before going live?
 
     -   Once the VM is protected, ASR provides the ability to do a test failover to a disconnected Azure virtual network. This meets the requirements of the COB team.
 
--   Given this will be an IaaS implementation, provide details of how you will provide HA and Failover capabilities to these VMs once they are in Azure
+-   Given this will be an IaaS implementation, provide details of how you will provide HA and Failover capabilities to these VMs once they are in Azure.
 
     -   The VM will be implemented using Managed disks and Premium storage. By using Managed disks there is better fault tolerance and with Premium storage the VM will be covered by a 99.9% SLA even for single VM applications.
 
@@ -498,11 +499,11 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 -   What Azure BCDR technologies will you implement for this classification?
 
-    -   Azure Site Recovery will be leveraged for these applications
+    -   Azure Site Recovery will be leveraged for these applications.
 
 -   Document how you will implement both types of implementations:
 
-    -   Migrate to Azure and support Azure Region to Region Failover
+    -   Migrate to Azure and support Azure Region to Region Failover.
 
         1.  The migration to Azure will be completed using a combination of Azure Site Recovery and SQL Always On Availability Groups. First the AOG will be extended to have Asynchronous replicas running in an Azure Virtual Network over the ExpressRoute Circuit. This allows for an extension of the database to Azure. During the Failover for the migration the Asynchronous side of the AOG will be made a Synchronous replica and then a planned failover will make one of the Azure nodes the primary replica. Once this is completed then ASR will be used to failover the Web tier to Azure. The migration will then be completed using the Azure portal.
 
@@ -510,7 +511,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
             ![Diagram of the Azure Region to Region preferred solution. At this time, we are unable to capture all of the information in the diagram. Future versions of this course should address this.](images/Whiteboarddesignsessiontrainerguide-Businesscontinuityanddisasterrecoveryimages/media/image8.png "Azure Region to Region preferred solution")
 
-6.  Remain on-premises for primary, but support Hyper-V to Azure Region Failover
+6.  Remain on-premises for primary, but support Hyper-V to Azure Region Failover.
 
 -   Like the migration, the AOG will be extended to have Asynchronous replicas running in an Azure Virtual Network over the ExpressRoute Circuit. This allows for an extension of the database to Azure. Azure Site Recovery will then be configured for a forced failover which will make one of the Asynchronous nodes in Azure a Synchronous replica. Once this is completed then ASR will be used to failover the Web tier to Azure.
 
@@ -526,7 +527,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
     -   Azure Automation Runbooks will need to be written to support these failovers as they are complex and must be done in the proper sequence. Using Runbooks will allow for single click failovers in both direction and won't involve any manual steps (although they can be built into the plan if the customer desires).
 
--   Given this will be an IaaS implementation, provide details of how you will provide HA and Failover capabilities to these VMs once they are in Azure
+-   Given this will be an IaaS implementation, provide details of how you will provide HA and Failover capabilities to these VMs once they are in Azure.
 
     -   These are mission critical systems that have multiple VMs, so they will be configured to leverage Managed Disks, Availability Sets and Premium disks. This provides for the most fault tolerance available to an Azure VM and will be eligible for a 99.95% SLA. The Internal Load balancer will also be used in front of the SQL Always On nodes that are running in Azure.
 
@@ -540,7 +541,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
     -   Given that these are PaaS Services the implementation is much different than IaaS. ASR won't be required to ensure availability of these applications.
 
--   Given this will be a PaaS implementation, provide details of how you will provide HA and Failover capabilities to these VMs once they are in Azure
+-   Given this will be a PaaS implementation, provide details of how you will provide HA and Failover capabilities to these VMs once they are in Azure.
 
     -   Multiple points of presence for these applications will be deployed in the Azure Regions discussed. Given the nature of their business, there will always be at least two POPs per region. The use of Auto scaling will also be leveraged to ensure that the site can deal with traffic spikes.
 
@@ -558,13 +559,13 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 ##  Checklist of preferred objection handling
 
-1.  With the move to the cloud, they are uncomfortable with any situation that assumes the cloud provider will handle their fail-over
+1.  With the move to the cloud, they are uncomfortable with any situation that assumes the cloud provider will handle their fail-over.
 
     *Potential Answer:*
 
     Using ASR CI will be able to handle all of their own DR. They will be using familiar tools with the Azure Portal and Hyper-V.
 
-2.  They have many systems that need to be accounted for, and they aren't sure if the tools really exist to give them the business continuity they desire
+2.  They have many systems that need to be accounted for, and they aren't sure if the tools really exist to give them the business continuity they desire.
 
     *Potential Answer:*
 
