@@ -63,18 +63,24 @@ Duration: 20 minutes
 
 **Note:** If the Azure Subscription you are using has limits on the number of cores you may wish to choose DS1\_V2.
 
-7.  On the **Settings** blade, choose RDP (3389) from the **Select public inbound ports dropdown**
+7. Click **Next: Disks**
+
+    ![Next: Disks Button](images/Setup/image7.png "Disks button")
+
+8.  Select **Premium SSD** then **Next: Networking>**
+
+>   ![Networking](images/Setup/image8.png "Next: Networking>")
+
+9.  Click Allow selected ports and then choose RDP (3389) from the **Select public inbound ports dropdown**.  This will open connections
+    from the internet to the VM.
+    
     ![Select public inbound ports dropdown with RDP (3389) selected](images/Setup/image27.png "Select public inbound ports dropdown")
 
-8. Accept the remaining defaults and Select **OK**
+10.  Click **Review + create**
 
-    ![OK button](images/Setup/image7.png "OK button")
-
-9.  Select **Summary** blade select **Create**
-
-> ![Create button](images/Setup/image8.png "Create button")
-
-    The deployment should begin provisioning. It may take 10+ minutes for the virtual machine to complete provisioning.
+    ![Review + create button](images/Setup/image28.png "Review + create button")
+    
+11. After the validation click Create. The deployment should begin provisioning. It may take 10+ minutes for the virtual machine to complete provisioning.
    ![Screenshot of the Deploying Visual Studio Community 2017 icon.](images/Setup/image9.png "Deploying Visual Studio icon")
 
 **Note:** Please wait for the LABVM to be provisioned prior to moving to the next step.

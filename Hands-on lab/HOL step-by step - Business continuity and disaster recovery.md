@@ -9,7 +9,7 @@ Hands-on lab step-by-step
 </div>
 
 <div class="MCWHeader3">
-May 2018
+September 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -90,7 +90,7 @@ Below are diagrams of the solution architecture you will build in this lab. Plea
 
     ![Diagram of the Azure IaaS failover region to region solution. At this time, we are unable to capture all of the information in the diagram. Future versions of this course should address this.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image3.png "Azure IaaS failover region to region solution")
 
-### Environment: Azure PaaS (high-availably with seamless failover)
+### Environment: Azure PaaS (high-availability with seamless failover)
 
 -   **Background:** This environment will deploy an Azure Web App and Azure SQL Server in both the Primary and Secondary locations. You will configure SQL Database Failover groups to allow for seamless failover of the database.
 
@@ -401,11 +401,11 @@ In this exercise, you will create and configure the services that will make it p
 
     ![Screenshot of the Windows PowerShell ISE button.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image71.png "Windows PowerShell ISE button")
 
-33. Open the file **C:\\HOL\\Deployments\\ASRRunBookVariable.ps1.** Review the script and enter the automation account name you creatred earlier . Then select the green play button to execute the script. You will need to authenticate to Azure.
+33. Open the file **C:\\HOL\\Deployments\\ASRRunBookVariable.ps1.** Review the script and enter the automation account name you created earlier. Then select the green play button to execute the script. You will need to authenticate to Azure.
 
     ![In the Windows PowerShell ISE window, the green play button is selected, and a callout points to \"Your-Automation-Account-Name-Here\" in the script window.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image72.png "Windows PowerShell ISE window")
 
-**Note**: If you are using an account that has multiple subscriptions you may need to change the context of your login. You can comment the **Login-AzureRmAccount** command in the script and complete the login and the use the **Get-AzureRmSubscription** and **Select-AzureRmSubscription** cmdlets to create the proper context for this HOL. For help, you can review this article: <https://docs.microsoft.com/en-us/powershell/azure/authenticate-azureps?view=azurermps-5.1.1> & <https://docs.microsoft.com/en-us/powershell/azure/manage-subscriptions-azureps?view=azurermps-5.1.1>
+**Note**: If you are using an account that has multiple subscriptions you may need to change the context of your login. You can comment out the **Login-AzureRmAccount** command in the script and complete the login and the use the **Get-AzureRmSubscription** and **Select-AzureRmSubscription** cmdlets to create the proper context for this HOL. For help, you can review this article: <https://docs.microsoft.com/en-us/powershell/azure/authenticate-azureps?view=azurermps-5.1.1> & <https://docs.microsoft.com/en-us/powershell/azure/manage-subscriptions-azureps?view=azurermps-5.1.1>
 
 34. Once the script has run, you will see the following output from PowerShell ISE. This script created a variable that will be used with the PowerShell Runbook in Azure Automation to help with the Failover and Failback of the Azure IaaS environment.
 
@@ -419,7 +419,7 @@ In this exercise, you will create and configure the services that will make it p
 
     ![In the Automation Account blade, under Name, a callout points to BCDRIaaSPlan.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image75.png "Automation Account blade")
 
-**Note:** When you configure the ASR Recovery Plan for the IaaS deployment you will use the SQL Runbook as a Pre-Failover Action and the Web Runbook as a Post-Failover action. They will run both ways and have been written to take the "Direction," of the failover into account when running.
+**Note:** When you configure the ASR Recovery Plan for the IaaS deployment you will use the SQL Runbook as a Pre-Failover Action and the Web Runbook as a Post-Failover action. They will run both ways and have been written to take the "Direction", of the failover into account when running.
 
 ## Exercise 3: Configure environments for failover
 
@@ -627,7 +627,7 @@ http://aka.ms/downloaddra_cus
 
 **Note**: You may see some errors, but this is normal behavior since the VM now thinks it should be in Azure.
 
-42. Enter exit to log out of the **OnPremVM**
+42. Type exit into the terminal to log out of the **OnPremVM**
 
 43. Sign out of **HYPERVHOST** and return to the Azure portal running on your **LABVM**
 
@@ -779,13 +779,13 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     ![Screenshot of the Create button.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image142.png "Create button")
 
-5.  Complete the **Create storage account** blade using the following details, then select **Create**:
+5.  Complete the **Create storage account** wizard using the following details, then select **Review + create**:
 
     -   **Name:** Unique name starting with bcdrcloudwitnessxxx
 
     -   **Deployment model**: Resource manager
 
-    -   **Account kind**: Storage (general purpose v1)
+    -   **Account kind**: Storage (general purpose v2)
 
     -   **Performance**: Standard
 
@@ -1937,7 +1937,7 @@ http://172.16.1.?/bcdr.php
 
 ### Task 4: Failback Azure IaaS region to region
 
-snip![Diagram of the Azure IaaS region to region failback solution. At this time, we are unable to capture all of the information in the diagram. Future versions of this course should address this.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image3.png "Azure IaaS region to region failback solution")
+![Diagram of the Azure IaaS region to region failback solution. At this time, we are unable to capture all of the information in the diagram. Future versions of this course should address this.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image3.png "Azure IaaS region to region failback solution")
 
 1.  Open the **BCDRSRV** and select **Replicated Items** under the **Protected Items** area. Make sure that **WEBVM1** and **WEBVM2** show up ad **Replication Heath**: **Healthy.**
 
