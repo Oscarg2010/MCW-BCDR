@@ -53,7 +53,6 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 <!-- /TOC -->
 
-
 # Trainer information
 
 Thank you for taking time to support the whiteboard design sessions as a trainer!
@@ -62,25 +61,25 @@ Thank you for taking time to support the whiteboard design sessions as a trainer
 
 An amazing trainer:
 
--   Creates a safe environment in which learning can take place
+-   Creates a safe environment in which learning can take place.
 
--   Stimulates the participant's thinking
+-   Stimulates the participant's thinking.
 
--   Involves the participant in the learning process
+-   Involves the participant in the learning process.
 
--   Manages the learning process (on time, on topic, and adjusting to benefit participants)
+-   Manages the learning process (on time, on topic, and adjusting to benefit participants).
 
--   Ensures individual participant accountability
+-   Ensures individual participant accountability.
 
--   Ties it all together for the participant
+-   Ties it all together for the participant.
 
--   Provides insight and experience to the learning process
+-   Provides insight and experience to the learning process.
 
--   Effectively leads the whiteboard design session discussion
+-   Effectively leads the whiteboard design session discussion.
 
--   Monitors quality and appropriateness of participant deliverables
+-   Monitors quality and appropriateness of participant deliverables.
 
--   Effectively leads the feedback process
+-   Effectively leads the feedback process.
 
 ## Whiteboard design session flow 
 
@@ -88,29 +87,35 @@ Each whiteboard design session uses the following flow:
 
 **Step 1: Review the customer case study (15 minutes)**
 
-Outcome: Analyze your customer's needs
+**Outcome**
 
--   Customer's background, situation, needs, and technical requirements
+Analyze your customer's needs.
+
+-   Customer's background, situation, needs and technical requirements
 
 -   Current customer infrastructure and architecture
 
--   Potential issues, objectives, and blockers
+-   Potential issues, objectives and blockers
 
 **Step 2: Design a proof of concept solution (60 minutes)**
 
-Outcome: Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
+**Outcome**
 
--   Determine your target customer audience
+Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
--   Determine customer's business needs to address your solution
+-   Determine your target customer audience.
 
--   Design and diagram your solution
+-   Determine customer's business needs to address your solution.
 
--   Prepare to present your solution
+-   Design and diagram your solution.
+
+-   Prepare to present your solution.
 
 **Step 3: Present the solution (30 minutes)**
 
-Outcome: Present solution to your customer.
+**Outcome**
+
+Present solution to your customer:
 
 -   Present solution
 
@@ -144,7 +149,7 @@ Before conducting your first whiteboard design session:
 
 When participants are doing activities, you can **look ahead to refresh your memory**.
 
--   **Adjust activity and whiteboard design session pace** as needed to allow time for presenting, feedback, and sharing
+-   **Adjust activity and whiteboard design session pace** as needed to allow time for presenting, feedback, and sharing.
 
 -   **Add examples, points, and stories** from your own experience. Think about stories you can share that help you make your points clearly and effectively.
 
@@ -170,16 +175,18 @@ At the end of this whiteboard design session, you will be better able to design 
 
 ## Step 1: Review the customer case study 
 
-**Outcome** 
+**Outcome**
 
-Analyze your customer’s needs.
+Analyze your customer's needs.
 
-Timeframe: 15 minutes 
+Timeframe: 15 minutes
 
-Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
+Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips.
 
 1.  Meet your table participants and trainer.
-2.  Read all of the directions for steps 1–3 in the student guide.
+
+2.  Read all of the directions for steps 1-3 in the student guide.
+
 3.  As a table team, review the following customer case study.
 
 ### Customer situation
@@ -234,23 +241,23 @@ CI has completed a cloud assessment of their applications and have classified th
 
 ## Step 2: Design a proof of concept solution
 
-**Outcome** 
+**Outcome**
 
-Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.  
+Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
 Timeframe: 60 minutes
 
 **Business needs**
 
-Directions: With all participants at your table, answer the following questions and list the answers on a flip chart. 
+Directions:  With all participants at your table, answer the following questions and list the answers on a flip chart:
 
 1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers?
 
 2.  What customer business needs do you need to address with your solution?
 
-**Design** 
+**Design**
 
-Directions: With all participants at your table, respond to the following questions on a flip chart.
+Directions: With all participants at your table, respond to the following questions on a flip chart:
 
 *Provide an overview of the technologies and the implementation at a high-level. How will you use Azure's BCDR technologies to meet the Customer's needs?*
 
@@ -290,9 +297,9 @@ Directions: With all participants at your table, respond to the following questi
 
     -   Document how you will implement both types of implementations:
 
-        1.  Migrate to Azure and support Azure Region to Region Failover.
+        -  Migrate to Azure and support Azure Region to Region Failover.
 
-        2.  Remain on-premises for primary, but support Hyper-V to Azure Region Failover.
+        -  Remain on-premises for primary, but support Hyper-V to Azure Region Failover.
 
     -   How will SQL Always On Availability Groups be set up in order to support both of these scenarios?
 
@@ -320,39 +327,47 @@ Provide details on how you will address each of the objections that were put for
 
 **Prepare**
 
-Directions: With all participants at your table: 
+Directions: With all participants at your table:
 
-1.  Identify any customer needs that are not addressed with the proposed solution. 
+1.  Identify any customer needs that are not addressed with the proposed solution.
+
 2.  Identify the benefits of your solution.
-3.  Determine how you will respond to the customer’s objections.
 
-Prepare a 15-minute chalk-talk style presentation to the customer. 
+3.  Determine how you will respond to the customer's objections.
+
+Prepare a 15-minute chalk-talk style presentation to the customer.
 
 ## Step 3: Present the solution
 
 **Outcome**
- 
+
 Present a solution to the target customer audience in a 15-minute chalk-talk format.
 
 Timeframe: 30 minutes
 
-**Presentation** 
+**Presentation**
 
 Directions:
 
 1.  Pair with another table.
+
 2.  One table is the Microsoft team and the other table is the customer.
+
 3.  The Microsoft team presents their proposed solution to the customer.
+
 4.  The customer makes one of the objections from the list of objections.
+
 5.  The Microsoft team responds to the objection.
+
 6.  The customer team gives feedback to the Microsoft team.
-7.  Tables switch roles and repeat Steps 2–6.
+
+7.  Tables switch roles and repeat Steps 2-6.
 
 ##  Wrap-up 
 
 Timeframe: 15 minutes
 
-Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study. 
+Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
 
 ##  Additional references
 |    |            |       
@@ -381,7 +396,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 -   Ask, "What questions do you have about the customer case study?"
 
--   Briefly review the steps and time frames of the whiteboard design session.
+-   Briefly review the steps and timeframes of the whiteboard design session.
 
 -   Ready, set, go! Let the table participants begin.
 
@@ -399,9 +414,9 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 ## Step 3: Present the solution
 
--   Determine which table will be paired with your table before Step 3 begins
+-   Determine which table will be paired with your table before Step 3 begins.
 
--   For the first round, assign one table as the presenting team and the other table as the customer
+-   For the first round, assign one table as the presenting team and the other table as the customer.
 
 -   Have the presenting team present their solution to the customer team.
 
@@ -409,11 +424,11 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
     -   The presentation, objections, and feedback should take no longer than 15 minutes.
 
+    -   If needed, the trainer may also provide feedback.
+
 ## Wrap-up
 
-Timeframe: 15 minutes
-
-Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
+-   Have the table participants reconvene with the larger session group to hear the facilitator/SME share the following preferred solution.
 
 ##  Preferred target audience
 
@@ -473,7 +488,9 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
     -   Design a HA and BDCR solution for each of the three application classifications. At a high-level provide details of your implementation. Make sure to document your design with a diagram along with addressing the questions.
 
-4.  Workgroup Applications
+4.  Design a HA and BDCR solution for each of the three application classifications. At a high-level provide details of your implementation. Make sure to document your design with a diagram along with addressing the questions.
+
+-   Workgroup Applications
 
 -   What Azure BCDR technologies will you implement for this classification?
 
@@ -495,7 +512,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
         ![The Azure IaaS failover region to region solution has on-premises, azure platform, and secondary region sections. On-premises has a hyper-v host and a linux on-premises virtual machine. Azure Platform uses Azure Site Recovery. The secondary region has an on-premises Linux VM as well.](images/Whiteboarddesignsessiontrainerguide-Businesscontinuityanddisasterrecoveryimages/media/image7.png "Azure IaaS failover region to region solution")
 
-5.   Enterprise Applications
+-   Enterprise Applications
 
 -   What Azure BCDR technologies will you implement for this classification?
 
@@ -505,19 +522,19 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
     -   Migrate to Azure and support Azure Region to Region Failover.
 
-        1.  The migration to Azure will be completed using a combination of Azure Site Recovery and SQL Always On Availability Groups. First the AOG will be extended to have Asynchronous replicas running in an Azure Virtual Network over the ExpressRoute Circuit. This allows for an extension of the database to Azure. During the Failover for the migration the Asynchronous side of the AOG will be made a Synchronous replica and then a planned failover will make one of the Azure nodes the primary replica. Once this is completed then ASR will be used to failover the Web tier to Azure. The migration will then be completed using the Azure portal.
+        -  The migration to Azure will be completed using a combination of Azure Site Recovery and SQL Always On Availability Groups. First the AOG will be extended to have Asynchronous replicas running in an Azure Virtual Network over the ExpressRoute Circuit. This allows for an extension of the database to Azure. During the Failover for the migration the Asynchronous side of the AOG will be made a Synchronous replica and then a planned failover will make one of the Azure nodes the primary replica. Once this is completed then ASR will be used to failover the Web tier to Azure. The migration will then be completed using the Azure portal.
 
-        2.  Once migrated to Azure the application will be re-protected to failover to the region pair that is assigned to their area of the world.
+        -  Once migrated to Azure the application will be re-protected to failover to the region pair that is assigned to their area of the world.
 
             ![Diagram of the Azure Region to Region preferred solution. At this time, we are unable to capture all of the information in the diagram. Future versions of this course should address this.](images/Whiteboarddesignsessiontrainerguide-Businesscontinuityanddisasterrecoveryimages/media/image8.png "Azure Region to Region preferred solution")
 
-6.  Remain on-premises for primary, but support Hyper-V to Azure Region Failover.
+    -   Remain on-premises for primary, but support Hyper-V to Azure Region Failover.
 
--   Like the migration, the AOG will be extended to have Asynchronous replicas running in an Azure Virtual Network over the ExpressRoute Circuit. This allows for an extension of the database to Azure. Azure Site Recovery will then be configured for a forced failover which will make one of the Asynchronous nodes in Azure a Synchronous replica. Once this is completed then ASR will be used to failover the Web tier to Azure.
+        -   Like the migration, the AOG will be extended to have Asynchronous replicas running in an Azure Virtual Network over the ExpressRoute Circuit. This allows for an extension of the database to Azure. Azure Site Recovery will then be configured for a forced failover which will make one of the Asynchronous nodes in Azure a Synchronous replica. Once this is completed then ASR will be used to failover the Web tier to Azure.
 
--   Once the outage on-premises has been resolved, and the SQL nodes are back online in the local datacenter a planned failover back using ASR will be executed. This will consist of first resuming data movement on the local nodes running on-premises. Once they are synchronized then a planned failover using ASR will assign a new primary replica locally and fail back the web tier.
+        -   Once the outage on-premises has been resolved, and the SQL nodes are back online in the local datacenter a planned failover back using ASR will be executed. This will consist of first resuming data movement on the local nodes running on-premises. Once they are synchronized then a planned failover using ASR will assign a new primary replica locally and fail back the web tier.
 
-    ![Diagram of the On-premises to Azure solution. At this time, we are unable to capture all of the information in the diagram. Future versions of this course should address this.](images/Whiteboarddesignsessiontrainerguide-Businesscontinuityanddisasterrecoveryimages/media/image9.png "On-premises to Azure solution")
+            ![Diagram of the On-premises to Azure solution. At this time, we are unable to capture all of the information in the diagram. Future versions of this course should address this.](images/Whiteboarddesignsessiontrainerguide-Businesscontinuityanddisasterrecoveryimages/media/image9.png "On-premises to Azure solution")
 
 -   How will SQL Always On Availability Groups be set up in order to support both of these scenarios?
 
@@ -535,7 +552,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
     -   The Traffic Manager will be used for these implementations given that they are a Primary / Secondary failover type of deployment the Priority Routing method is the best to implement. If the Primary goes down the Monitor Status will show as Degraded and traffic will be send to the Secondary once it is up and running and shows a Monitor Status of Online.
 
-7.  Global, Mobile and API Web Applications
+-   Global, Mobile and API Web Applications
 
 -   What Azure BCDR technologies will you implement for this classification?
 
@@ -561,30 +578,22 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 1.  With the move to the cloud, they are uncomfortable with any situation that assumes the cloud provider will handle their fail-over.
 
-    *Potential Answer:*
-
     Using ASR CI will be able to handle all of their own DR. They will be using familiar tools with the Azure Portal and Hyper-V.
 
 2.  They have many systems that need to be accounted for, and they aren't sure if the tools really exist to give them the business continuity they desire.
-
-    *Potential Answer:*
 
     There are BCDR tools built into the all of the different application classification they have at CI, including Linux.
 
 3.  They want to know their BCDR solution is secure.
 
-    *Potential Answer:*
-
     All of the traffic and data used for all Azure BCDR features is secured both at rest and in-transit. As a result, there is no difference in this data and any other data that is running or stored in Azure.
 
 4.  They have heavily invested in a third-party backup solution but want to use Azure as their archive. Does Azure support this?
-
-    *Potential Answer:*
 
     Azure has support for third-party backup providers through the Azure Marketplace. It's possible to both backup VMs using these tools by deploying them to Azure IaaS or by extending the backup infrastructure to use the Azure cloud as an archive target.
 
 ## Customer quote (to be read back to the attendees at the end)
 
-*"Azure has BCDR built into each classification of application that we have here at Contoso Insurance. This depth and breadth will allow us to meet both our business needs and regulatory requirements for our applications. Not to mention ensuring our agents are able to help our customers in their time of need."*
+"Azure has BCDR built into each classification of application that we have here at Contoso Insurance. This depth and breadth will allow us to meet both our business needs and regulatory requirements for our applications. Not to mention ensuring our agents are able to help our customers in their time of need."
 
 - Liz Simmons, VP of Datacenters
