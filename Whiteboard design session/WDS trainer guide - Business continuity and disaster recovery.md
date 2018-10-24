@@ -526,7 +526,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
         -  Once migrated to Azure the application will be re-protected to failover to the region pair that is assigned to their area of the world.
 
-            ![Diagram of the Azure Region to Region preferred solution. At this time, we are unable to capture all of the information in the diagram. Future versions of this course should address this.](images/Whiteboarddesignsessiontrainerguide-Businesscontinuityanddisasterrecoveryimages/media/image8.png "Azure Region to Region preferred solution")
+            ![Diagram of the Azure Region to Region preferred solution.](images/Whiteboarddesignsessiontrainerguide-Businesscontinuityanddisasterrecoveryimages/media/image8.png "Azure Region to Region preferred solution")
 
     -   Remain on-premises for primary, but support Hyper-V to Azure Region Failover.
 
@@ -534,7 +534,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
         -   Once the outage on-premises has been resolved, and the SQL nodes are back online in the local datacenter a planned failover back using ASR will be executed. This will consist of first resuming data movement on the local nodes running on-premises. Once they are synchronized then a planned failover using ASR will assign a new primary replica locally and fail back the web tier.
 
-            ![Diagram of the On-premises to Azure solution. At this time, we are unable to capture all of the information in the diagram. Future versions of this course should address this.](images/Whiteboarddesignsessiontrainerguide-Businesscontinuityanddisasterrecoveryimages/media/image9.png "On-premises to Azure solution")
+            ![Diagram of the On-premises to Azure solution.](images/Whiteboarddesignsessiontrainerguide-Businesscontinuityanddisasterrecoveryimages/media/image9.png "On-premises to Azure solution")
 
 -   How will SQL Always On Availability Groups be set up in order to support both of these scenarios?
 
