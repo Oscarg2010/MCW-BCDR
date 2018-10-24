@@ -24,7 +24,7 @@ The names of manufacturers, products, or URLs are provided for informational pur
 
 <!-- TOC -->
 
-- [Business continuity and diisaster recovery before the hands-on lab setup guide](#business-continuity-and-diisaster-recovery-before-the-hands-on-lab-setup-guide)
+- [Business continuity and disaster recovery before the hands-on lab setup guide](#business-continuity-and-disaster-recovery-before-the-hands-on-lab-setup-guide)
     - [Requirements](#requirements)
     - [Before the hands-on lab](#before-the-hands-on-lab)
         - [Task 1: Create a virtual machine to execute the lab](#task-1-create-a-virtual-machine-to-execute-the-lab)
