@@ -139,7 +139,7 @@ Duration: 20 minutes
 
 1.  Download the zipped Hands-on Lab Step by Step student files at this link:
 
-    <https://www.dropbox.com/s/sx91sjcn63t980j/StudentFiles.zip?dl=1>
+    <https://www.dropbox.com/s/mfy0hx84ljie3rq/StudentFiles.zip?dl=1>
 
 2.  Extract the files to a directory here **C:\\HOL** on LABVM.
 
