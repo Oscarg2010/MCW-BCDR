@@ -1,18 +1,18 @@
 ![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
-Business continuity and disaster recovery
+Business Continuity and Disaster Recovery
 </div>
 
 <div class="MCWHeader2">
-Whiteboard design session student guide
+Whiteboard Design Session Student Guide
 </div>
 
 <div class="MCWHeader3">
-September 2018
+November 2018
 </div>
 
-Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
+Information in this document, including URLs and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
 
 Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this document. Except as expressly provided in any written license agreement from Microsoft, the furnishing of this document does not give you any license to these patents, trademarks, copyrights, or other intellectual property.
 
@@ -25,7 +25,7 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 <!-- TOC -->
 
-- [Business continuity and disaster recovery whiteboard design session student guide](#business-continuity-and-disaster-recovery-whiteboard-design-session-student-guide)
+- [Business Continuity and Disaster Recovery Whiteboard Design Session Student Guide](#business-continuity-and-disaster-recovery-whiteboard-design-session-student-guide)
     - [Abstract](#abstract)
     - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
         - [Customer situation](#customer-situation)
@@ -39,37 +39,37 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 <!-- /TOC -->
 
-#  Business continuity and disaster recovery whiteboard design session student guide
+#  Business Continuity and Disaster Recovery Whiteboard Design Session Student Guide
 
 ## Abstract
 
-In this whiteboard design session, you will work in a group to design a solution using Azure business continuity and disaster recovery (BCDR) technologies. Your solution will consider three different types of environments. The first will consist of on-premises VMs running applications that will be migrated to Azure IaaS. Next, Azure IaaS applications that need to be failed over from either on-premises to Azure, or between two Azure Regions. Finally, the use of automated failover technologies built into Azure PaaS services, App Service, and SQL Database will be used for PaaS applications.
+In this Whiteboard Design Session (WDS), you will work in a group to design a solution using Azure business continuity and disaster recovery (BCDR) technologies. Your solution will consider three different types of environments. The first will consist of on-premises VMs running applications that will be migrated to Azure IaaS. Next, Azure IaaS applications that need to be failed over from either on-premises to Azure, or between two Azure Regions. Finally, the use of automated failover technologies built into Azure PaaS services, App Service, and SQL Database will be used for PaaS applications.
 
-At the end of this whiteboard design session, you will be better able to design a solution that leverages various Azure technologies together to build a complex and robust IaaS BCDR plan.
+At the end of this WDS, you will be better able to design a solution that leverages various Azure technologies together to build a complex and robust IaaS BCDR plan.
 
 ## Step 1: Review the customer case study 
 
 **Outcome**
 
-Analyze your customer's needs.
+Analyze the customer's needs.
 
 Timeframe: 15 minutes
 
 Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips.
 
-1.  Meet your table participants and trainer.
+1.  Meet your table participants and trainer
 
-2.  Read all of the directions for steps 1-3 in the student guide.
+2.  Read all of the directions for steps 1-3 in the student guide
 
-3.  As a table team, review the following customer case study.
+3.  As a table team, review the following customer case study
 
 ### Customer situation
 
-Contoso Insurance (CI), is a multinational corporation, headquartered in Miami providing insurance solutions in North America, Europe, and Australia. Its products include accident and health insurance, life insurance, travel, home, and auto coverage. CI manages data collection services by sending mobile agents directly to the insured to gather information as part of the data collection process for claims from an insured individual. These mobile agents are based all over the world and are residents of the region in which they work. Mobile agents are managed remotely, and each regional corporate office has a support staff responsible for scheduling their time based on requests that arrive to the system.
+Contoso Insurance (CI), headquartered in Miami, is a multinational corporation providing insurance solutions in North America, Europe, and Australia. Its products include accident and health insurance, life insurance, travel, home, and auto coverage. CI manages data collection services by sending mobile agents directly to the insured to gather information as part of the data collection process for claims from an insured individual. These mobile agents are based all over the world and are residents of the region in which they work. Mobile agents are managed remotely, and each regional corporate office has a support staff responsible for scheduling their time based on requests that arrive to the system.
 
 CI currently hosts their primary corporate systems at co-location facilities within each geo-political region and manage all IT operations for the system. These sites include Miami, London, and Sydney all of which are connected to the Internet and each other via a combination of VPNs and private WANs.
 
-CI is expecting significant growth within the United States and abroad.  They foresee the need to scale their system, and their IT operations staff. "We are exploring a move to Microsoft Azure to simplify some of the operations management overhead and associated costs, beginning with our U.S. datacenter followed by those in Europe and Australia", says Liz Simmons, VP of Datacenters. Given CI's international footprint, they need to be operational 24x7. As such they have concerns about how they will address business continuity and disaster recovery (BCDR), in their move to the cloud.
+CI is expecting significant growth within the United States and abroad. They foresee the need to scale their system, and their IT operations staff. "We are exploring a move to Microsoft Azure to simplify some of the operations management overhead and associated costs, beginning with our U.S. datacenter followed by those in Europe and Australia", says Liz Simmons, VP of Datacenters. Given CI's international footprint, they need to be operational 24x7. As such they have concerns about how they will address business continuity and disaster recovery (BCDR), in their move to the cloud.
 
 CI has completed a cloud assessment of their applications and have classified their target applications into three types that they wish to focus on for their implementation of Azure BCDR technologies:
 
@@ -93,11 +93,11 @@ CI has completed a cloud assessment of their applications and have classified th
 
 ### Customer objections 
 
-1.  With the move to the cloud, they are uncomfortable with any situation that assumes the cloud provider will handle their fail-over.
+1.  With the move to the cloud, they are uncomfortable with any situation that assumes the cloud provider will handle their fail-over
 
-2.  They have many systems that need to be accounted for and they aren't sure if the tools really exist to give them the business continuity they desire.
+2.  They have many systems that need to be accounted for and they aren't sure if the tools really exist to give them the business continuity they desire
 
-3.  They want to know their BCDR solution is secure.
+3.  They want to know their BCDR solution is secure
 
 4.  CI has heavily invested in a third-party backup solution but want to use Azure as their archive. Does Azure support this?
 
@@ -123,7 +123,7 @@ Timeframe: 60 minutes
 
 **Business needs**
 
-Directions:  With all participants at your table, answer the following questions and list the answers on a flip chart:
+Directions:  With all participants at your table, answer the following questions and document the answers on a flip chart:
 
 1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers?
 
@@ -131,7 +131,7 @@ Directions:  With all participants at your table, answer the following questions
 
 **Design**
 
-Directions: With all participants at your table, respond to the following questions on a flip chart:
+Directions: With all participants at your table, respond to the following questions and record responses on a flip chart:
 
 *Provide an overview of the technologies and the implementation at a high-level. How will you use Azure's BCDR technologies to meet the Customer's needs?*
 
@@ -139,7 +139,7 @@ Directions: With all participants at your table, respond to the following questi
 
     -   Which regions should be deployed in support of the goals of the client?
 
-    -   Why did you select these regions?
+    -   Why did you select these particular regions?
 
 2.  Backup
 
@@ -153,7 +153,7 @@ Directions: With all participants at your table, respond to the following questi
 
     -   What DR Solutions will be leveraged for the implementation at CI?
 
-4.  Design a HA and BDCR solution for each of the three application classifications. At a high-level provide details of your implementation. Make sure to document your design with a diagram along with addressing the questions.
+4.  Design a HA and BDCR solution for each of the three application classifications. At a high-level, provide details of your implementation. Make sure to document your design with a diagram along with addressing the questions.
 
 -   Workgroup Applications
 
@@ -171,15 +171,15 @@ Directions: With all participants at your table, respond to the following questi
 
     -   Document how you will implement both types of implementations:
 
-        -  Migrate to Azure and support Azure Region to Region Failover.
+        -  Migrate to Azure and support Azure region-to-region failover
 
-        -  Remain on-premises for primary, but support Hyper-V to Azure Region Failover.
+        -  Remain on-premises for primary, but support Hyper-V to Azure Region Failover
 
     -   How will SQL Always On Availability Groups be set up in order to support both of these scenarios?
 
-    -   What Azure technology, which is commentary to DR, will you implement to deal with application specific tasks such as Pre-Actions and Post-Actions during a failover?
+    -   What Azure technology, which is complimentary to DR, will you implement to deal with application-specific tasks such as Pre-Actions and Post-Actions during a failover?
 
-    -   Given this will be an IaaS implementation, provide details of how you will provide HA and Failover capabilities to these VMs once they are in Azure?
+    -   Given this will be an IaaS implementation, provide details of how you will provide high availabilty (HA) and failover capabilities to these VMs once they are in Azure?
 
     -   How will you direct web traffic to the active site?
 
@@ -187,7 +187,7 @@ Directions: With all participants at your table, respond to the following questi
 
     -   What Azure BCDR technologies will you implement for this classification?
 
-    -   Given this will be a PaaS implementation, provide details of how you will provide HA and Failover capabilities to these VMs once they are in Azure?
+    -   Given this will be a PaaS implementation, provide details of how you will provide high availabilty (HA) and failover capabilities to these VMs once they are in Azure?
 
     -   How will SQL Database be set up to support both scenarios?
 
@@ -203,11 +203,11 @@ Directions: With all participants at your table, respond to the following questi
 
 Directions: With all participants at your table:
 
-1.  Identify any customer needs that are not addressed with the proposed solution.
+1.  Identify any customer needs that are not addressed with the proposed solution
 
-2.  Identify the benefits of your solution.
+2.  Identify the benefits of your solution
 
-3.  Determine how you will respond to the customer's objections.
+3.  Determine how you will respond to the customer's objections
 
 Prepare a 15-minute chalk-talk style presentation to the customer.
 
@@ -223,19 +223,19 @@ Timeframe: 30 minutes
 
 Directions:
 
-1.  Pair with another table.
+1.  Pair with another table
 
-2.  One table is the Microsoft team and the other table is the customer.
+2.  One table is the Microsoft team and the other table is the customer
 
-3.  The Microsoft team presents their proposed solution to the customer.
+3.  The Microsoft team presents their proposed solution to the customer
 
-4.  The customer makes one of the objections from the list of objections.
+4.  The customer makes one of the objections from the list of objections
 
-5.  The Microsoft team responds to the objection.
+5.  The Microsoft team responds to the objection
 
-6.  The customer team gives feedback to the Microsoft team.
+6.  The customer team gives feedback to the Microsoft team
 
-7.  Tables switch roles and repeat Steps 2-6.
+7.  Tables switch roles and repeat Steps 2-6
 
 ##  Wrap-up 
 
