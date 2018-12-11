@@ -1,4 +1,4 @@
-# Business Continuity and Disaster Recovery
+# Business continuity and disaster recovery
 November 2018
 
 Contoso Insurance, headquartered in Miami, is a multi-national corporation providing insurance solutions in North America, Europe, and Australia. Its products include accident and health insurance, life insurance, travel, home, and auto coverage. Contoso seeks to automate their backup and recovery of their solutions, not just individual components.
@@ -21,13 +21,13 @@ Three different types of environments will be examined. The first will consist o
 
 At the end of this workshop, you will be better able to leverage various Azure technologies together to build a complex and robust IaaS BCDR plan.
 
-## Whiteboard Design Session
+## Whiteboard design session
 
 In the Whiteboard Design Session (WDS), you will work in groups to design a solution using Azure business continuity and disaster recovery (BCDR) technologies. Your solution will consider three different types of environments. The first will consist of on-premises VMs running applications that will be migrated to Azure IaaS. Next, Azure IaaS applications that need to be failed over from either on-premises to Azure, or between two Azure Regions. Finally, the use of automated failover technologies built into Azure PaaS services, App Service, and SQL Database will be used for PaaS applications.
 
 At the end of the whiteboard design session, you will be better able to design a solution that leverages various Azure technologies together to build a complex and robust IaaS BCDR plan.
 
-## Hands-on Lab
+## Hands-on lab
 
 In the hands-on lab, you will implement three different environments and use Azure BCDR technologies to achieve three distinct goals for each environment. These will include a migration to Azure, Azure region-to-region failover, and a PaaS implementation using BCDR technologies to ensure high availability of an application.
 

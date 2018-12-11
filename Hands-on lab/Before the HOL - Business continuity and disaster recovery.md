@@ -34,7 +34,7 @@ The names of manufacturers, products, or URLs are provided for informational pur
 
 <!-- /TOC -->
 
-# Business Continuity and Disaster Recovery - Hands-on Lab Setup Guide 
+# Business continuity and disaster recovery - hands-on lab setup guide 
 
 ## Requirements
 
@@ -51,15 +51,15 @@ Estimated Duration: 20 minutes
 Once prompted, login with your Microsoft Azure credentials. 
 If prompted, choose whether your account is an Organization  or Microsoft account.
 
-Select on **+Create a resource**, in the search box start typing **Visual Studio Community** and press **Enter**. Select the **Visual Studio Community 2017 (latest upates) on Windows Server 2016 (64)**. 
+Select on **+Create a resource**, in the search box start typing **Visual Studio Community** and press **Enter**. Select the **Visual Studio Community 2017 (latest updates) on Windows Server 2016 (64)**. 
 
->Note: Ensure that you select the exact image name identifid above. Failure to do so may result in problems successfully completeling the BCDR HOL.
+>Note: Ensure that you select the exact image name identified above. Failure to do so may result in problems successfully completing the BCDR HOL.
 
-3.  In the returned search results, select the latest image name. Leave the *Select a Deployment Model* chooser on **Resource Mangager**
+3.  In the returned search results, select the latest image name. Leave the *Select a Deployment Model* chooser on **Resource Manager**.
 
     ![In the Everything blade, Visual Studio Community 2017 (latest release) on Windows Server 2016 (x64) is selected.](images/Setup/image5.png "Everything blade")
 
-4.  Select **Create**
+4.  Select **Create**.
 
 5.  Apply the following configuration items on the Basics tab and select **OK**:
 
@@ -77,15 +77,15 @@ Select on **+Create a resource**, in the search box start typing **Visual Studio
     -   **Resource Group**: BCDRLabRG 
     ![Fields in the Basics blade are set to the previously defined settings.](images/Setup/image6.png "Basics blade")
 
-6.  Choose the **Standard D2 V3 (D2s_V3)** instance size on the Size blade
+6.  Choose the **Standard D2 V3 (D2s_V3)** instance size on the Size blade.
 
->**Note:** If the Azure Subscription you are using has limits on the number of cores, you may wish to choose DS1\_V2
+>**Note:** If the Azure Subscription you are using has limits on the number of cores, you may wish to choose DS1\_V2.
 
-7. Click **Next: Disks**
+7. Click **Next: Disks**.
 
     ![Next: Disks Button](images/Setup/image7.png "Disks button")
 
-8.  Select **Premium SSD**, then **Next: Networking>**
+8.  Select **Premium SSD**, then **Next: Networking>**.
 
     ![Networking](images/Setup/image8.png "Next: Networking>")
 
@@ -93,7 +93,7 @@ Select on **+Create a resource**, in the search box start typing **Visual Studio
     
     ![Select public inbound ports dropdown with RDP (3389) selected](images/Setup/image27.png "Select public inbound ports dropdown")
 
-10.  Click **Review + create**
+10.  Click **Review + create**.
 
      ![Review + create button](images/Setup/image28.png "Review + create button")
     
@@ -101,7 +101,7 @@ Select on **+Create a resource**, in the search box start typing **Visual Studio
 
        ![Screenshot of the Deploying Visual Studio Community 2017 icon.](images/Setup/image9.png "Deploying Visual Studio icon")
 
->**Note:** Please wait for the LABVM to be completly provisioned prior to moving to the next step
+>**Note:** Please wait for the LABVM to be completely provisioned prior to moving to the next step.
 
 11. Move back to the Portal page on your local machine and wait for **LABVM** to show the Status of **Running**. Select **Connect** to establish a new Remote Desktop Session.
 
@@ -125,15 +125,15 @@ Select on **+Create a resource**, in the search box start typing **Visual Studio
 
     ![The Networks pop-up displays, asking if you want to turn on network discovery.](images/Setup/image13.png "Networks pop-up")
 
-16. Notice that Server Manager opens by default. On the left, select **Local Server** (LABVM)
+16. Notice that Server Manager opens by default. On the left, select **Local Server** (LABVM).
 
     ![On the Server Manager menu, Local Server is selected.](images/Setup/image14.png "Server Manager menu")
 
-17. On the right side of the pane, select **Off** next to **IE Enhanced Security Configuration**
+17. On the right side of the pane, select **Off** next to **IE Enhanced Security Configuration**.
 
     ![IE Enhanced Security Configuration is set to Off, and is selected.](images/Setup/image15.png "IE Enhanced Security Configuration option")
 
-18. Change to **Off** for both Administrators and Users then select **OK**
+18. Change to **Off** for both Administrators and Users then select **OK**.
 
     ![In the Internet Explorer Enhanced Security Configuration dialog box, Administrators is set to Off, and Users is set to Off.](images/Setup/image16.png "Internet Explorer Enhanced Security Configuration dialog box")
 
@@ -143,7 +143,7 @@ Select on **+Create a resource**, in the search box start typing **Visual Studio
 
     <https://www.dropbox.com/s/mfy0hx84ljie3rq/StudentFiles.zip?dl=1> [Nov 2018]
 
-2.  Extract the files to a directory here **C:\\HOL** on LABVM
+2.  Extract the files to a directory here **C:\\HOL** on LABVM.
 
 ### Task 3: Install SQL Server Express on LABVM
 
@@ -151,15 +151,15 @@ Select on **+Create a resource**, in the search box start typing **Visual Studio
 
     <https://www.microsoft.com/en-US/sql-server/sql-server-downloads>
 
-2.  Click **Download now** under the Express edition of SQL
+2.  Click **Download now** under the Express edition of SQL.
 
     ![On the Download SQL Server 2017 for Windows webpage, Express edition is selected for download.](images/Setup/image17.png "Download SQL Server 2017 for Windows webpage")
 
-3.  Click **Run** when prompted after downloading
+3.  Click **Run** when prompted after downloading.
 
     ![Next to the message asking if you want to run or save SQLServer 2017, Run is selected.](images/Setup/image18.png "Run button")
 
-4.  When the installer starts, click **Basic**
+4.  When the installer starts, click **Basic**.
 
     ![Basic is selected in the SQL Server 2017 Express Edition Installer wizard.](images/Setup/image19.png "SQL Server 2017 Express Edition Installer")
 
@@ -173,13 +173,13 @@ Select on **+Create a resource**, in the search box start typing **Visual Studio
 
     ![On the Download SSMS page, the link to Download SQL Server Management Studio 17.5 is selected.](images/Setup/image21.png "Download SSMS page")
 
-8.  Click **Install** when prompted to begin installing SSMS. This may take 5-10 miuntes to complete.
+8.  Click **Install** when prompted to begin installing SSMS. This may take 5-10 minutes to complete.
 
-    ![On the Install Microsoft SQL Server Managmeent Studio Welcome page, the Install button is selected.](images/Setup/image22.png "Microsoft SQL Server Managmeent Studio Welcome page")
+    ![On the Install Microsoft SQL Server Managmeent Studio Welcome page, the Install button is selected.](images/Setup/image22.png "Microsoft SQL Server Management Studio Welcome page")
 
-9.  Click **Close** when the installation of SMSS is complete
+9.  Click **Close** when the installation of SMSS is complete.
 
-10. Click **Close** on the SQL Express Edition setup wizard
+10. Click **Close** on the SQL Express Edition setup wizard.
 
 
 ### Task 4: Create Azure Resource Groups
@@ -196,27 +196,27 @@ In this task, you will select **Primary** and **Secondary** Azure regions that w
 
 3.  Complete the **Resource group** blade using the following inputs and select **Create**:
 
-    -   **Resource group name**: BCDRIaaSPrimarySite
+    -   **Resource group name**: BCDRIaaSPrimarySite.
 
-    -   **Subscription**: Select your subscription
+    -   **Subscription**: Select your subscription.
 
-    -   **Resource group location**: Select a Region for the Primary location
+    -   **Resource group location**: Select a region for the Primary location.
 
         ![In the Resource group blade, fields are set to the previously defined settings.](images/Setup/image24.png "Resource group blade")
 
 >**Note:** It's very important to use these exact names. Changing the names of the Resource groups will impact the HOL setup and could cause you not to be able to complete the lab.
 
-4.  Select **Resource groups**, then select **+Add**
+4.  Select **Resource groups**, then select **+Add**.
 
     ![On the Azure Portal Resource groups blade, the Add button is selected.](images/Setup/image23.png "Azure Portal, Resource groups blade")
 
 5.  Complete the **Resource group** blade using the following inputs and select **Create**.
 
-    -   **Resource group name**: BCDRIaaSSecondarySite
+    -   **Resource group name**: BCDRIaaSSecondarySite.
 
-    -   **Subscription**: Select your subscription
+    -   **Subscription**: Select your subscription.
 
-    -   **Resource group location**: Select a Region for the Secondary location
+    -   **Resource group location**: Select a region for the Secondary location.
 
         ![In the Resource group blade, fields are set to the previously defined settings.](images/Setup/image25.png "Resource group blade")
 
@@ -233,7 +233,7 @@ In this task, you will select **Primary** and **Secondary** Azure regions that w
 
 7.  Once all the resource groups have been created, review all the resource groups for this HOL. **It is critical to ensure that the spelling is correct and that they are in the correct Azure Regions (Primary or Secondary)**.
 
->**Note:** If for some reason there is an error, delete the erroneous resource group  and recreate it
+>**Note:** If for some reason there is an error, delete the erroneous resource group  and recreate it.
 
 8.  Here is the Azure Portal with each of the resource groups created in the correct Azure Region:
 

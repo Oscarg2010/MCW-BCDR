@@ -1,11 +1,11 @@
 ![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
-Business Continuity and Disaster Recovery
+Business continuity and disaster recovery
 </div>
 
 <div class="MCWHeader2">
-Whiteboard Design Session Student Guide
+Whiteboard design session student guide
 </div>
 
 <div class="MCWHeader3">
@@ -25,7 +25,7 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 <!-- TOC -->
 
-- [Business Continuity and Disaster Recovery Whiteboard Design Session Student Guide](#business-continuity-and-disaster-recovery-whiteboard-design-session-student-guide)
+- [Business continuity and disaster recovery whiteboard design session student guide](#business-continuity-and-disaster-recovery-whiteboard-design-session-student-guide)
     - [Abstract](#abstract)
     - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
         - [Customer situation](#customer-situation)
@@ -39,7 +39,7 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 <!-- /TOC -->
 
-#  Business Continuity and Disaster Recovery Whiteboard Design Session Student Guide
+#  Business continuity and disaster recovery whiteboard design session student guide
 
 ## Abstract
 
@@ -57,11 +57,11 @@ Timeframe: 15 minutes
 
 Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips.
 
-1.  Meet your table participants and trainer
+1.  Meet your table participants and trainer.
 
-2.  Read all of the directions for steps 1-3 in the student guide
+2.  Read all of the directions for steps 1-3 in the student guide.
 
-3.  As a table team, review the following customer case study
+3.  As a table team, review the following customer case study.
 
 ### Customer situation
 
@@ -93,11 +93,11 @@ CI has completed a cloud assessment of their applications and have classified th
 
 ### Customer objections 
 
-1.  With the move to the cloud, they are uncomfortable with any situation that assumes the cloud provider will handle their fail-over
+1.  With the move to the cloud, they are uncomfortable with any situation that assumes the cloud provider will handle their fail-over.
 
-2.  They have many systems that need to be accounted for and they aren't sure if the tools really exist to give them the business continuity they desire
+2.  They have many systems that need to be accounted for and they aren't sure if the tools really exist to give them the business continuity they desire.
 
-3.  They want to know their BCDR solution is secure
+3.  They want to know their BCDR solution is secure.
 
 4.  CI has heavily invested in a third-party backup solution but want to use Azure as their archive. Does Azure support this?
 
@@ -105,7 +105,7 @@ CI has completed a cloud assessment of their applications and have classified th
 
 ![Azure Site Recovery Scenarios apply to multiple on-premises and cloud-based replication infrastructures, including Hyper-V to Hyper-V, Hyper-V to Azure, VMWare or physical to VMWare, VMWare or Physical to Azure, and Azure to Azure.](images/Whiteboarddesignsessiontrainerguide-Businesscontinuityanddisasterrecoveryimages/media/image2.png "Azure Site Recovery Scenarios ")
 
-![Recovering Hyper-V VMs to Azure Architecuture has the source as Hyper-V Hosts (Windows or Linux), an Azure Recovery Services agent, SCVMM with a Site Recovery DRA, Azure Site Recovery, and a Microsoft Azure cloud service. ](images/Whiteboarddesignsessiontrainerguide-Businesscontinuityanddisasterrecoveryimages/media/image3.png "Recover Hyper-V VMs to Azure Architecuture")
+![Recovering Hyper-V VMs to Azure Architecture has the source as Hyper-V Hosts (Windows or Linux), an Azure Recovery Services agent, SCVMM with a Site Recovery DRA, Azure Site Recovery, and a Microsoft Azure cloud service. ](images/Whiteboarddesignsessiontrainerguide-Businesscontinuityanddisasterrecoveryimages/media/image3.png "Recover Hyper-V VMs to Azure Architecture")
 
 ![In this environment, the Source Environment (East US) has a storage account with two disks and a storage account cache asr with cache data. These interact with a VNet environment made up of an availability set of two Azure Virtual Machines, and a subnet. Data flows from here through the Cache data, and to the Target Environment (Central US) Storage account ASR disks. In the Target Environment, the VNet-asr is empty.](images/Whiteboarddesignsessiontrainerguide-Businesscontinuityanddisasterrecoveryimages/media/image4.png "Azure Site Recovery Region to Region Failover")
 
@@ -179,7 +179,7 @@ Directions: With all participants at your table, respond to the following questi
 
     -   What Azure technology, which is complimentary to DR, will you implement to deal with application-specific tasks such as Pre-Actions and Post-Actions during a failover?
 
-    -   Given this will be an IaaS implementation, provide details of how you will provide high availabilty (HA) and failover capabilities to these VMs once they are in Azure?
+    -   Given this will be an IaaS implementation, provide details of how you will provide high availability (HA) and failover capabilities to these VMs once they are in Azure?
 
     -   How will you direct web traffic to the active site?
 
@@ -187,7 +187,7 @@ Directions: With all participants at your table, respond to the following questi
 
     -   What Azure BCDR technologies will you implement for this classification?
 
-    -   Given this will be a PaaS implementation, provide details of how you will provide high availabilty (HA) and failover capabilities to these VMs once they are in Azure?
+    -   Given this will be a PaaS implementation, provide details of how you will provide high availability (HA) and failover capabilities to these VMs once they are in Azure?
 
     -   How will SQL Database be set up to support both scenarios?
 
@@ -203,11 +203,11 @@ Directions: With all participants at your table, respond to the following questi
 
 Directions: With all participants at your table:
 
-1.  Identify any customer needs that are not addressed with the proposed solution
+1.  Identify any customer needs that are not addressed with the proposed solution.
 
-2.  Identify the benefits of your solution
+2.  Identify the benefits of your solution.
 
-3.  Determine how you will respond to the customer's objections
+3.  Determine how you will respond to the customer's objections.
 
 Prepare a 15-minute chalk-talk style presentation to the customer.
 
@@ -223,19 +223,19 @@ Timeframe: 30 minutes
 
 Directions:
 
-1.  Pair with another table
+1.  Pair with another table.
 
-2.  One table is the Microsoft team and the other table is the customer
+2.  One table is the Microsoft team and the other table is the customer.
 
-3.  The Microsoft team presents their proposed solution to the customer
+3.  The Microsoft team presents their proposed solution to the customer.
 
-4.  The customer makes one of the objections from the list of objections
+4.  The customer makes one of the objections from the list of objections.
 
-5.  The Microsoft team responds to the objection
+5.  The Microsoft team responds to the objection.
 
-6.  The customer team gives feedback to the Microsoft team
+6.  The customer team gives feedback to the Microsoft team.
 
-7.  Tables switch roles and repeat Steps 2-6
+7.  Tables switch roles and repeat Steps 2-6.
 
 ##  Wrap-up 
 
