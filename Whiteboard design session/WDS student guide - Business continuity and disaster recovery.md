@@ -51,7 +51,7 @@ At the end of this WDS, you will be better able to design a solution that levera
 
 **Outcome**
 
-Analyze the customer's needs.
+Analyze your customer's needs.
 
 Timeframe: 15 minutes
 
