@@ -1,7 +1,7 @@
 ![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
-Business Continuity and Disaster Recovery
+Business continuity and disaster Recovery
 </div>
 
 <div class="MCWHeader2">
@@ -24,7 +24,7 @@ The names of manufacturers, products, or URLs are provided for informational pur
 
 <!-- TOC -->
 
-- [Business Continuity and Disaster Recovery before the hands-on lab Setup Guide](#business-continuity-and-disaster-recovery-before-the-hands-on-lab-setup-guide)
+- [Business continuity and disaster recovery before the hands-on lab setup guide](#business-continuity-and-disaster-recovery-before-the-hands-on-lab-setup-guide)
     - [Requirements](#requirements)
     - [Before the hands-on lab](#before-the-hands-on-lab)
         - [Task 1: Create a virtual machine to execute the lab](#task-1-create-a-virtual-machine-to-execute-the-lab)
@@ -34,26 +34,25 @@ The names of manufacturers, products, or URLs are provided for informational pur
 
 <!-- /TOC -->
 
-# Business continuity and disaster recovery - hands-on lab setup guide 
+# Business continuity and disaster recovery before the hands-on lab setup guide 
 
 ## Requirements
 
 - Laptop or tablet, Internet browser, reliable and available internet connection
-- Azure Subscription with full access to the environment
+
+- Azure Subscription with full access to the environment.
 
 ## Before the hands-on lab
 
-Estimated Duration: 20 minutes
+Duration: 20 minutes
 
 ### Task 1: Create a virtual machine to execute the lab
 
-1.  Launch a browser and navigate to the Azure Global portal at <https://portal.azure.com>.
-Once prompted, login with your Microsoft Azure credentials. 
-If prompted, choose whether your account is an Organization  or Microsoft account.
+1.  Launch a browser and navigate to the Azure Global portal at <https://portal.azure.com>. Once prompted, login with your Microsoft Azure credentials. If prompted, choose whether your account is an Organization  or Microsoft account.
 
-Select on **+Create a resource**, in the search box start typing **Visual Studio Community** and press **Enter**. Select the **Visual Studio Community 2017 (latest updates) on Windows Server 2016 (64)**. 
+2.  Select on **+Create a resource**, in the search box start typing **Visual Studio Community** and press **Enter**. Select the **Visual Studio Community 2017 (latest updates) on Windows Server 2016 (64)**. 
 
->Note: Ensure that you select the exact image name identified above. Failure to do so may result in problems successfully completing the BCDR HOL.
+>**Note**: Ensure that you select the exact image name identified above. Failure to do so may result in problems successfully completing the BCDR HOL.
 
 3.  In the returned search results, select the latest image name. Leave the *Select a Deployment Model* chooser on **Resource Manager**.
 
@@ -65,16 +64,18 @@ Select on **+Create a resource**, in the search box start typing **Visual Studio
 
     -   **Name**: LABVM
 
-    -   **Region**: Choose the Azure region closet to you
+    -   **Region**: Choose the Azure region closet to you.
 
     -   **User name**: mcwadmin
 
-    -   **Password:** demo\@pass123 
-        >**Note:** You may want to click the small eyeball icon to ensure you've entered it correctly
+    -   **Password:** demo\@pass123
+    
+        >**Note:** You may want to click the small eyeball icon to ensure you've entered it correctly.
 
      -   **Subscription**: If you have multiple subscriptions, choose the appropriate subscription in which to conduct the lab.
 
-    -   **Resource Group**: BCDRLabRG 
+    -   **Resource Group**: BCDRLabRG
+    
     ![Fields in the Basics blade are set to the previously defined settings.](images/Setup/image6.png "Basics blade")
 
 6.  Choose the **Standard D2 V3 (D2s_V3)** instance size on the Size blade.
@@ -212,7 +213,7 @@ In this task, you will select **Primary** and **Secondary** Azure regions that w
 
 5.  Complete the **Resource group** blade using the following inputs and select **Create**.
 
-    -   **Resource group name**: BCDRIaaSSecondarySite.
+    -   **Resource group name**: BCDRIaaSSecondarySite
 
     -   **Subscription**: Select your subscription.
 
@@ -239,6 +240,4 @@ In this task, you will select **Primary** and **Secondary** Azure regions that w
 
     ![In the Resource groups blade, various resource groups and their locations are listed.](images/Setup/image26.png "Resource groups blade")
 
-**Congratulations!!** You have now completed all of the environmental setup required for the Business Continuity and Disaster Recovery Hands-On-Lab.
-
-You should successfully complete all of the steps in this guide *before* starting the BCDR Hands-on Lab.
+You should follow all steps provided *before* starting the Hands-on Lab.
