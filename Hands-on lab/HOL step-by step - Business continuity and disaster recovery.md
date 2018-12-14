@@ -5,7 +5,7 @@ Business continuity and disaster recovery
 </div>
 
 <div class="MCWHeader2">
-Hands-on lab step-by-step guide
+Hands-on lab step-by-step
 </div>
 
 <div class="MCWHeader3">
@@ -67,7 +67,7 @@ At the end of this hands-on lab, you will be able to design and build complex an
 
 ## Overview
 
-The Business Continuity and Disaster Recovery Hands-on Lab is an exercise that will challenge you to implement a BCDR solution that includes three different environments and uses Azure BCDR technologies to achieve three distinct goals for each environment. These objectives include a migration to Azure, Azure region to region failover using Azure Site Recovery (ASR), and a PaaS implementation using BCDR technologies to ensure high availability of an application.
+The Business continuity and disaster recovery hands-on Lab is an exercise that will challenge you to implement a BCDR solution that includes three different environments and uses Azure BCDR technologies to achieve three distinct goals for each environment. These objectives include a migration to Azure, Azure region to region failover using Azure Site Recovery (ASR), and a PaaS implementation using BCDR technologies to ensure high availability of an application.
 
 The hands-on lab can be implemented on your own, but it is highly recommended to pair up with other members at the lab to model real-world experiences and to allow each member to share their expertise for the overall solution.
 
@@ -187,7 +187,7 @@ In this exercise, you will use Azure ARM templates to deploy the following envir
 
     ![In the Settings section, the Domain Controller DNS Name field is populated.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image36.png "Settings section")
 
-10. Finally, select **I agree to the terms and conditions stated above** and **Pin to dashboard.**. Select **Purchase** to start the deployment.
+10. Finally, select **I agree to the terms and conditions stated above** and **Pin to dashboard**. Select **Purchase** to start the deployment.
 
     ![The checkboxes for pin to dashboard, and I agree to the terms and conditions are selected, as is the Purchase button.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image34.png "Purchase button")
 
@@ -275,11 +275,11 @@ In this exercise, you will create and configure the services that will make it p
 
 4.  Complete the **Add Automation Account** blade using the following inputs and then select **Create**:
 
-    -   **Name**: Enter a Globally unique name starting with BCDR
+    -   **Name**: Enter a Globally unique name starting with BCDR.
 
     -   **Resource group**: Use existing / BCDRAzureAutomation
 
-    -   **Location**: Select a site in your area (but NOT your Primary site)
+    -   **Location**: Select a site in your area (but NOT your Primary site).
 
     -   **Create Azure Run As account**: Yes
 
@@ -323,7 +323,7 @@ In this exercise, you will create and configure the services that will make it p
 
     ![Screenshot of the Import blade with the Azure Automation account highlighted.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image54.png "Import blade")
 
-14. The portal will begin the import process, and should only take about a minute.
+14. The portal will begin the import process and should only take about a minute.
 
     ![Screenshot of the AzureRM.Network modules import status.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image54a.png "AzureRM.Network deployment status")
 
@@ -447,7 +447,7 @@ In this task, the **OnPremVM** will be configured to replicate to Azure and be r
 
     ![In the For On-Premises Machines section, Prepare Infrastructure is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image77.png "For On-Premises Machines section")
 
-4.  On **Step 1 Protection Goal** select the following inputs and then click **OK**:
+4.  On **Step 1 Protection Goal** select the following inputs and then select **OK**:
 
     -   **Where are your machines located?**: On-premises
 
@@ -749,7 +749,7 @@ Once complete, select **OK**.
 
     ![In the Replicated items blade, a callout points to the status of 0 percent synchronized.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image133.png "Replicated items blade")
 
-    >**NOTE:** If the **OnPremVM** does not immediately go to a healthy replication  state, or ever gets in an unhealth state, you may need to "Disable Replication" and recreate it using the steps above.
+    >**Note**: If the **OnPremVM** does not immediately go to a healthy replication  state, or ever gets in an unhealth state, you may need to "Disable Replication" and recreate it using the steps above.
 
 64. Select **OnPremVM**. Review the Replication details for **OnPremVM**. Once the VM has replicated, the selections across the top menu bar of the dashboard will allow you to work with this VM.
 
@@ -925,11 +925,11 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
 30. Open a new Remote desktop session (this can be done from within SQLVM1), and repeat these steps to **Enable SQL Always On**. Change the username to **contoso\\mcwadmin** on each of the other nodes **SQLVM2**, and **SQLVM3.** Make sure that you have restarted the SQL Service on each node prior to moving to the next node.
 
->**Note:** If you get confused what server you are on open a command prompt and simply enter the command *hostname.*.
+>**Note**: If you get confused what server you are on open a command prompt and simply enter the command *hostname*.
 
 31. After you have completed the process on each SQLVM Node, reconnect to **SQLVM1** using Remote Desktop.
 
->**Note:** Remember that you must use the BCDRDC1 VM as your jumpbox to get into the environment. You can use the Azure portal to connect to BCDRDC1 and then use Remote desktop form there to SQLVM1.
+>**Note**: Remember that you must use the BCDRDC1 VM as your jumpbox to get into the environment. You can use the Azure portal to connect to BCDRDC1 and then use Remote desktop form there to SQLVM1.
 
 32. Use the Start menu to launch **Microsoft SQL Server Management Studio 17** and connect to the local instance of SQL Server. (Located in the Microsoft SQL Server Tools 17 folder).
 
@@ -967,7 +967,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     ![Screenshot of the Connect to Server dialog box for SQLVM2.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image180.png "Connect to Server dialog box")
 
-41. For **SQLVM2**, select Automatic Failover and Availability Mode of Synchronous commit
+41. For **SQLVM2**, select Automatic Failover and Availability Mode of Synchronous commit.
 
     ![On the Replicas tab, for SQLVM2, the checkbox for Automatic Failover (Up to 3) is selected, and availability mode is set to synchronous commit.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image181.png "Specify Replicase Screen")
 
@@ -1549,7 +1549,7 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![In Solution Explorer, the right-click menu for ContosoInsurance displays, and Publish is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image298.png "Solution Explorer")
 
-42. On the **Publish** screen select **App Service** and then **Select Existing** and finally **Publish**
+42. On the **Publish** screen select **App Service** and then **Select Existing** and finally **Publish**.
 
     ![On the Publish screen, App Service is selected. The radio button for Select Existing is selected as well.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image299.png "Publish screen")
 
@@ -1861,7 +1861,7 @@ Now, that your applications have been made ready for high-availability and BCDR 
 
     ![A sample webpage displays a message saying that you are connected successfully to MySQL.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image109.png "Sample Webpage")
 
-15. Your on-premise virtual machine (**OnPremVM**) has been successfully migrated to Azure!!
+15. Your on-premise virtual machine (**OnPremVM**) has been successfully migrated to Azure!
 
 **Optional Task**: If desired, you can Remote Desktop back into the HYPERVHOST, and you will observe that the original on-premise VM has shutdown.
 
