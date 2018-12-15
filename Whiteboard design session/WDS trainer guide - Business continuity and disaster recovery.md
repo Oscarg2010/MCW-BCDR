@@ -289,7 +289,7 @@ Directions: With all participants at your table, respond to the following questi
 
     -   Can you test the migration before going live?
 
-    -   Given this will be an IaaS implementation, provide details of how you will provide HA and Failover capabilities to these VMs once they are in Azure
+    -   Given this will be an IaaS implementation, provide details of how you will provide HA and Failover capabilities to these VMs once they are in Azure.
 
 -   Enterprise Applications
 
@@ -458,11 +458,11 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 -   Why did you select these regions?
 
-    -   These regions are closest to the locations of their current operations and datacenters
+    -   These regions are closest to the locations of their current operations and datacenters.
 
-    -   Each of these regions is considered "Region Pairs"
+    -   Each of these regions is considered "Region Pairs".
 
-    -   Miami, London and Sydney all support Express Route, so this will be implemented along with the Premium SKU so all regions can see each other
+    -   Miami, London and Sydney all support Express Route, so this will be implemented along with the Premium SKU so all regions can see each other.
 
 2.  Backup
 
@@ -494,7 +494,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 -   What Azure BCDR technologies will you implement for this classification?
 
-    -   Given these are single VMs they will be protected locally using Azure Site Recovery to ensure they can be failed over to Azure in case of an outage
+    -   Given these are single VMs they will be protected locally using Azure Site Recovery to ensure they can be failed over to Azure in case of an outage.
 
 -   How will you migrate these VMs to Azure?
 
@@ -524,7 +524,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
         -  The migration to Azure will be completed using a combination of Azure Site Recovery and SQL Always-On Availability Groups. First the AOG will be extended to have Asynchronous replicas running in an Azure Virtual Network over the ExpressRoute Circuit. This allows for an extension of the database to Azure. During the Failover for the migration the Asynchronous side of the AOG will be made a Synchronous replica and then a planned failover will make one of the Azure nodes the primary replica. Once this is completed then ASR will be used to failover the Web tier to Azure. The migration will then be completed using the Azure portal.
 
-        -  Once migrated to Azure the application will be re-protected to failover to the region pair that is assigned to their area of the world
+        -  Once migrated to Azure the application will be re-protected to failover to the region pair that is assigned to their area of the world.
 
             ![Diagram of the Azure Region to Region preferred solution.](images/Whiteboarddesignsessiontrainerguide-Businesscontinuityanddisasterrecoveryimages/media/image8.png "Azure Region to Region preferred solution")
 
