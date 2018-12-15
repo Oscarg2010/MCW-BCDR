@@ -89,7 +89,7 @@ Each whiteboard design session uses the following flow:
 
 **Outcome**
 
-Analyze your customer's needs
+Analyze your customer's needs.
 
 -   Customer's background, situation, needs and technical requirements
 
@@ -117,21 +117,21 @@ Design a solution and prepare to present the solution to the target customer aud
 
 Present solution to your customer:
 
--   Present solution.
+-   Present solution
 
--   Respond to customer objections.
+-   Respond to customer objections
 
--   Receive feedback.
+-   Receive feedback
 
 **Wrap-up (15 minutes)**
 
--   Review preferred solution.
+-   Review preferred solution
 
 ## Before the whiteboard design session: How to prepare
 
 Before conducting your first whiteboard design session:
 
--   Read the Student Guide (including the case study) and Trainer guide.
+-   Read the Student guide (including the case study) and Trainer guide.
 
 -   Become familiar with all key points and activities.
 
@@ -159,13 +159,13 @@ When participants are doing activities, you can **look ahead to refresh your mem
 
 **Involve your participants.** Talk and share your knowledge but always involve your participants, even while you are the one speaking.
 
-**Ask questions** and get them to share to fully involve your group in the learning process!
+**Ask questions** and get them to share to fully involve your group in the learning process.
 
 **Ask first**, whenever possible. Before launching into a topic, learn your audience's opinions about it and experiences with it. Asking first enables you to assess their level of knowledge and experience, and leaves them more open to what you are presenting.
 
 **Wait for responses**. If you ask a question such as, "What's your experience with (fill in the blank)?" then wait. Do not be afraid of a little silence. If you leap into the silence, your participants will feel you are not serious about involving them and will become passive. Give participants a chance to think, and if no one answers, patiently ask again. You will usually get a response.
 
-#  Business Continuity and Disaster Recovery Whiteboard Design Session Student Guide
+#  Business continuity and disaster recovery whiteboard design session student guide
 
 ## Abstract
 
@@ -388,11 +388,11 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 | Backup Solution Architectures | <https://azure.microsoft.com/en-us/solutions/architecture/backup-archive-on-premises-applications/> |
 
 
-# Business Continuity and Disaster Recovery Whiteboard Design Session Trainer Guide 
+# Business continuity and disaster recovery whiteboard design session trainer guide 
 
 ## Step 1: Review the customer case study
 
--   Check in with your table participants to introduce yourself as the trainer
+-   Check in with your table participants to introduce yourself as the trainer.
 
 -   Ask, "What questions do you have about the customer case study?"
 
@@ -420,7 +420,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 -   Have the presenting team present their solution to the customer team.
 
-    -   Have the customer team provide one objection for the presenting team's response.
+    -   Have the customer team provide one objection for the presenting team to respond to.
 
     -   The presentation, objections, and feedback should take no longer than 15 minutes.
 
