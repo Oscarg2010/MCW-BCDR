@@ -9,7 +9,7 @@ Whiteboard design session trainer guide
 </div>
 
 <div class="MCWHeader3">
-September 2018
+November 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -191,7 +191,7 @@ Directions: With all participants in the session, the facilitator/SME presents a
 
 ### Customer situation
 
-Contoso Insurance (CI), is a multinational corporation, headquartered in Miami providing insurance solutions in North America, Europe, and Australia. Its products include accident and health insurance, life insurance, travel, home, and auto coverage. CI manages data collection services by sending mobile agents directly to the insured to gather information as part of the data collection process for claims from an insured individual. These mobile agents are based all over the world and are residents of the region in which they work. Mobile agents are managed remotely, and each regional corporate office has a support staff responsible for scheduling their time based on requests that arrive to the system.
+Contoso Insurance (CI), headquartered in Miami, is a multinational corporation providing insurance solutions in North America, Europe, and Australia. Its products include accident and health insurance, life insurance, travel, home, and auto coverage. CI manages data collection services by sending mobile agents directly to the insured to gather information as part of the data collection process for claims from an insured individual. These mobile agents are based all over the world and are residents of the region in which they work. Mobile agents are managed remotely, and each regional corporate office has a support staff responsible for scheduling their time based on requests that arrive to the system.
 
 CI currently hosts their primary corporate systems at co-location facilities within each geo-political region and manage all IT operations for the system. These sites include Miami, London, and Sydney all of which are connected to the Internet and each other via a combination of VPNs and private WANs.
 
@@ -201,7 +201,7 @@ CI has completed a cloud assessment of their applications and have classified th
 
 **Workgroup Applications:** These are typically smaller applications that run on a single VM and are used by 25 or fewer employees. These applications have been developed locally by the Regional IT teams and are based on Linux, Apache, PHP, and MySQL (LAMP). These applications are important to the various business units and need to be managed and require backup but won't need mission-critical failover capabilities. The primary concern is how to migrate these applications as quickly as possible to Azure with minimal downtime.
 
-**Enterprise Applications:** The applications in this classification are mission critical to the business and have been developed using ASP.NET and SQL Server Enterprise over many years. They are deployed using Windows Clustering and SQL Always On Availability Groups (AOG), to ensure failover of databases during an outage. These applications are running in the various datacenters around the world but currently, have no DR capabilities. They are backed up using a third-party software with a mix of online disk backup and ultimately then archived to tape and sent offsite for storage. Given their status as core to the business, they require complex DR failover and failback capabilities whether they are running in an Azure region or one of the colocation facilities. "There is critical concern about the Miami datacenter given how hurricane-prone the area is and the intensity of the storms which could cause outages lasting weeks," says Clifton Quinlan Director of Continuity of Business (COB). "With only a few months until the next hurricane season, we need to get these applications protected in Azure. Some will be migrated immediately, and others will need to be extended to failover to the cloud but will need to allow for failback to the on-premises."
+**Enterprise Applications:** The applications in this classification are mission critical to the business and have been developed using ASP.NET and SQL Server Enterprise over many years. They are deployed using Windows Clustering and SQL Always-On Availability Groups (AOG), to ensure failover of databases during an outage. These applications are running in the various datacenters around the world but currently, have no DR capabilities. They are backed up using a third-party software with a mix of online disk backup and ultimately then archived to tape and sent offsite for storage. Given their status as core to the business, they require complex DR failover and failback capabilities whether they are running in an Azure region or one of the colocation facilities. "There is critical concern about the Miami datacenter given how hurricane-prone the area is and the intensity of the storms which could cause outages lasting weeks," says Clifton Quinlan Director of Continuity of Business (COB). "With only a few months until the next hurricane season, we need to get these applications protected in Azure. Some will be migrated immediately, and others will need to be extended to failover to the cloud but will need to allow for failback to the on-premises."
 
 **Global, Mobile, and API Web Applications:** CI has leveraged their experience with ASP.NET and SQL Server to build applications that are Azure PaaS ready. These applications primarily service their external customers and the mobile agents. These include applications for consumers and their employees in the field dealing with claims. "We have prototyped these applications in Azure App Services and SQL Database with success but need a plan for how they will be implemented for high-availability and automatic failover," says Mrs. Simmons. "These applications are global, so we want to make sure that they are distributed around the world and that users will be directed to the closest point of presence (POP) but will never get an error if there is a local issue."
 
@@ -231,7 +231,7 @@ CI has completed a cloud assessment of their applications and have classified th
 
 ![Azure Site Recovery Scenarios apply to multiple on-premises and cloud-based replication infrastructures, including Hyper-V to Hyper-V, Hyper-V to Azure, VMWare or physical to VMWare, VMWare or Physical to Azure, and Azure to Azure.](images/Whiteboarddesignsessiontrainerguide-Businesscontinuityanddisasterrecoveryimages/media/image2.png "Azure Site Recovery Scenarios ")
 
-![Recovering Hyper-V VMs to Azure Architecuture has the source as Hyper-V Hosts (Windows or Linux), an Azure Recovery Services agent, SCVMM with a Site Recovery DRA, Azure Site Recovery, and a Microsoft Azure cloud service. ](images/Whiteboarddesignsessiontrainerguide-Businesscontinuityanddisasterrecoveryimages/media/image3.png "Recover Hyper-V VMs to Azure Architecuture")
+![Recovering Hyper-V VMs to Azure Architecture has the source as Hyper-V Hosts (Windows or Linux), an Azure Recovery Services agent, SCVMM with a Site Recovery DRA, Azure Site Recovery, and a Microsoft Azure cloud service. ](images/Whiteboarddesignsessiontrainerguide-Businesscontinuityanddisasterrecoveryimages/media/image3.png "Recover Hyper-V VMs to Azure Architecture")
 
 ![In this environment, the Source Environment (East US) has a storage account with two disks and a storage account cache asr with cache data. These interact with a VNet environment made up of an availability set of two Azure Virtual Machines, and a subnet. Data flows from here through the Cache data, and to the Target Environment (Central US) Storage account ASR disks. In the Target Environment, the VNet-asr is empty.](images/Whiteboarddesignsessiontrainerguide-Businesscontinuityanddisasterrecoveryimages/media/image4.png "Azure Site Recovery Region to Region Failover")
 
@@ -279,7 +279,7 @@ Directions: With all participants at your table, respond to the following questi
 
     -   What DR Solutions will be leveraged for the implementation at CI?
 
-4.  Design a HA and BDCR solution for each of the three application classifications. At a high-level provide details of your implementation. Make sure to document your design with a diagram along with addressing the questions.
+4.  Design a HA and BDCR solution for each of the three application classifications. At a high-level, provide details of your implementation. Make sure to document your design with a diagram along with addressing the questions.
 
 -   Workgroup Applications
 
@@ -289,7 +289,7 @@ Directions: With all participants at your table, respond to the following questi
 
     -   Can you test the migration before going live?
 
-    -   Given this will be an IaaS implementation, provide details of how you will provide HA and Failover capabilities to these VMs once they are in Azure
+    -   Given this will be an IaaS implementation, provide details of how you will provide HA and Failover capabilities to these VMs once they are in Azure.
 
 -   Enterprise Applications
 
@@ -299,9 +299,9 @@ Directions: With all participants at your table, respond to the following questi
 
         -  Migrate to Azure and support Azure Region to Region Failover.
 
-        -  Remain on-premises for primary, but support Hyper-V to Azure Region Failover.
+        -  Remain on-premises for primary, but support Hyper-V to Azure Region failover.
 
-    -   How will SQL Always On Availability Groups be set up in order to support both of these scenarios?
+    -   How will SQL Always-On Availability Groups be set up in order to support both of these scenarios?
 
     -   What Azure technology, which is commentary to DR, will you implement to deal with application specific tasks such as Pre-Actions and Post-Actions during a failover?
 
@@ -458,11 +458,11 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 -   Why did you select these regions?
 
-    -   These regions are closest to the locations of their current operations and datacenters
+    -   These regions are closest to the locations of their current operations and datacenters.
 
-    -   Each of these regions is considered "Region Pairs"
+    -   Each of these regions is considered "Region Pairs".
 
-    -   Miami, London and Sydney all support express route, so this will be implemented along with the Premium SKU so all regions can see each other
+    -   Miami, London and Sydney all support Express Route, so this will be implemented along with the Premium SKU so all regions can see each other.
 
 2.  Backup
 
@@ -486,7 +486,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
     -   Azure Site Recovery will be the primary BCDR Servers that is used for DR by CI. The service will be used as a Migration Tool as well as a COB tool for failovers between either on-premises Hyper-V implementations or between two Azure Regions for IaaS deployments.
 
-    -   Design a HA and BDCR solution for each of the three application classifications. At a high-level provide details of your implementation. Make sure to document your design with a diagram along with addressing the questions.
+    -   Design a HA and BDCR solution for each of the three application classifications. At a high-level, provide details of your implementation. Make sure to document your design with a diagram along with addressing the questions.
 
 4.  Design a HA and BDCR solution for each of the three application classifications. At a high-level provide details of your implementation. Make sure to document your design with a diagram along with addressing the questions.
 
@@ -494,7 +494,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 -   What Azure BCDR technologies will you implement for this classification?
 
-    -   Given these are single VMs they will be protected locally using Azure Site Recovery to ensure they can be failed over to Azure in case of an outage
+    -   Given these are single VMs they will be protected locally using Azure Site Recovery to ensure they can be failed over to Azure in case of an outage.
 
 -   How will you migrate these VMs to Azure?
 
@@ -510,7 +510,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
     -   The VM will be implemented using Managed disks and Premium storage. By using Managed disks there is better fault tolerance and with Premium storage the VM will be covered by a 99.9% SLA even for single VM applications.
 
-        ![The Azure IaaS failover region to region solution has on-premises, azure platform, and secondary region sections. On-premises has a hyper-v host and a linux on-premises virtual machine. Azure Platform uses Azure Site Recovery. The secondary region has an on-premises Linux VM as well.](images/Whiteboarddesignsessiontrainerguide-Businesscontinuityanddisasterrecoveryimages/media/image7.png "Azure IaaS failover region to region solution")
+        ![The Azure IaaS failover region to region solution has on-premises, azure platform, and secondary region sections. On-premises has a Hyper-V host and a Linux on-premises virtual machine. Azure Platform uses Azure Site Recovery. The secondary region has an on-premises Linux VM as well.](images/Whiteboarddesignsessiontrainerguide-Businesscontinuityanddisasterrecoveryimages/media/image7.png "Azure IaaS failover region to region solution")
 
 -   Enterprise Applications
 
@@ -522,13 +522,13 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
     -   Migrate to Azure and support Azure Region to Region Failover.
 
-        -  The migration to Azure will be completed using a combination of Azure Site Recovery and SQL Always On Availability Groups. First the AOG will be extended to have Asynchronous replicas running in an Azure Virtual Network over the ExpressRoute Circuit. This allows for an extension of the database to Azure. During the Failover for the migration the Asynchronous side of the AOG will be made a Synchronous replica and then a planned failover will make one of the Azure nodes the primary replica. Once this is completed then ASR will be used to failover the Web tier to Azure. The migration will then be completed using the Azure portal.
+        -  The migration to Azure will be completed using a combination of Azure Site Recovery and SQL Always-On Availability Groups. First the AOG will be extended to have Asynchronous replicas running in an Azure Virtual Network over the ExpressRoute Circuit. This allows for an extension of the database to Azure. During the Failover for the migration the Asynchronous side of the AOG will be made a Synchronous replica and then a planned failover will make one of the Azure nodes the primary replica. Once this is completed then ASR will be used to failover the Web tier to Azure. The migration will then be completed using the Azure portal.
 
         -  Once migrated to Azure the application will be re-protected to failover to the region pair that is assigned to their area of the world.
 
             ![Diagram of the Azure Region to Region preferred solution.](images/Whiteboarddesignsessiontrainerguide-Businesscontinuityanddisasterrecoveryimages/media/image8.png "Azure Region to Region preferred solution")
 
-    -   Remain on-premises for primary, but support Hyper-V to Azure Region Failover.
+    -   Remain on-premises for primary, but support Hyper-V to Azure Region Failover
 
         -   Like the migration, the AOG will be extended to have Asynchronous replicas running in an Azure Virtual Network over the ExpressRoute Circuit. This allows for an extension of the database to Azure. Azure Site Recovery will then be configured for a forced failover which will make one of the Asynchronous nodes in Azure a Synchronous replica. Once this is completed then ASR will be used to failover the Web tier to Azure.
 
@@ -536,9 +536,9 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
             ![Diagram of the On-premises to Azure solution.](images/Whiteboarddesignsessiontrainerguide-Businesscontinuityanddisasterrecoveryimages/media/image9.png "On-premises to Azure solution")
 
--   How will SQL Always On Availability Groups be set up in order to support both of these scenarios?
+-   How will SQL Always-On Availability Groups be set up in order to support both of these scenarios?
 
-    -   SQL Always On will have multiple Replicas which are built with Synchronous replication and Automatic failover in the Primary site. The Secondary site will have at least one Asynchronous replication and a Manual failover partner. This will be identical regardless if it is on-premises to Azure or Azure Region to Region.
+    -   SQL Always-On will have multiple Replicas which are built with Synchronous replication and Automatic failover in the Primary site. The Secondary site will have at least one Asynchronous replication and a Manual failover partner. This will be identical regardless if it is on-premises to Azure or Azure Region to Region.
 
 -   What Azure technology, which is commentary to DR, will you implement to deal with application specific tasks such as Pre-Actions and Post-Actions during a failover?
 
@@ -546,7 +546,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 -   Given this will be an IaaS implementation, provide details of how you will provide HA and Failover capabilities to these VMs once they are in Azure.
 
-    -   These are mission critical systems that have multiple VMs, so they will be configured to leverage Managed Disks, Availability Sets and Premium disks. This provides for the most fault tolerance available to an Azure VM and will be eligible for a 99.95% SLA. The Internal Load balancer will also be used in front of the SQL Always On nodes that are running in Azure.
+    -   These are mission critical systems that have multiple VMs, so they will be configured to leverage Managed Disks, Availability Sets and Premium disks. This provides for the most fault tolerance available to an Azure VM and will be eligible for a 99.95% SLA. The Internal Load balancer will also be used in front of the SQL Always-On nodes that are running in Azure.
 
 -   How will you direct web traffic to the active site?
 
@@ -564,7 +564,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 -   How will SQL Database be set up to support both of these scenarios?
 
-    -   The SQL Database will be implemented using Auto Failover Groups. This allows for geo-replication with a single listener name like the SQL Always On Availability Groups. This dramatically simplifies issues of connection strings within the App Services Application Settings. By pointing at the Listener rather than a server, there should never be an issue if a Database is failed over.
+    -   The SQL Database will be implemented using Auto Failover Groups. This allows for geo-replication with a single listener name like the SQL Always-On Availability Groups. This dramatically simplifies issues of connection strings within the App Services Application Settings. By pointing at the Listener rather than a server, there should never be an issue if a Database is failed over.
 
 -   What Azure technology and/or DevOps tools will you implement to deal with application specific tasks, such as Pre-Actions and Post-Actions during a failover?
 
