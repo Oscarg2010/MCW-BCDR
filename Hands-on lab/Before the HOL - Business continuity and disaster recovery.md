@@ -155,7 +155,7 @@ Duration: 20 minutes
 
 1.  Download the zipped Hands-on Lab Step by Step student files at the following link:
 
-    <https://www.dropbox.com/s/mfy0hx84ljie3rq/StudentFiles.zip?dl=1> [Nov 2018]
+    <https://github.com/Microsoft/MCW-Business-continuity-and-disaster-recovery/blob/master/Hands-on%20lab/StudentFiles/studentfiles.zip?raw=true> 
 
 2.  Extract the files to a directory here **C:\\HOL** on LABVM.
 

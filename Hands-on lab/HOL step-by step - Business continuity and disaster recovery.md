@@ -991,7 +991,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     ![The Add button is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image189.png "Add button")
 
-51. Select the Subnet of **172.16.2.0/24** and then add IPv4 **172.16.2.100** and select **OK**. This is the IP address of the Internal Load Balancer that is in front of the **SQLVM3** and **SQLVM4** in the **BCDRFOVNET** **Data** Subnet running in the **Secondary** Site.
+51. Select the Subnet of **172.16.2.0/24** and then add IPv4 **172.16.2.100** and select **OK**. This is the IP address of the Internal Load Balancer that is in front of the **SQLVM3** in the **BCDRFOVNET** **Data** Subnet running in the **Secondary** Site.
 
     ![Fields in the Add IP Address dialog box are set to the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image190.png "Add IP Address dialog box")
 
@@ -1149,7 +1149,11 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     - **Name**: BCDRIaaS
 
+    - **Accepted protocol**: HTTP only
+
     - **Backend pool**: BCDRIaaS
+
+    - **Forwarding protocol**: HTTP Only
 
     ![Add a rule pane with the previously specified values entered in the fields.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image213-g.png "Add a rule pane")
 
@@ -1159,11 +1163,13 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
 85. Once validation has completed, select **Create** to provision the Front Door service.
 
-86. Select the Fontend host of the Front Door, the Policy Connect web application will load. This is connecting to the **WWWEXTLB** External Load Balancer that is in front of **WEBVM1** and **WEBVM2** running in the **Primary** Site in **BCDRIaaSPrimarySite** resource group and connecting to the SQL Always On Listener at the same location.
+86. Select the **Frontend host** URL of Azure Front Door, the Policy Connect web application will load. This is connecting to the **WWWEXTLB** External Load Balancer that is in front of **WEBVM1** and **WEBVM2** running in the **Primary** Site in **BCDRIaaSPrimarySite** resource group and connecting to the SQL Always On Listener at the same location.
 
     ![The Frontend host link is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image223.png "Frontend host link")
 
     ![The Contoso Insurance PolicyConnect webpage displays with a callout pointing to the DNS name trafficmanager.net.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image224.png "Contoso Insurance PolicyConnect webpage ")
+
+    > **NOTE:** Be sure to use **HTTP** to access the Azure Front Door **frontend host** URL. The lab configures only HTTP support for Front Door since WebVM1 and WebVM2 for the BCDRIaaS environment are only setup for HTTP support; not HTTPS (aka SSL).
 
     > **NOTE:** If you get a "Our services aren't available right now" error accessing the web application, then continue on with the lab and come back to this later. Sometime this can take a ~10 minutes for the routing rules to publish before it's "live".
     >
