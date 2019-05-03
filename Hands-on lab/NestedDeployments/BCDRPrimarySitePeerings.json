@@ -1,0 +1,50 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+  },
+  "variables": {
+    "vNet1Name": "BCDRVNET",
+    "vNet2Name": "BCDRFOVNET",
+    "PrimaryVnetResourceGroup": "BCDRIaaSPrimarySite",
+    "SecondaryVnetResourceGroup": "BCDRIaaSSecondarySite",
+    "vNet1tovNet2PeeringName": "[concat(variables('vNet1Name'), '/peering-to-remote-vnet')]",
+    "vNet2tovNet1PeeringName": "[concat(variables('vNet2Name'), '/peering-from-remote-vnet')]"
+     },
+  "resources": [
+    {
+      "apiVersion": "2018-08-01",
+      "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
+      "name": "[variables('vNet1tovNet2PeeringName')]",
+      "location": "[variables('PrimaryVnetResourceGroup')]",
+      "comments": "This is the peering from BCDRVNET to BCDRFOVNET",
+      "properties": {
+          "allowVirtualNetworkAccess": "true",
+          "allowForwardedTraffic": "false",
+          "allowGatewayTransit": "false",
+          "useRemoteGateways": "false",
+          "remoteVirtualNetwork": {
+            "id": "[resourceId(variables('SecondaryVnetResourceGroup'), 'Microsoft.Network/virtualNetworks', variables('vnet2Name'))]"
+          }
+        }
+    },
+    {
+      "apiVersion": "2018-08-01",
+      "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
+      "name": "[variables('vNet2tovNet1PeeringName')]",
+      "location": "[variables('SecondaryVnetResourceGroup')]",
+      "comments": "This is the peering from BCDRFOVNET to BCDRVNET",
+      "properties": {
+          "allowVirtualNetworkAccess": "true",
+          "allowForwardedTraffic": "false",
+          "allowGatewayTransit": "false",
+          "useRemoteGateways": "false",
+          "remoteVirtualNetwork": {
+            "id": "[resourceId(variables('PrimaryVnetResourceGroup'), 'Microsoft.Network/virtualNetworks', variables('vnet1Name'))]"
+          }
+        }
+    }
+  ],
+  "outputs": {
+  }
+}

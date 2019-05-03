@@ -1,0 +1,83 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {
+    "BCDRVNetName": "BCDRVNet",
+    "DNSIP": "10.0.3.4",
+    "BCDRVNetPrefix": "10.0.0.0/16",
+    "BCDRVNetSubnet1Name": "GatewaySubnet",
+    "BCDRVNetSubnet1Prefix": "10.0.0.0/24",
+    "BCDRVNetSubnet2Name": "WEB",
+    "BCDRVNetSubnet2Prefix": "10.0.1.0/24",
+    "BCDRVNetSubnet3Name": "DATA",
+    "BCDRVNetSubnet3Prefix": "10.0.2.0/24",
+    "BCDRVNetSubnet4Name": "AD",
+    "BCDRVNetSubnet4Prefix": "10.0.3.0/24",
+    "ADNSGName": "ADNSG",
+    "DEFAULTNSGName": "Default"
+  },
+  "resources": [
+    {
+      "name": "[variables('BCDRVNetName')]",
+      "type": "Microsoft.Network/virtualNetworks",
+      "location": "[resourceGroup().location]",
+      "apiVersion": "2017-10-01",
+      "dependsOn": [],
+      "tags": {
+        "displayName": "[variables('BCDRVNetName')]"
+      },
+      "properties": {
+        "addressSpace": {
+          "addressPrefixes": [
+            "[variables('BCDRVNetPrefix')]"
+          ]
+        },
+        "dhcpOptions": {
+          "dnsServers": [
+            "[variables('DNSIP')]"
+          ]
+        },
+        "subnets": [
+          {
+            "name": "[variables('BCDRVNetSubnet1Name')]",
+            "properties": {
+              "addressPrefix": "[variables('BCDRVNetSubnet1Prefix')]",
+              "networkSecurityGroup": {
+                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('DEFAULTNSGName'))]"
+              }
+            }
+          },
+          {
+            "name": "[variables('BCDRVNetSubnet2Name')]",
+            "properties": {
+              "addressPrefix": "[variables('BCDRVNetSubnet2Prefix')]",
+              "networkSecurityGroup": {
+                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('DEFAULTNSGName'))]"
+              }
+            }
+          },
+          {
+            "name": "[variables('BCDRVNetSubnet3Name')]",
+            "properties": {
+              "addressPrefix": "[variables('BCDRVNetSubnet3Prefix')]",
+              "networkSecurityGroup": {
+                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('DEFAULTNSGName'))]"
+              }
+            }
+          },
+          {
+            "name": "[variables('BCDRVNetSubnet4Name')]",
+            "properties": {
+              "addressPrefix": "[variables('BCDRVNetSubnet4Prefix')]",
+              "networkSecurityGroup": {
+                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('ADNSGName'))]"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "outputs": {}
+}

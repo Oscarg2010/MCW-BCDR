@@ -1,0 +1,83 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+
+  },
+  "variables": {
+    "BCDRSecondarysqlserverName": "[concat('bcdrsecondarysqlserver', uniqueString(resourceGroup().id))]",
+    "BCDRSecondarySiteContosoInsuranceName": "[concat('BCDRSecondarySiteContosoInsurance', uniqueString(resourceGroup().id))]",
+    "BCDRSecondarysqlserverAdminLogin": "mcwadmin",
+    "BCDRSecondarysqlserverAdminLoginPassword": "demo@pass123",
+    "BCDRSecondarySiteAppPlanName": "BCDRSecondarySiteAppPlan",
+    "BCDRSecondarySiteAppPlanSkuName": "S1"
+
+  },
+  "resources": [
+    {
+      "name": "[variables('BCDRSecondarysqlserverName')]",
+      "type": "Microsoft.Sql/servers",
+      "location": "[resourceGroup().location]",
+      "apiVersion": "2014-04-01-preview",
+      "dependsOn": [],
+      "tags": {
+        "displayName": "BCDRSecondarysqlserver"
+      },
+      "properties": {
+        "administratorLogin": "[variables('bcdrSecondarysqlserverAdminLogin')]",
+        "administratorLoginPassword": "[variables('BCDRSecondarysqlserverAdminLoginPassword')]"
+      },
+      "resources": [
+        {
+          "name": "AllowAllWindowsAzureIps",
+          "type": "firewallrules",
+          "location": "[resourceGroup().location]",
+          "apiVersion": "2014-04-01-preview",
+          "dependsOn": [
+            "[resourceId('Microsoft.Sql/servers', variables('BCDRSecondarysqlserverName'))]"
+          ],
+          "properties": {
+            "startIpAddress": "0.0.0.0",
+            "endIpAddress": "0.0.0.0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "[variables('BCDRSecondarySiteAppPlanName')]",
+      "type": "Microsoft.Web/serverfarms",
+      "location": "[resourceGroup().location]",
+      "apiVersion": "2015-08-01",
+      "sku": {
+        "name": "[variables('BCDRSecondarySiteAppPlanSkuName')]"
+      },
+      "dependsOn": [],
+      "tags": {
+        "displayName": "BCDRSecondarySiteAppPlan"
+      },
+      "properties": {
+        "name": "[variables('BCDRSecondarySiteAppPlanName')]",
+        "numberOfWorkers": 1
+      }
+    },
+    {
+      "name": "[variables('BCDRSecondarySiteContosoInsuranceName')]",
+      "type": "Microsoft.Web/sites",
+      "location": "[resourceGroup().location]",
+      "apiVersion": "2015-08-01",
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/serverfarms', variables('BCDRSecondarySiteAppPlanName'))]"
+      ],
+      "tags": {
+        "[concat('hidden-related:', resourceId('Microsoft.Web/serverfarms', variables('BCDRSecondarySiteAppPlanName')))]": "Resource",
+        "displayName": "BCDRSecondarySiteContosoInsurance"
+      },
+      "properties": {
+        "name": "[variables('BCDRSecondarySiteContosoInsuranceName')]",
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('BCDRSecondarySiteAppPlanName'))]"
+      }
+    }
+  ],
+  "outputs": {
+  }
+}
