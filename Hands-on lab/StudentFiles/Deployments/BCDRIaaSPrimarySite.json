@@ -525,9 +525,6 @@
       "dependsOn": [
         "[resourceId('Microsoft.Network/networkInterfaces', variables('BCDRDC1NicName'))]"
       ],
-      "zones": [
-        "1"
-      ],
       "tags": {
         "displayName": "BCDRDC1"
       },
@@ -604,18 +601,11 @@
         "displayName": "BCDRDC1-PUBIP"
       },
       "properties": {
-        "publicIPAllocationMethod": "Static",
+        "publicIPAllocationMethod": "dynamic",
         "dnsSettings": {
           "domainNameLabel": "[parameters('domainControllerDnsName')]"
         }
-      },
-      "sku": {
-        "name": "Standard",
-        "tier": "Regional"
-      },
-      "zones": [
-        "1"
-      ]
+      }
     },
     {
       "name": "BCDRVnetUpdateDNS",
