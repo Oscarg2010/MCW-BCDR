@@ -9,7 +9,7 @@ Before the hands-on lab setup guide
 </div>
 
 <div class="MCWHeader3">
-June 2019
+May 2019
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -38,7 +38,7 @@ The names of manufacturers, products, or URLs are provided for informational pur
 
 ## Requirements
 
-- Laptop or tablet, Internet browser, reliable and available internet connection
+- Laptop or tablet, internet browser, reliable and available internet connection
 
 - Azure Subscription with full access to the environment.
 
@@ -50,7 +50,7 @@ Duration: 20 minutes
 
 1.  Launch a browser and navigate to the Azure Global portal at <https://portal.azure.com>. Once prompted, login with your Microsoft Azure credentials. If prompted, choose whether your account is an Organization  or Microsoft account.
 
-2.  Select on **+Create a resource**, in the search box start typing **Visual Studio Community** and press **Enter**. Select the **Visual Studio Community 2017 (latest updates) on Windows Server 2016 (64)**.
+2.  Select **+Create a resource**, in the search box start typing **Visual Studio Community** and press **Enter**. Select the **Visual Studio Community 2017 (latest updates) on Windows Server 2016 (64)**.
 
     >**Note**: Ensure that you select the exact image name identified above. Failure to do so may result in problems successfully completing the BCDR HOL.
 
@@ -68,13 +68,13 @@ Duration: 20 minutes
 
     -   **Virtual machine name**: LABVM
 
-    -   **Size**: Choose the **Standard D2s V3 (D2s_V3)** instance size
+    -   **Size**: Choose the **Standard D2s V3 (D2s_V3)** instance size.
 
     -   **Region**: Choose the Azure region closet to you.
 
-    -   **Username**: `mcwadmin`
+    -   **Username**: mcwadmin
 
-    -   **Password:** `demo@pass123`
+    -   **Password:** demo@pass123
     
     >**Note:** You may want to click the small eyeball icon to ensure you've entered it correctly.
     
@@ -82,23 +82,23 @@ Duration: 20 minutes
 
     >**Note:** If the Azure Subscription you are using has limits on the number of cores, you may wish to choose DS1\_V2.
 
-7. Click **Next: Disks**.
+6. Click **Next: Disks**.
 
-    ![Next: Disks Button](images/Setup/image7.png "Disks button")
+    ![View of the Next: Disks Button.](images/Setup/image7.png "Disks button")
 
-8.  Select **Premium SSD**, then **Next: Networking>**.
+7.  Select **Premium SSD**, then **Next: Networking>**.
 
-    ![Networking](images/Setup/image8.png "Next: Networking>")
+    ![Premium SSD is selected, then Next : Networking](images/Setup/image8.png "Next: Networking>")
 
-9.  Click **Allow selected ports** and then choose **RDP** (3389) from the **Select  inbound ports** dropdown chooser.  This will enable remote desktop connections from the internet to LABVM.
+8.  Click **Allow selected ports** and then choose **RDP** (3389) from the **Select  inbound ports** dropdown chooser.  This will enable remote desktop connections from the internet to LABVM.
     
     ![Select public inbound ports dropdown with RDP (3389) selected](images/Setup/image27.png "Select public inbound ports dropdown")
 
-10.  Click **Review + create**.
+9.  Click **Review + create**.
 
      ![Review + create button](images/Setup/image28.png "Review + create button")
     
-11. After validation, click **Create**. The Azure deployment should begin provisioning. It may take 10+ minutes for the virtual machine provisioning to complete.
+10. After validation, click **Create**. The Azure deployment should begin provisioning. It may take 10+ minutes for the virtual machine provisioning to complete.
 
        ![Screenshot of the Deploying Visual Studio Community 2017 icon.](images/Setup/image9.png "Deploying Visual Studio icon")
 
@@ -112,9 +112,9 @@ Duration: 20 minutes
 
 13. Log in to your newly created LABVM with the credentials specified during creation:
 
-    -   **User**: `mcwadmin`
+    -   **User**: mcwadmin
 
-    -   **Password**: `demo@pass123`
+    -   **Password**: demo@pass123
 
     ![Credentials fields are called out in the Windows Security Credentials section.](images/Setup/image11.png "Windows Security Credentials section")
 
@@ -140,7 +140,7 @@ Duration: 20 minutes
 
 ### Task 2: Install Azure PowerShell 'Az' commands
 
-1. Open a PowerShell command-line (be sure to *Run as Administrator*)
+1. Open a PowerShell command-line (be sure to *Run as Administrator*).
 
 2. In the PowerShell command-line, run the following command to install the new Azure PowerShell 'Az' commands:
 
@@ -149,7 +149,7 @@ Duration: 20 minutes
     ```
 
     > Note: If you have any errors installing the Azure 'Az' PowerShell commands, then reference the following article:
-    > <https://azure.microsoft.com/en-us/blog/how-to-migrate-from-azurerm-to-az-in-azure-powershell/>
+    > <https://azure.microsoft.com/en-us/blog/how-to-migrate-from-azurerm-to-az-in-azure-powershell/>.
 
 ### Task 3: Download hands-on support files to LABVM
 
@@ -207,7 +207,7 @@ In this task, you will select **Primary** and **Secondary** Azure regions that w
 
 3.  Complete the **Resource group** blade using the following inputs and select **Review + Create** and **Create**:
 
-    - **Resource group name**: BCDRIaaSPrimarySite.
+    - **Resource group name**: BCDRIaaSPrimarySite
 
     - **Subscription**: Select your subscription.
 
