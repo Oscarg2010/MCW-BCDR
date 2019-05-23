@@ -140,7 +140,7 @@ Duration: 20 minutes
 
 ### Task 2: Install Azure PowerShell 'Az' commands
 
-1. Open a PowerShell command-line (be sure to *Run as Admininstrator*)
+1. Open a PowerShell command-line (be sure to *Run as Administrator*)
 
 2. In the PowerShell command-line, run the following command to install the new Azure PowerShell 'Az' commands:
 
@@ -187,7 +187,7 @@ Duration: 20 minutes
 
 8.  Click **Install** when prompted to begin installing SSMS. This may take 5-10 minutes to complete.
 
-    ![On the Install Microsoft SQL Server Managmeent Studio Welcome page, the Install button is selected.](images/Setup/image22.png "Microsoft SQL Server Management Studio Welcome page")
+    ![On the Install Microsoft SQL Server Management Studio Welcome page, the Install button is selected.](images/Setup/image22.png "Microsoft SQL Server Management Studio Welcome page")
 
 9.  Click **Close** when the installation of SMSS is complete.
 

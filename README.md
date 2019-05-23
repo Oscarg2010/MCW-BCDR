@@ -5,7 +5,7 @@ Contoso Insurance, headquartered in Miami, is a multi-national corporation provi
 
 Contoso also wants to insure they have the right breadth and depth of continuity protection. In the case of a lights-out event, they want to be able to control how the systems failover.
 
-Contoso's corporate datacenter in the US is in a hurricane-prone region, and they need a backup datacenter that mirrors the core functions they have here.
+Contoso's corporate data center in the US is in a hurricane-prone region, and they need a backup data center that mirrors the core functions they have here.
 
 ## Target audience
 - Infrastructure Architects
