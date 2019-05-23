@@ -1,9 +1,7 @@
 ﻿{
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
-  "parameters": {
-
-  },
+  "parameters": {},
   "variables": {
     "BCDRSecondarysqlserverName": "[concat('bcdrsecondarysqlserver', uniqueString(resourceGroup().id))]",
     "BCDRSecondarySiteContosoInsuranceName": "[concat('BCDRSecondarySiteContosoInsurance', uniqueString(resourceGroup().id))]",
@@ -11,7 +9,6 @@
     "BCDRSecondarysqlserverAdminLoginPassword": "demo@pass123",
     "BCDRSecondarySiteAppPlanName": "BCDRSecondarySiteAppPlan",
     "BCDRSecondarySiteAppPlanSkuName": "S1"
-
   },
   "resources": [
     {
@@ -78,6 +75,5 @@
       }
     }
   ],
-  "outputs": {
-  }
+  "outputs": {}
 }

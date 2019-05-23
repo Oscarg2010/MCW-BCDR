@@ -1,27 +1,19 @@
 ﻿{
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
-  "parameters": {
-
-  },
+  "parameters": {},
   "variables": {
-    "GitHubScriptRepo": "deltadan/MCW-Business-continuity-and-disaster-recovery",
+    "GitHubScriptRepo": "microsoft/MCW-Business-continuity-and-disaster-recovery",
     "GitHubScriptRepoBranch": "master",
     "GitHubScriptRepoBranchURL": "[concat('https://raw.githubusercontent.com/', variables('GitHubScriptRepo'), '/', variables('GitHubScriptRepoBranch'), '/Hands-on lab/NestedDeployments/')]",
-
     "bcdrprimarysqlserverName": "[concat('bcdrprimarysqlserver', uniqueString(resourceGroup().id))]",
     "BCDRPrimarySiteContosoInsuranceName": "[concat('BCDRPrimarySiteContosoInsurance', uniqueString(resourceGroup().id))]",
-
     "bcdrprimarysqlserverAdminLogin": "mcwadmin",
     "bcdrprimarysqlserverAdminLoginPassword": "demo@pass123",
-    
     "BCDRPrimarySiteAppPlanName": "BCDRPrimarySiteAppPlan",
     "BCDRPrimarySiteAppPlanSkuName": "S1",
-
     "BCDRPaaSSecondarySiteTemplateURL": "[concat(variables('GitHubScriptRepoBranchURL'), 'BCDRPaaSSecondarySite.json')]",
-
     "secondResourceGroup": "BCDRPaaSSecondarySite"
-
   },
   "resources": [
     {
@@ -92,8 +84,7 @@
       "type": "Microsoft.Resources/deployments",
       "resourceGroup": "[variables('secondResourceGroup')]",
       "apiVersion": "2017-05-10",
-      "dependsOn": [
-      ],
+      "dependsOn": [],
       "properties": {
         "mode": "Incremental",
         "templateLink": {
@@ -103,6 +94,5 @@
       }
     }
   ],
-  "outputs": {
-  }
+  "outputs": {}
 }

@@ -3,10 +3,9 @@
   "contentVersion": "1.0.0.0",
   "parameters": {},
   "variables": {
-    "GitHubScriptRepo": "deltadan/MCW-Business-continuity-and-disaster-recovery",
+    "GitHubScriptRepo": "microsoft/MCW-Business-continuity-and-disaster-recovery",
     "GitHubScriptRepoBranch": "master",
     "GitHubScriptRepoBranchURL": "[concat('https://raw.githubusercontent.com/', variables('GitHubScriptRepo'), '/', variables('GitHubScriptRepoBranch'), '/Hands-on lab/NestedDeployments/')]",
-
     "BCDRFOVNetName": "BCDRFOVNET",
     "BCDRFOVNetPrefix": "172.16.0.0/16",
     "BCDRFOVNetSubnet2Name": "WEB",
@@ -17,10 +16,8 @@
     "BCDRFOVNetSubnet4Prefix": "172.16.3.0/24",
     "InternalLoadBalancerName": "SQLAOGILB",
     "InternalLoadBalancerID": "[resourceId('Microsoft.Network/loadBalancers',variables('InternalLoadBalancerName'))]",
-
     "ADNSGName": "ADNSG",
     "DEFAULTNSGName": "Default",
-
     "SQLVM3Name": "SQLVM3",
     "SQLVM3AdminUserName": "mcwadmin",
     "SQLVM3AdminPassword": "demo@pass123",
@@ -33,11 +30,9 @@
     "SQLVM3PubIPName": "[concat(variables('SQLVM3Name'), '-IP')]",
     "SQLVM3NicName": "[concat(variables('SQLVM3Name'), '-NIC')]",
     "SQLVM3ConfigURL": "[concat(variables('GitHubScriptRepoBranchURL'), 'CustomScripts/SQLVM3Config.zip')]",
-
     "SQLVM3JoinDomainScriptFolder": ".",
     "SQLVM3JoinDomainScriptFileName": "SQLVM3JoinDomain.ps1",
     "SQLVM3JoinDomainURL": "[concat(variables('GitHubScriptRepoBranchURL'), 'CustomScripts/', variables('SQLVM3JoinDomainScriptFileName'))]",
-
     "ExternalLoadBalancerName": "WWWEXTLB",
     "ExternalLoadBalancerPublicIPName": "WWWEXTLB-PIP",
     "ExternalLoadBalancerPublicIPDNSName": "[concat('bcdrsecondarysitelb', uniqueString(resourceGroup().id))]",
@@ -53,9 +48,7 @@
       "type": "Microsoft.Network/virtualNetworks",
       "location": "[resourceGroup().location]",
       "apiVersion": "2018-12-01",
-      "dependsOn": [
-        
-      ],
+      "dependsOn": [],
       "tags": {
         "displayName": "[variables('BCDRFOVNetName')]"
       },
@@ -101,30 +94,30 @@
             "[resourceId('Microsoft.Network/virtualNetworks', variables('BCDRFOVNetName'))]"
           ],
           "properties": {
-              "addressPrefix": "[variables('BCDRFOVNetSubnet2Prefix')]",
-              "networkSecurityGroup": {
-                  "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('DEFAULTNSGName'))]"
-              },
-              "serviceEndpoints": [],
-              "delegations": []
+            "addressPrefix": "[variables('BCDRFOVNetSubnet2Prefix')]",
+            "networkSecurityGroup": {
+              "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('DEFAULTNSGName'))]"
+            },
+            "serviceEndpoints": [],
+            "delegations": []
           }
         },
         {
-            "type": "subnets",
-            "apiVersion": "2018-12-01",
-            "name": "[variables('BCDRFOVNetSubnet3Name')]",
-            "dependsOn": [
-              "[resourceId('Microsoft.Network/virtualNetworks', variables('BCDRFOVNetName'))]",
-              "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('BCDRFOVNetName'), variables('BCDRFOVNetSubnet2Name'))]"
-            ],
-            "properties": {
-                "addressPrefix": "[variables('BCDRFOVNetSubnet3Prefix')]",
-                "networkSecurityGroup": {
-                    "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('DEFAULTNSGName'))]"
-                },
-                "serviceEndpoints": [],
-                "delegations": []
-            }
+          "type": "subnets",
+          "apiVersion": "2018-12-01",
+          "name": "[variables('BCDRFOVNetSubnet3Name')]",
+          "dependsOn": [
+            "[resourceId('Microsoft.Network/virtualNetworks', variables('BCDRFOVNetName'))]",
+            "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('BCDRFOVNetName'), variables('BCDRFOVNetSubnet2Name'))]"
+          ],
+          "properties": {
+            "addressPrefix": "[variables('BCDRFOVNetSubnet3Prefix')]",
+            "networkSecurityGroup": {
+              "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('DEFAULTNSGName'))]"
+            },
+            "serviceEndpoints": [],
+            "delegations": []
+          }
         },
         {
           "type": "subnets",
@@ -135,12 +128,12 @@
             "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('BCDRFOVNetName'), variables('BCDRFOVNetSubnet3Name'))]"
           ],
           "properties": {
-              "addressPrefix": "[variables('BCDRFOVNetSubnet4Prefix')]",
-              "networkSecurityGroup": {
-                  "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('ADNSGName'))]"
-              },
-              "serviceEndpoints": [],
-              "delegations": []
+            "addressPrefix": "[variables('BCDRFOVNetSubnet4Prefix')]",
+            "networkSecurityGroup": {
+              "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('ADNSGName'))]"
+            },
+            "serviceEndpoints": [],
+            "delegations": []
           }
         }
       ]
@@ -255,14 +248,14 @@
       "name": "[variables('SQLVM3PubIPName')]",
       "location": "[resourceGroup().location]",
       "sku": {
-          "name": "Standard",
-          "tier": "Regional"
+        "name": "Standard",
+        "tier": "Regional"
       },
       "properties": {
-          "publicIPAddressVersion": "IPv4",
-          "publicIPAllocationMethod": "Static",
-          "idleTimeoutInMinutes": 4,
-          "ipTags": []
+        "publicIPAddressVersion": "IPv4",
+        "publicIPAllocationMethod": "Static",
+        "idleTimeoutInMinutes": 4,
+        "ipTags": []
       },
       "zones": [
         "1"
