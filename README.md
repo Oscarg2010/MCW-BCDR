@@ -1,11 +1,10 @@
 # Business continuity and disaster recovery
-November 2018
 
 Contoso Insurance, headquartered in Miami, is a multi-national corporation providing insurance solutions in North America, Europe, and Australia. Its products include accident and health insurance, life insurance, travel, home, and auto coverage. Contoso seeks to automate their backup and recovery of their solutions, not just individual components.
 
 Contoso also wants to insure they have the right breadth and depth of continuity protection. In the case of a lights-out event, they want to be able to control how the systems failover.
 
-Contoso's corporate datacenter in the US is in a hurricane-prone region, and they need a backup datacenter that mirrors the core functions they have here.
+Contoso's corporate data center in the US is in a hurricane-prone region, and they need a backup data center that mirrors the core functions they have here.
 
 ## Target audience
 - Infrastructure Architects
@@ -36,7 +35,7 @@ At the end of this hands-on lab, you will be better able to build a complex and 
 ## Azure services and related products
   -  Azure Site Recovery
   -  Azure Automation
-  -  Azure Traffic Manager
+  -  Azure Frontdoor
   -  Azure SQL Server Always on Availability Groups
   -  Azure App Services
 

@@ -1,0 +1,361 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {
+    "BCDRFOVNetPrefix": "172.16.0.0/16",
+    "BCDRFOVNetSubnet2Name": "WEB",
+    "BCDRFOVNetSubnet2Prefix": "172.16.1.0/24",
+    "BCDRFOVNetSubnet3Name": "DATA",
+    "BCDRFOVNetSubnet3Prefix": "172.16.2.0/24",
+    "BCDRFOVNetSubnet4Name": "AD",
+    "BCDRFOVNetSubnet4Prefix": "172.16.3.0/24",
+    "PrimaryVnetResourceGroup": "BCDRIaaSPrimarySite",
+    "vNet1Name": "BCDRVNET",
+    "vNet2Name": "BCDRFOVNET",
+    "vNet2tovNet1PeeringName": "[concat(variables('vNet2Name'), '/peering-from-remote-vnet')]",
+    "ADNSGName": "ADNSG",
+    "DEFAULTNSGName": "Default"
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Network/networkSecurityGroups",
+      "apiVersion": "2018-12-01",
+      "name": "[variables('ADNSGName')]",
+      "location": "[resourceGroup().location]",
+      "properties": {
+        "securityRules": [
+          {
+            "name": "RDP",
+            "properties": {
+              "protocol": "*",
+              "sourcePortRange": "*",
+              "destinationPortRange": "3389",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 100,
+              "direction": "Inbound"
+            }
+          }
+        ],
+        "defaultSecurityRules": [
+          {
+            "name": "AllowVnetInBound",
+            "properties": {
+              "description": "Allow inbound traffic from all VMs in VNET",
+              "protocol": "*",
+              "sourcePortRange": "*",
+              "destinationPortRange": "*",
+              "sourceAddressPrefix": "VirtualNetwork",
+              "destinationAddressPrefix": "VirtualNetwork",
+              "access": "Allow",
+              "priority": 65000,
+              "direction": "Inbound"
+            }
+          },
+          {
+            "name": "AllowAzureLoadBalancerInBound",
+            "properties": {
+              "description": "Allow inbound traffic from azure load balancer",
+              "protocol": "*",
+              "sourcePortRange": "*",
+              "destinationPortRange": "*",
+              "sourceAddressPrefix": "AzureLoadBalancer",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 65001,
+              "direction": "Inbound"
+            }
+          },
+          {
+            "name": "DenyAllInBound",
+            "properties": {
+              "description": "Deny all inbound traffic",
+              "protocol": "*",
+              "sourcePortRange": "*",
+              "destinationPortRange": "*",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Deny",
+              "priority": 65500,
+              "direction": "Inbound"
+            }
+          },
+          {
+            "name": "AllowVnetOutBound",
+            "properties": {
+              "description": "Allow outbound traffic from all VMs to all VMs in VNET",
+              "protocol": "*",
+              "sourcePortRange": "*",
+              "destinationPortRange": "*",
+              "sourceAddressPrefix": "VirtualNetwork",
+              "destinationAddressPrefix": "VirtualNetwork",
+              "access": "Allow",
+              "priority": 65000,
+              "direction": "Outbound"
+            }
+          },
+          {
+            "name": "AllowInternetOutBound",
+            "properties": {
+              "description": "Allow outbound traffic from all VMs to Internet",
+              "protocol": "*",
+              "sourcePortRange": "*",
+              "destinationPortRange": "*",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "Internet",
+              "access": "Allow",
+              "priority": 65001,
+              "direction": "Outbound"
+            }
+          },
+          {
+            "name": "DenyAllOutBound",
+            "properties": {
+              "description": "Deny all outbound traffic",
+              "protocol": "*",
+              "sourcePortRange": "*",
+              "destinationPortRange": "*",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Deny",
+              "priority": 65500,
+              "direction": "Outbound"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "Microsoft.Network/networkSecurityGroups",
+      "apiVersion": "2018-12-01",
+      "name": "[variables('DEFAULTNSGName')]",
+      "location": "[resourceGroup().location]",
+      "properties": {
+        "securityRules": [
+          {
+            "name": "Port_80",
+            "properties": {
+              "protocol": "*",
+              "sourcePortRange": "*",
+              "destinationPortRange": "80",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 100,
+              "direction": "Inbound",
+              "sourcePortRanges": [],
+              "destinationPortRanges": [],
+              "sourceAddressPrefixes": [],
+              "destinationAddressPrefixes": []
+            }
+          },
+          {
+            "name": "Port_443",
+            "properties": {
+              "protocol": "*",
+              "sourcePortRange": "*",
+              "destinationPortRange": "443",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 110,
+              "direction": "Inbound",
+              "sourcePortRanges": [],
+              "destinationPortRanges": [],
+              "sourceAddressPrefixes": [],
+              "destinationAddressPrefixes": []
+            }
+          }
+        ],
+        "defaultSecurityRules": [
+          {
+            "name": "AllowVnetInBound",
+            "properties": {
+              "description": "Allow inbound traffic from all VMs in VNET",
+              "protocol": "*",
+              "sourcePortRange": "*",
+              "destinationPortRange": "*",
+              "sourceAddressPrefix": "VirtualNetwork",
+              "destinationAddressPrefix": "VirtualNetwork",
+              "access": "Allow",
+              "priority": 65000,
+              "direction": "Inbound"
+            }
+          },
+          {
+            "name": "AllowAzureLoadBalancerInBound",
+            "properties": {
+              "description": "Allow inbound traffic from azure load balancer",
+              "protocol": "*",
+              "sourcePortRange": "*",
+              "destinationPortRange": "*",
+              "sourceAddressPrefix": "AzureLoadBalancer",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 65001,
+              "direction": "Inbound"
+            }
+          },
+          {
+            "name": "DenyAllInBound",
+            "properties": {
+              "description": "Deny all inbound traffic",
+              "protocol": "*",
+              "sourcePortRange": "*",
+              "destinationPortRange": "*",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Deny",
+              "priority": 65500,
+              "direction": "Inbound"
+            }
+          },
+          {
+            "name": "AllowVnetOutBound",
+            "properties": {
+              "description": "Allow outbound traffic from all VMs to all VMs in VNET",
+              "protocol": "*",
+              "sourcePortRange": "*",
+              "destinationPortRange": "*",
+              "sourceAddressPrefix": "VirtualNetwork",
+              "destinationAddressPrefix": "VirtualNetwork",
+              "access": "Allow",
+              "priority": 65000,
+              "direction": "Outbound"
+            }
+          },
+          {
+            "name": "AllowInternetOutBound",
+            "properties": {
+              "description": "Allow outbound traffic from all VMs to Internet",
+              "protocol": "*",
+              "sourcePortRange": "*",
+              "destinationPortRange": "*",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "Internet",
+              "access": "Allow",
+              "priority": 65001,
+              "direction": "Outbound"
+            }
+          },
+          {
+            "name": "DenyAllOutBound",
+            "properties": {
+              "description": "Deny all outbound traffic",
+              "protocol": "*",
+              "sourcePortRange": "*",
+              "destinationPortRange": "*",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Deny",
+              "priority": 65500,
+              "direction": "Outbound"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "BCDRFOVNET",
+      "type": "Microsoft.Network/virtualNetworks",
+      "location": "[resourceGroup().location]",
+      "apiVersion": "2018-12-01",
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', variables('ADNSGName'))]",
+        "[resourceId('Microsoft.Network/networkSecurityGroups', variables('DEFAULTNSGName'))]"
+      ],
+      "tags": {
+        "displayName": "BCDRFOVNET"
+      },
+      "properties": {
+        "addressSpace": {
+          "addressPrefixes": [
+            "[variables('BCDRFOVNetPrefix')]"
+          ]
+        },
+        "dhcpOptions": {
+          "dnsServers": [
+            "10.0.3.4",
+            "8.8.8.8"
+          ]
+        }
+      },
+      "resources": [
+        {
+          "type": "subnets",
+          "apiVersion": "2018-12-01",
+          "name": "[variables('BCDRFOVNetSubnet4Name')]",
+          "dependsOn": [
+            "[resourceId('Microsoft.Network/virtualNetworks', variables('vNet2Name'))]"
+          ],
+          "properties": {
+            "addressPrefix": "[variables('BCDRFOVNetSubnet4Prefix')]",
+            "networkSecurityGroup": {
+              "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('ADNSGName'))]"
+            },
+            "serviceEndpoints": [],
+            "delegations": []
+          }
+        },
+        {
+          "type": "subnets",
+          "apiVersion": "2018-12-01",
+          "name": "[variables('BCDRFOVNetSubnet3Name')]",
+          "dependsOn": [
+            "[resourceId('Microsoft.Network/virtualNetworks', variables('vNet2Name'))]",
+            "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('vNet2Name'), variables('BCDRFOVNetSubnet4Name'))]"
+          ],
+          "properties": {
+            "addressPrefix": "[variables('BCDRFOVNetSubnet3Prefix')]",
+            "networkSecurityGroup": {
+              "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('DEFAULTNSGName'))]"
+            },
+            "serviceEndpoints": [],
+            "delegations": []
+          }
+        },
+        {
+          "type": "subnets",
+          "apiVersion": "2018-12-01",
+          "name": "[variables('BCDRFOVNetSubnet2Name')]",
+          "dependsOn": [
+            "[resourceId('Microsoft.Network/virtualNetworks', variables('vNet2Name'))]",
+            "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('vNet2Name'), variables('BCDRFOVNetSubnet3Name'))]"
+          ],
+          "properties": {
+            "addressPrefix": "[variables('BCDRFOVNetSubnet2Prefix')]",
+            "networkSecurityGroup": {
+              "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('DEFAULTNSGName'))]"
+            },
+            "serviceEndpoints": [],
+            "delegations": []
+          }
+        }
+      ]
+    },
+    {
+      "apiVersion": "2018-08-01",
+      "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
+      "name": "[variables('vNet2tovNet1PeeringName')]",
+      "location": "[resourceGroup().location]",
+      "comments": "This is the peering from BCDRFOVNET to BCDRVNET",
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', variables('vNet2Name'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('vNet2Name'), variables('BCDRFOVNetSubnet2Name'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('vNet2Name'), variables('BCDRFOVNetSubnet3Name'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('vNet2Name'), variables('BCDRFOVNetSubnet4Name'))]"
+      ],
+      "properties": {
+        "allowVirtualNetworkAccess": "true",
+        "allowForwardedTraffic": "false",
+        "allowGatewayTransit": "false",
+        "useRemoteGateways": "false",
+        "remoteVirtualNetwork": {
+          "id": "[resourceId(variables('PrimaryVnetResourceGroup'), 'Microsoft.Network/virtualNetworks', variables('vnet1Name'))]"
+        }
+      }
+    }
+  ]
+}

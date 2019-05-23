@@ -1,0 +1,98 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {
+    "GitHubScriptRepo": "microsoft/MCW-Business-continuity-and-disaster-recovery",
+    "GitHubScriptRepoBranch": "master",
+    "GitHubScriptRepoBranchURL": "[concat('https://raw.githubusercontent.com/', variables('GitHubScriptRepo'), '/', variables('GitHubScriptRepoBranch'), '/Hands-on lab/NestedDeployments/')]",
+    "bcdrprimarysqlserverName": "[concat('bcdrprimarysqlserver', uniqueString(resourceGroup().id))]",
+    "BCDRPrimarySiteContosoInsuranceName": "[concat('BCDRPrimarySiteContosoInsurance', uniqueString(resourceGroup().id))]",
+    "bcdrprimarysqlserverAdminLogin": "mcwadmin",
+    "bcdrprimarysqlserverAdminLoginPassword": "demo@pass123",
+    "BCDRPrimarySiteAppPlanName": "BCDRPrimarySiteAppPlan",
+    "BCDRPrimarySiteAppPlanSkuName": "S1",
+    "BCDRPaaSSecondarySiteTemplateURL": "[concat(variables('GitHubScriptRepoBranchURL'), 'BCDRPaaSSecondarySite.json')]",
+    "secondResourceGroup": "BCDRPaaSSecondarySite"
+  },
+  "resources": [
+    {
+      "name": "[variables('bcdrprimarysqlserverName')]",
+      "type": "Microsoft.Sql/servers",
+      "location": "[resourceGroup().location]",
+      "apiVersion": "2014-04-01-preview",
+      "dependsOn": [],
+      "tags": {
+        "displayName": "bcdrprimarysqlserver"
+      },
+      "properties": {
+        "administratorLogin": "[variables('bcdrprimarysqlserverAdminLogin')]",
+        "administratorLoginPassword": "[variables('bcdrprimarysqlserverAdminLoginPassword')]"
+      },
+      "resources": [
+        {
+          "name": "AllowAllWindowsAzureIps",
+          "type": "firewallrules",
+          "location": "[resourceGroup().location]",
+          "apiVersion": "2014-04-01-preview",
+          "dependsOn": [
+            "[resourceId('Microsoft.Sql/servers', variables('bcdrprimarysqlserverName'))]"
+          ],
+          "properties": {
+            "startIpAddress": "0.0.0.0",
+            "endIpAddress": "0.0.0.0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "[variables('BCDRPrimarySiteAppPlanName')]",
+      "type": "Microsoft.Web/serverfarms",
+      "location": "[resourceGroup().location]",
+      "apiVersion": "2015-08-01",
+      "sku": {
+        "name": "[variables('BCDRPrimarySiteAppPlanSkuName')]"
+      },
+      "dependsOn": [],
+      "tags": {
+        "displayName": "BCDRPrimarySiteAppPlan"
+      },
+      "properties": {
+        "name": "[variables('BCDRPrimarySiteAppPlanName')]",
+        "numberOfWorkers": 1
+      }
+    },
+    {
+      "name": "[variables('BCDRPrimarySiteContosoInsuranceName')]",
+      "type": "Microsoft.Web/sites",
+      "location": "[resourceGroup().location]",
+      "apiVersion": "2015-08-01",
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/serverfarms', variables('BCDRPrimarySiteAppPlanName'))]"
+      ],
+      "tags": {
+        "[concat('hidden-related:', resourceId('Microsoft.Web/serverfarms', variables('BCDRPrimarySiteAppPlanName')))]": "Resource",
+        "displayName": "BCDRPrimarySiteContosoInsurance"
+      },
+      "properties": {
+        "name": "[variables('BCDRPrimarySiteContosoInsuranceName')]",
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('BCDRPrimarySiteAppPlanName'))]"
+      }
+    },
+    {
+      "name": "BCDRPaaSSecondarySite",
+      "type": "Microsoft.Resources/deployments",
+      "resourceGroup": "[variables('secondResourceGroup')]",
+      "apiVersion": "2017-05-10",
+      "dependsOn": [],
+      "properties": {
+        "mode": "Incremental",
+        "templateLink": {
+          "uri": "[variables('BCDRPaaSSecondarySiteTemplateURL')]",
+          "contentVersion": "1.0.0.0"
+        }
+      }
+    }
+  ],
+  "outputs": {}
+}

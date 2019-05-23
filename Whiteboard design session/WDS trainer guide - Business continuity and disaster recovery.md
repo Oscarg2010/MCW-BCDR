@@ -9,7 +9,7 @@ Whiteboard design session trainer guide
 </div>
 
 <div class="MCWHeader3">
-November 2018
+May 2019
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -17,7 +17,7 @@ Information in this document, including URL and other Internet Web site referenc
 Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this document. Except as expressly provided in any written license agreement from Microsoft, the furnishing of this document does not give you any license to these patents, trademarks, copyrights, or other intellectual property.
 
 The names of manufacturers, products, or URLs are provided for informational purposes only and Microsoft makes no representations and warranties, either expressed, implied, or statutory, regarding these manufacturers or the use of the products with any Microsoft technologies. The inclusion of a manufacturer or product does not imply endorsement of Microsoft of the manufacturer or product. Links may be provided to third party sites. Such sites are not under the control of Microsoft and Microsoft is not responsible for the contents of any linked site or any link contained in a linked site, or any changes or updates to such sites. Microsoft is not responsible for webcasting or any other form of transmission received from any linked site. Microsoft is providing these links to you only as a convenience, and the inclusion of any link does not imply endorsement of Microsoft of the site or the products contained therein.
-© 2018 Microsoft Corporation. All rights reserved.
+© 2019 Microsoft Corporation. All rights reserved.
 
 Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.
 
@@ -195,15 +195,15 @@ Contoso Insurance (CI), headquartered in Miami, is a multinational corporation p
 
 CI currently hosts their primary corporate systems at co-location facilities within each geo-political region and manage all IT operations for the system. These sites include Miami, London, and Sydney all of which are connected to the Internet and each other via a combination of VPNs and private WANs.
 
-CI is expecting significant growth within the United States and abroad.  They foresee the need to scale their system, and their IT operations staff. "We are exploring a move to Microsoft Azure to simplify some of the operations management overhead and associated costs, beginning with our U.S. datacenter followed by those in Europe and Australia", says Liz Simmons, VP of Datacenters. Given CI's international footprint, they need to be operational 24x7. As such they have concerns about how they will address business continuity and disaster recovery (BCDR), in their move to the cloud.
+CI is expecting significant growth within the United States and abroad.  They foresee the need to scale their system, and their IT operations staff. "We are exploring a move to Microsoft Azure to simplify some of the operations management overhead and associated costs, beginning with our U.S. data center followed by those in Europe and Australia", says Liz Simmons, VP of data centers. Given CI's international footprint, they need to be operational 24x7. As such they have concerns about how they will address business continuity and disaster recovery (BCDR), in their move to the cloud.
 
 CI has completed a cloud assessment of their applications and have classified their target applications into three types that they wish to focus on for their implementation of Azure BCDR technologies:
 
 **Workgroup Applications:** These are typically smaller applications that run on a single VM and are used by 25 or fewer employees. These applications have been developed locally by the Regional IT teams and are based on Linux, Apache, PHP, and MySQL (LAMP). These applications are important to the various business units and need to be managed and require backup but won't need mission-critical failover capabilities. The primary concern is how to migrate these applications as quickly as possible to Azure with minimal downtime.
 
-**Enterprise Applications:** The applications in this classification are mission critical to the business and have been developed using ASP.NET and SQL Server Enterprise over many years. They are deployed using Windows Clustering and SQL Always-On Availability Groups (AOG), to ensure failover of databases during an outage. These applications are running in the various datacenters around the world but currently, have no DR capabilities. They are backed up using a third-party software with a mix of online disk backup and ultimately then archived to tape and sent offsite for storage. Given their status as core to the business, they require complex DR failover and failback capabilities whether they are running in an Azure region or one of the colocation facilities. "There is critical concern about the Miami datacenter given how hurricane-prone the area is and the intensity of the storms which could cause outages lasting weeks," says Clifton Quinlan Director of Continuity of Business (COB). "With only a few months until the next hurricane season, we need to get these applications protected in Azure. Some will be migrated immediately, and others will need to be extended to failover to the cloud but will need to allow for failback to the on-premises."
+**Enterprise Applications:** The applications in this classification are mission critical to the business and have been developed using ASP.NET and SQL Server Enterprise over many years. They are deployed using Windows Clustering and SQL Always-On Availability Groups (AOG), to ensure failover of databases during an outage. These applications are running in the various data centers around the world but currently, have no DR capabilities. They are backed up using a third-party software with a mix of online disk backup and ultimately then archived to tape and sent offsite for storage. Given their status as core to the business, they require complex DR failover and failback capabilities whether they are running in an Azure region or one of the collocation facilities. "There is critical concern about the Miami data center given how hurricane-prone the area is and the intensity of the storms which could cause outages lasting weeks," says Clifton Quinlan Director of Continuity of Business (COB). "With only a few months until the next hurricane season, we need to get these applications protected in Azure. Some will be migrated immediately, and others will need to be extended to failover to the cloud but will need to allow for failback to the on-premises."
 
-**Global, Mobile, and API Web Applications:** CI has leveraged their experience with ASP.NET and SQL Server to build applications that are Azure PaaS ready. These applications primarily service their external customers and the mobile agents. These include applications for consumers and their employees in the field dealing with claims. "We have prototyped these applications in Azure App Services and SQL Database with success but need a plan for how they will be implemented for high-availability and automatic failover," says Mrs. Simmons. "These applications are global, so we want to make sure that they are distributed around the world and that users will be directed to the closest point of presence (POP) but will never get an error if there is a local issue."
+**Global, Mobile, and API Web Applications:** CI has leveraged their experience with ASP.NET and SQL Server to build applications that are Azure PaaS ready. These applications primarily service their external customers and the mobile agents. These include applications for consumers and their employees in the field dealing with claims. "We have prototyped these applications in Azure App Services and SQL Database with success but need a plan for how they will be implemented for high-availability and automatic failover," says Ms. Simmons. "These applications are global, so we want to make sure that they are distributed around the world and that users will be directed to the closest point of presence (POP) but will never get an error if there is a local issue."
 
 ### Customer needs
 
@@ -215,7 +215,7 @@ CI has completed a cloud assessment of their applications and have classified th
 
 4.  CI has struggled with DR solutions with respect to the Data tier of their application. They need to understand how this will work with IaaS and PaaS solutions for SQL Server and SQL DB.
 
-5.  CI's corporate datacenter in the US is in a hurricane-prone region, and they need a backup datacenter that mirrors the core functions they have here. They don't want to build another datacenter.
+5.  CI's corporate data center in the US is in a hurricane-prone region, and they need a backup data center that mirrors the core functions they have here. They don't want to build another data center.
 
 ### Customer objections 
 
@@ -382,9 +382,9 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 | Support matrix for Hyper-V replication to Azure | <https://docs.microsoft.com/en-us/azure/site-recovery/support-matrix-hyper-v-to-azure/> |
 | Protect SQL Server using SQL Server disaster recovery and Azure Site Recovery | <https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-sql/> |
 | Overview: Failover groups and active geo-replication | <https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview/> |
-| What is Traffic Manager? | <https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-overview/> |
-| Traffic Manager Routing Methods | <https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-routing-methods/> |
-| Traffic Manager Endpoints | <https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-endpoint-types/> |
+| What is Azure Front Door service? | <https://docs.microsoft.com/en-us/azure/frontdoor/front-door-overview> |
+| Front Door Routing Methods | <https://docs.microsoft.com/en-us/azure/frontdoor/front-door-routing-methods> |
+| Backends and backend pools in Azure Front Door Service | <https://docs.microsoft.com/en-us/azure/frontdoor/front-door-backend-pool> |
 | Backup Solution Architectures | <https://azure.microsoft.com/en-us/solutions/architecture/backup-archive-on-premises-applications/> |
 
 
@@ -432,7 +432,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 ##  Preferred target audience
 
--   Liz Simmons, VP of Datacenters
+-   Liz Simmons, VP of data centers
 
 -   Clifton Quinlan, Directory of Continuity of Business (COB)
 
@@ -458,7 +458,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 -   Why did you select these regions?
 
-    -   These regions are closest to the locations of their current operations and datacenters.
+    -   These regions are closest to the locations of their current operations and data centers.
 
     -   Each of these regions is considered "Region Pairs".
 
@@ -532,7 +532,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
         -   Like the migration, the AOG will be extended to have Asynchronous replicas running in an Azure Virtual Network over the ExpressRoute Circuit. This allows for an extension of the database to Azure. Azure Site Recovery will then be configured for a forced failover which will make one of the Asynchronous nodes in Azure a Synchronous replica. Once this is completed then ASR will be used to failover the Web tier to Azure.
 
-        -   Once the outage on-premises has been resolved, and the SQL nodes are back online in the local datacenter a planned failover back using ASR will be executed. This will consist of first resuming data movement on the local nodes running on-premises. Once they are synchronized then a planned failover using ASR will assign a new primary replica locally and fail back the web tier.
+        -   Once the outage on-premises has been resolved, and the SQL nodes are back online in the local data center a planned failover back using ASR will be executed. This will consist of first resuming data movement on the local nodes running on-premises. Once they are synchronized then a planned failover using ASR will assign a new primary replica locally and fail back the web tier.
 
             ![Diagram of the On-premises to Azure solution.](images/Whiteboarddesignsessiontrainerguide-Businesscontinuityanddisasterrecoveryimages/media/image9.png "On-premises to Azure solution")
 
@@ -546,11 +546,11 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 -   Given this will be an IaaS implementation, provide details of how you will provide HA and Failover capabilities to these VMs once they are in Azure.
 
-    -   These are mission critical systems that have multiple VMs, so they will be configured to leverage Managed Disks, Availability Sets and Premium disks. This provides for the most fault tolerance available to an Azure VM and will be eligible for a 99.95% SLA. The Internal Load balancer will also be used in front of the SQL Always-On nodes that are running in Azure.
+    -   These are mission critical systems that have multiple VMs, so they will be configured to leverage Managed Disks, Availability Zones and Premium disks. This provides for the most fault tolerance available to an Azure VM and will be eligible for a 99.95% SLA. The Internal Load balancer will also be used in front of the SQL Always-On nodes that are running in Azure.
 
 -   How will you direct web traffic to the active site?
 
-    -   The Traffic Manager will be used for these implementations given that they are a Primary / Secondary failover type of deployment the Priority Routing method is the best to implement. If the Primary goes down the Monitor Status will show as Degraded and traffic will be send to the Secondary once it is up and running and shows a Monitor Status of Online.
+    -   Azure Front Door will be used for these implementations given that they are a Primary / Secondary failover type of deployment. If the Primary goes down the Monitor Status will show as Degraded and traffic will be send to the Secondary once it is up and running and shows a Monitor Status of Online.
 
 -   Global, Mobile and API Web Applications
 
@@ -596,4 +596,4 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 "Azure has BCDR built into each classification of application that we have here at Contoso Insurance. This depth and breadth will allow us to meet both our business needs and regulatory requirements for our applications. Not to mention ensuring our agents are able to help our customers in their time of need."
 
-- Liz Simmons, VP of Datacenters
+- Liz Simmons, VP of data centers
