@@ -1399,7 +1399,7 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     -   **Login:** mcwadmin
 
-    -   **Password:** demo@pass12`
+    -   **Password:** demo@pass123
 
         ![Fields in the Connect to Server dialog box display with the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image269.png "Connect to Server dialog box")
 
@@ -1477,7 +1477,7 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     -   **Username:** mcwadmin
 
-    -   **Password:** demo@pass12`
+    -   **Password:** demo@pass123
 
     ![The original SQLServer.TXT file displays.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image286.png "SQLServer.TXT file")
 
