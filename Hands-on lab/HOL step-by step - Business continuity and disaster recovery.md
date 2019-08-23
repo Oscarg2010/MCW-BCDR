@@ -9,7 +9,7 @@ Hands-on lab step-by-step
 </div>
 
 <div class="MCWHeader3">
-May 2019
+September 2019
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -239,9 +239,9 @@ In this exercise, you will create and configure the services that will make it p
 
 1.  Using **LABVM**, connect to the Azure portal using your web browser at <https://portal.azure.com>.
 
-2.  Select **+Create a resource**, then enter **Backup and Site Recovery (OMS)**, and select **Create**.
+2.  Select **+Create a resource**, then enter **Backup and Site Recovery**, and select **Create**.
 
-    ![Screenshot of the Backup and Site Recovery (OMS) Screen with the Create button clicked.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image39.png "Backup and Site Recovery (OMS) Screen Create Button")
+    ![Screenshot of the Backup and Site Recovery Screen with the Create button clicked.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image39.png "Backup and Site Recovery Screen Create Button")
 
 3.  Complete the **Recovery Services Vault** blade using the following inputs, then select **Create**:
 
@@ -285,7 +285,7 @@ In this exercise, you will create and configure the services that will make it p
 
         ![Fields in the Add Automation Account blade are set to the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image45.png "Add Automation Account blade")
 
-    >**Note:** Azure Automation accounts are only allowed to be created in certain Azure regions, but they can act on any region in Azure (except Government, China or Germany). It is not a requirement to have your Azure Automation account in the same region as the **BCDRAzureAutomation** resource group but **CANNOT** be in your primary site.
+  > **Note:** Azure Automation accounts are only allowed to be created in certain Azure regions, but they can act on any region in Azure (except Government, China or Germany). It is not a requirement to have your Azure Automation account in the same region as the **BCDRAzureAutomation** resource group but **CANNOT** be in your primary site.
 
 5.  Once the Azure automation account has been created, open the account and select **Modules gallery** under **Shared Resources**.
 
