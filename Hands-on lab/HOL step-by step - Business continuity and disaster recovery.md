@@ -429,6 +429,10 @@ In this task, the **OnPremVM** will be configured to replicate to Azure and be r
 
     - **Where do you want to replicate your machines to?**: To Azure
 
+    - **Are you performing a migration?**: Yes
+
+    - **I understand, but I would like to continue with Azure Site Recovery**: *checked*
+
     - **Are your machines virtualized?**: Yes, with Hyper-V [Your VM is running as a nested VM in Azure].
 
     - **Are you using System Center VMM to manage your Hyper-V hosts?**: No
@@ -507,7 +511,9 @@ In this task, the **OnPremVM** will be configured to replicate to Azure and be r
 
 21. Open Internet Explorer on **HYPERVHOST** and browse to the following URL. This will download the Azure Site Recovery Provider for Hyper-V.
 
-        http://aka.ms/downloaddra_cus
+    ```    
+    http://aka.ms/downloaddra_cus
+    ```
 
 22. Select **Run**.
 
