@@ -915,7 +915,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     >**Note**: Remember that you must use the BCDRDC1 VM as your jumpbox to get into the environment. You can use the Azure portal to connect to BCDRDC1 and then use Remote desktop form there to SQLVM1.
 
-32. Use the Start menu to launch **Microsoft SQL Server Management Studio 17** and connect to the local instance of SQL Server. (Located in the Microsoft SQL Server Tools 17 folder).
+32. Use the Start menu to launch **Microsoft SQL Server Management Studio 17** and connect to the local instance of SQL Server. (Located in the Microsoft SQL Server Tools folder).
 
     ![Screenshot of Microsoft SQL Server Management Studio 17 on the Start menu.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image172.png "Microsoft SQL Server Management Studio 17")
 
@@ -1121,7 +1121,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
 77. On the **Add a backend pool** pane, enter the following value, then select the **Add a backend** link.
 
-    - **Name**: BCDRIaaS
+    - **Name**: BCDRIaaSPrimarySiteLB
 
     - **Health Probes - Protocol**: HTTP
 
@@ -1230,12 +1230,14 @@ In this task the WEBVM1 and WEBVM2 will be configured to replicate from the Prim
     - **Target storage:** Accept the new account.
 
     - **Target Availability Type:**
-        - WEBVM1: *zone 1*
-        - WEBVM2: *zone 2*
 
-    ![In the Configure settings blade, under General Settings and VM Settings fields are set to the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image230.png "Configure settings blade")
+            - WEBVM1: *zone 1*
 
-    >**Note**: Double check these selections, they are **critical** to your on-premise to Azure failover!
+            - WEBVM2: *zone 2*
+
+  ![In the Configure settings blade, under General Settings and VM Settings fields are set to the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image230.png "Configure settings blade")
+
+  >**Note**: Double check these selections, they are **critical** to your on-premise to Azure failover!
 
 9.  Next, select **Create target resources**.
 
