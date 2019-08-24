@@ -1515,7 +1515,7 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
         ![The connection string for PolicyConnect displays.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image292.png "Connection string")
 
-    >**Note**: You must use the Name **PolicyConnect**. This is the name that is recognized by the Application in the source code.
+  >**Note**: You must use the Name **PolicyConnect**. This is the name that is recognized by the Application in the source code.
 
 36. Repeat the same procedure on the Web App located in the **BCDRPaaSSecondarySite** resource group using the same connection string:
 
