@@ -1231,9 +1231,9 @@ In this task the WEBVM1 and WEBVM2 will be configured to replicate from the Prim
 
     - **Target Availability Type:**
 
-            - WEBVM1: *zone 1*
+        - WEBVM1: *zone 1*
 
-            - WEBVM2: *zone 2*
+        - WEBVM2: *zone 2*
 
   ![In the Configure settings blade, under General Settings and VM Settings fields are set to the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image230.png "Configure settings blade")
 
