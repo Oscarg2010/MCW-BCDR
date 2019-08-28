@@ -550,7 +550,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 -   How will you direct web traffic to the active site?
 
-    -   Azure Front Door will be used for these implementations given that they are a Primary / Secondary failover type of deployment. If the Primary goes down the Monitor Status will show as Degraded and traffic will be send to the Secondary once it is up and running and shows a Monitor Status of Online.
+    -   Azure Front Door will be used for these implementations given that they are a Primary / Secondary failover type of deployment. If the Primary goes down the Monitor Status will show as Degraded and traffic will be sent to the Secondary once it is up and running and shows a Monitor Status of Online.
 
 -   Global, Mobile and API Web Applications
 
