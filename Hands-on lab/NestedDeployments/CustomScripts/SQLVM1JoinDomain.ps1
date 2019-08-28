@@ -25,7 +25,7 @@ Install-WindowsFeature -Name "Failover-Clustering" `
 Set-NetFirewallProfile -Profile Domain -Enabled False
 
 ### Enable File and Printer Sharing
-Set-NetFirewallRule -DisplayGroup "File And Printer Sharing" -Enabled True -Profile Domain
+# Set-NetFirewallRule -DisplayGroup "File And Printer Sharing" -Enabled True -Profile Domain
 
 ### Enable Network Discovery
 # Turn on SSDPSRV

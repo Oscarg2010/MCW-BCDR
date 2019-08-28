@@ -9,7 +9,7 @@ Before the hands-on lab setup guide
 </div>
 
 <div class="MCWHeader3">
-May 2019
+September 2019
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -153,7 +153,7 @@ Duration: 20 minutes
 
 ### Task 3: Download hands-on support files to LABVM
 
-1.  Download the zipped Hands-on Lab Step by Step student files at the following link: [Student Files](https://github.com/Microsoft/MCW-Business-continuity-and-disaster-recovery/blob/master/Hands-on%20lab/StudentFiles/StudentFiles.zip?raw=true)
+1.  Download the zipped Hands-on Lab Step by Step student files at the following link: [Student Files](https://github.com/Microsoft/MCW-Business-continuity-and-disaster-recovery/blob/master/Hands-on%20lab/StudentFiles/StudentFiles.zip?raw=true).
 
 2.  Extract the files to a directory here **C:\\HOL** on LABVM.
 
@@ -181,9 +181,9 @@ Duration: 20 minutes
 
     ![On the SQL Server 2017 Express Edition Installation Complete page, the Install SSMS button is selected.](images/Setup/image20.png "SQL Server 2017 Express Edition Installation Complete page")
 
-7.  Click the **Download SQL Server Management Studio 17.X** link. When prompted, click **Run**.
+7.  Click the **Download SQL Server Management Studio** link. When prompted, click **Run**.
 
-    ![On the Download SSMS page, the link to Download SQL Server Management Studio 17.5 is selected.](images/Setup/image21.png "Download SSMS page")
+    ![On the Download SSMS page, the link to Download SQL Server Management Studio is selected.](images/Setup/image21.png "Download SSMS page")
 
 8.  Click **Install** when prompted to begin installing SSMS. This may take 5-10 minutes to complete.
 

@@ -9,7 +9,7 @@ Hands-on lab step-by-step
 </div>
 
 <div class="MCWHeader3">
-May 2019
+September 2019
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -239,9 +239,9 @@ In this exercise, you will create and configure the services that will make it p
 
 1.  Using **LABVM**, connect to the Azure portal using your web browser at <https://portal.azure.com>.
 
-2.  Select **+Create a resource**, then enter **Backup and Site Recovery (OMS)**, and select **Create**.
+2.  Select **+Create a resource**, then enter **Backup and Site Recovery**, and select **Create**.
 
-    ![Screenshot of the Backup and Site Recovery (OMS) Screen with the Create button clicked.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image39.png "Backup and Site Recovery (OMS) Screen Create Button")
+    ![Screenshot of the Backup and Site Recovery Screen with the Create button clicked.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image39.png "Backup and Site Recovery Screen Create Button")
 
 3.  Complete the **Recovery Services Vault** blade using the following inputs, then select **Create**:
 
@@ -285,7 +285,7 @@ In this exercise, you will create and configure the services that will make it p
 
         ![Fields in the Add Automation Account blade are set to the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image45.png "Add Automation Account blade")
 
-    >**Note:** Azure Automation accounts are only allowed to be created in certain Azure regions, but they can act on any region in Azure (except Government, China or Germany). It is not a requirement to have your Azure Automation account in the same region as the **BCDRAzureAutomation** resource group but **CANNOT** be in your primary site.
+  > **Note:** Azure Automation accounts are only allowed to be created in certain Azure regions, but they can act on any region in Azure (except Government, China or Germany). It is not a requirement to have your Azure Automation account in the same region as the **BCDRAzureAutomation** resource group but **CANNOT** be in your primary site.
 
 5.  Once the Azure automation account has been created, open the account and select **Modules gallery** under **Shared Resources**.
 
@@ -429,6 +429,10 @@ In this task, the **OnPremVM** will be configured to replicate to Azure and be r
 
     - **Where do you want to replicate your machines to?**: To Azure
 
+    - **Are you performing a migration?**: Yes
+
+    - **I understand, but I would like to continue with Azure Site Recovery**: *checked*
+
     - **Are your machines virtualized?**: Yes, with Hyper-V [Your VM is running as a nested VM in Azure].
 
     - **Are you using System Center VMM to manage your Hyper-V hosts?**: No
@@ -507,7 +511,9 @@ In this task, the **OnPremVM** will be configured to replicate to Azure and be r
 
 21. Open Internet Explorer on **HYPERVHOST** and browse to the following URL. This will download the Azure Site Recovery Provider for Hyper-V.
 
-        http://aka.ms/downloaddra_cus
+    ```    
+    http://aka.ms/downloaddra_cus
+    ```
 
 22. Select **Run**.
 
@@ -909,7 +915,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     >**Note**: Remember that you must use the BCDRDC1 VM as your jumpbox to get into the environment. You can use the Azure portal to connect to BCDRDC1 and then use Remote desktop form there to SQLVM1.
 
-32. Use the Start menu to launch **Microsoft SQL Server Management Studio 17** and connect to the local instance of SQL Server. (Located in the Microsoft SQL Server Tools 17 folder).
+32. Use the Start menu to launch **Microsoft SQL Server Management Studio 17** and connect to the local instance of SQL Server. (Located in the Microsoft SQL Server Tools folder).
 
     ![Screenshot of Microsoft SQL Server Management Studio 17 on the Start menu.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image172.png "Microsoft SQL Server Management Studio 17")
 
@@ -1115,7 +1121,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
 77. On the **Add a backend pool** pane, enter the following value, then select the **Add a backend** link.
 
-    - **Name**: BCDRIaaS
+    - **Name**: BCDRIaaSPrimarySiteLB
 
     - **Health Probes - Protocol**: HTTP
 
@@ -1169,9 +1175,9 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     ![The Contoso Insurance PolicyConnect webpage displays with a call out pointing to the DNS name trafficmanager.net.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image224.png "Contoso Insurance PolicyConnect webpage ")
 
-    > **NOTE:** Be sure to use **HTTP** to access the Azure Front Door **frontend host** URL. The lab configures only HTTP support for Front Door since WebVM1 and WebVM2 for the BCDRIaaS environment are only setup for HTTP support; not HTTPS (aka SSL).
+    > **Note:** Be sure to use **HTTP** to access the Azure Front Door **frontend host** URL. The lab configures only HTTP support for Front Door since WebVM1 and WebVM2 for the BCDRIaaS environment are only setup for HTTP support; not HTTPS (aka SSL).
 
-    > **NOTE:** If you get a "Our services aren't available right now" error accessing the web application, then continue on with the lab and come back to this later. Sometime this can take a ~10 minutes for the routing rules to publish before it's "live".
+    > **Note:** If you get a "Our services aren't available right now" error accessing the web application, then continue on with the lab and come back to this later. Sometime this can take a ~10 minutes for the routing rules to publish before it's "live".
     >
     > ![Error shown displaying Our services aren't available right now](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image224-b.png "Error shown displaying Our services aren't available right now")
 
@@ -1224,12 +1230,14 @@ In this task the WEBVM1 and WEBVM2 will be configured to replicate from the Prim
     - **Target storage:** Accept the new account.
 
     - **Target Availability Type:**
+
         - WEBVM1: *zone 1*
+
         - WEBVM2: *zone 2*
 
-    ![In the Configure settings blade, under General Settings and VM Settings fields are set to the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image230.png "Configure settings blade")
+  ![In the Configure settings blade, under General Settings and VM Settings fields are set to the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image230.png "Configure settings blade")
 
-    >**Note**: Double check these selections, they are **critical** to your on-premise to Azure failover!
+  >**Note**: Double check these selections, they are **critical** to your on-premise to Azure failover!
 
 9.  Next, select **Create target resources**.
 
@@ -1507,7 +1515,7 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
         ![The connection string for PolicyConnect displays.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image292.png "Connection string")
 
-    >**Note**: You must use the Name **PolicyConnect**. This is the name that is recognized by the Application in the source code.
+  >**Note**: You must use the Name **PolicyConnect**. This is the name that is recognized by the Application in the source code.
 
 36. Repeat the same procedure on the Web App located in the **BCDRPaaSSecondarySite** resource group using the same connection string:
 
@@ -1647,7 +1655,7 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     - **Backend pool**: BCDRPaaS
 
-    ![Add a rule pane](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image308-i.png "Add a rule pane")
+    ![Add a rule pane.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image308-i.png "Add a rule pane")
 
 63. Select **Review + Create**.
 
@@ -1660,6 +1668,8 @@ In this task you will deploy the website to App Services using Visual Studio, mi
     ![The Frontend host link is called out.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image315.png "Frontend host")
 
     ![The Contoso Insurance PolicyConnect webpage displays with a call out pointing to the URL in the address bar.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image316.png "Contoso Insurance PolicyConnect webpage")
+
+    > **Note:** If you get a "Our services aren't available right now" error accessing the web application, then continue on with the lab and come back to this later. Sometime this can take a ~10 minutes for the routing rules to publish before it's "live".
 
 ## Exercise 4: Simulate failovers
 
