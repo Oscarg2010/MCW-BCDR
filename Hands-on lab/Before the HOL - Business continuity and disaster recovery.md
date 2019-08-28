@@ -153,7 +153,7 @@ Duration: 20 minutes
 
 ### Task 3: Download hands-on support files to LABVM
 
-1.  Download the zipped Hands-on Lab Step by Step student files at the following link: [Student Files](https://github.com/Microsoft/MCW-Business-continuity-and-disaster-recovery/blob/master/Hands-on%20lab/StudentFiles/StudentFiles.zip?raw=true)
+1.  Download the zipped Hands-on Lab Step by Step student files at the following link: [Student Files](https://github.com/Microsoft/MCW-Business-continuity-and-disaster-recovery/blob/master/Hands-on%20lab/StudentFiles/StudentFiles.zip?raw=true).
 
 2.  Extract the files to a directory here **C:\\HOL** on LABVM.
 
