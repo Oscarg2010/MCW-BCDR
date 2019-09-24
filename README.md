@@ -12,9 +12,9 @@ September 2019
 - Infrastructure Architects
 - Cloud Solution Architects
 
-# Abstract
+## Abstracts
 
-## Workshop
+### Workshop
 
 In this workshop, you will gain experience designing solutions using Azure business continuity and disaster recovery (BCDR) technologies. 
 
@@ -22,13 +22,13 @@ Three different types of environments will be examined. The first will consist o
 
 At the end of this workshop, you will be better able to leverage various Azure technologies together to build a complex and robust IaaS BCDR plan.
 
-## Whiteboard design session
+### Whiteboard design session
 
 In the Whiteboard Design Session (WDS), you will work in groups to design a solution using Azure business continuity and disaster recovery (BCDR) technologies. Your solution will consider three different types of environments. The first will consist of on-premises VMs running applications that will be migrated to Azure IaaS. Next, Azure IaaS applications that need to be failed over from either on-premises to Azure, or between two Azure Regions. Finally, the use of automated failover technologies built into Azure PaaS services, App Service, and SQL Database will be used for PaaS applications.
 
 At the end of the whiteboard design session, you will be better able to design a solution that leverages various Azure technologies together to build a complex and robust IaaS BCDR plan.
 
-## Hands-on lab
+### Hands-on lab
 
 In the hands-on lab, you will implement three different environments and use Azure BCDR technologies to achieve three distinct goals for each environment. These will include a migration to Azure, Azure region-to-region failover, and a PaaS implementation using BCDR technologies to ensure high availability of an application.
 
