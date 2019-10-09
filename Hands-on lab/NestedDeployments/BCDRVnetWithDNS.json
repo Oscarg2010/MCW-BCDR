@@ -42,10 +42,7 @@
           {
             "name": "[variables('BCDRVNetSubnet1Name')]",
             "properties": {
-              "addressPrefix": "[variables('BCDRVNetSubnet1Prefix')]",
-              "networkSecurityGroup": {
-                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('DEFAULTNSGName'))]"
-              }
+              "addressPrefix": "[variables('BCDRVNetSubnet1Prefix')]"
             }
           },
           {
