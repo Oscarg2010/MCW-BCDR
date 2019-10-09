@@ -28,10 +28,10 @@ workflow ASRSQLFailover
         [Object]$RecoveryPlanContext 
     ) 
     $connectionName = "AzureRunAsConnection" 
-    $ASRFailoverScriptPath = "https://www.dropbox.com/s/q3tb6h2u1qqzqx8/ASRFailOver.ps1?dl=1"
-	$ASRFailoverScriptPathSQLVM1 = "https://www.dropbox.com/s/t3f2wx9rzlwgkbx/ASRFailOverSQLVM1.ps1?dl=1"
-	$ASRFailoverScriptPathSQLVM2 = "https://www.dropbox.com/s/cfr2v9alyslct8c/ASRFailOverSQLVM2.ps1?dl=1"
-	$ASRFailBackScriptPath = "https://www.dropbox.com/s/szq4zkq75xa3ue1/ASRFailBack.ps1?dl=1"
+    $ASRFailoverScriptPath = "https://raw.githubusercontent.com/crpietschmann/MCW-Business-continuity-and-disaster-recovery/master/Hands-on%20lab/StudentFiles/Deployments/ASRFailOver.ps1"
+	$ASRFailoverScriptPathSQLVM1 = "https://raw.githubusercontent.com/crpietschmann/MCW-Business-continuity-and-disaster-recovery/master/Hands-on%20lab/StudentFiles/Deployments/ASRFailOverSQLVM1.ps1"
+	$ASRFailoverScriptPathSQLVM2 = "https://raw.githubusercontent.com/crpietschmann/MCW-Business-continuity-and-disaster-recovery/master/Hands-on%20lab/StudentFiles/Deployments/ASRFailOverSQLVM2.ps1"
+    $ASRFailBackScriptPath = "https://raw.githubusercontent.com/crpietschmann/MCW-Business-continuity-and-disaster-recovery/master/Hands-on%20lab/StudentFiles/Deployments/ASRFailBack.ps1"
     
 Try 
  {
