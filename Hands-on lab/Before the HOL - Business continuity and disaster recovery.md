@@ -50,15 +50,13 @@ Duration: 20 minutes
 
 1.  Launch a browser and navigate to the Azure Global portal at <https://portal.azure.com>. Once prompted, login with your Microsoft Azure credentials. If prompted, choose whether your account is an Organization  or Microsoft account.
 
-2.  Select **+Create a resource**, in the search box start typing **Visual Studio Community** and press **Enter**. Select the **Visual Studio Community 2017 (latest updates) on Windows Server 2016 (64)**.
+2.  Select **+Create a resource**, in the search box start typing **Visual Studio Community** and press **Enter**. Select the **Visual Studio 2019 Latest** tile, then choose the **Visual Studio 2019 Community (latest release) on Windows Server 2019 (x64)** software plan.
 
     >**Note**: Ensure that you select the exact image name identified above. Failure to do so may result in problems successfully completing the BCDR HOL.
 
-3.  In the returned search results, select the latest image name. Leave the *Select a Deployment Model* chooser on **Resource Manager**.
+    ![In the Everything blade, Visual Studio Community 2019 (latest release) on Windows Server 2019 (x64) is selected.](images/Setup/image5.png "Marketplace blade")
 
-    ![In the Everything blade, Visual Studio Community 2017 (latest release) on Windows Server 2016 (x64) is selected.](images/Setup/image5.png "Everything blade")
-
-4.  Select **Create**.
+3.  Select **Create**.
 
 5.  Apply the following configuration items on the Basics tab and select **OK**:
 
@@ -68,7 +66,7 @@ Duration: 20 minutes
 
     -   **Virtual machine name**: LABVM
 
-    -   **Size**: Choose the **Standard D2s V3 (D2s_V3)** instance size.
+    -   **Size**: Choose the **Standard D4s V3** instance size.
 
     -   **Region**: Choose the Azure region closet to you.
 
@@ -91,16 +89,16 @@ Duration: 20 minutes
     ![Premium SSD is selected, then Next : Networking](images/Setup/image8.png "Next: Networking>")
 
 8.  Click **Allow selected ports** and then choose **RDP** (3389) from the **Select  inbound ports** dropdown chooser.  This will enable remote desktop connections from the internet to LABVM.
-    
+
     ![Select public inbound ports dropdown with RDP (3389) selected](images/Setup/image27.png "Select public inbound ports dropdown")
 
 9.  Click **Review + create**.
 
-     ![Review + create button](images/Setup/image28.png "Review + create button")
+    ![Review + create button](images/Setup/image28.png "Review + create button")
     
 10. After validation, click **Create**. The Azure deployment should begin provisioning. It may take 10+ minutes for the virtual machine provisioning to complete.
 
-       ![Screenshot of the Deploying Visual Studio Community 2017 icon.](images/Setup/image9.png "Deploying Visual Studio icon")
+    ![Screenshot of the Deploying Visual Studio Community 2019.](images/Setup/image9.png "Your deployment is underway")
 
 >**Note:** Please wait for the LABVM to be completely provisioned prior to moving to the next step.
 
