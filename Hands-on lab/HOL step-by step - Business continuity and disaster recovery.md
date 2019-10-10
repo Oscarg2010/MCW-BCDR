@@ -1157,7 +1157,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     - **Accepted protocol**: HTTP only
 
-    - **Backend pool**: BCDRIaaS
+    - **Backend pool**: BCDRIaaSPrimarySiteLB
 
     - **Forwarding protocol**: HTTP Only
 
