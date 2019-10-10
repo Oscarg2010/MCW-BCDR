@@ -271,7 +271,7 @@ Directions: With all participants at your table, respond to the following questi
 
     -   How can each part of their solution be backed up?
 
-    -   How can they sunset the use of tape archive?
+    -   How can they retire and move away from the use of tape archive?
 
     -   Can they continue to use their third-party backup vendor?
 
@@ -279,7 +279,7 @@ Directions: With all participants at your table, respond to the following questi
 
     -   What DR Solutions will be leveraged for the implementation at CI?
 
-4.  Design a HA and BDCR solution for each of the three application classifications. At a high-level, provide details of your implementation. Make sure to document your design with a diagram along with addressing the questions.
+4.  Design a HA and BCDR solution for each of the three application classifications. At a high-level, provide details of your implementation. Make sure to document your design with a diagram along with addressing the questions.
 
 -   Workgroup Applications
 
@@ -472,7 +472,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
     -   PaaS: Azure App Service and SQL Database have built in Backup services that must be implemented. These are robust solutions, but their features are dependent upon the select and SKUs that CI selects during the provisioning of these services.
 
--   How can they sunset the use of tape archive?
+-   How can they retire and move away from the use of tape archive?
 
     -   The ability to extend their third-party backup solution to use Azure allows it to become an archive target. This means that the customer can move from tapes to the cloud for the final resting place for their backups.
 
@@ -486,9 +486,9 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
     -   Azure Site Recovery will be the primary BCDR Servers that is used for DR by CI. The service will be used as a Migration Tool as well as a COB tool for failovers between either on-premises Hyper-V implementations or between two Azure Regions for IaaS deployments.
 
-    -   Design a HA and BDCR solution for each of the three application classifications. At a high-level, provide details of your implementation. Make sure to document your design with a diagram along with addressing the questions.
+    -   Design a HA and BCDR solution for each of the three application classifications. At a high-level, provide details of your implementation. Make sure to document your design with a diagram along with addressing the questions.
 
-4.  Design a HA and BDCR solution for each of the three application classifications. At a high-level provide details of your implementation. Make sure to document your design with a diagram along with addressing the questions.
+4.  Design a HA and BCDR solution for each of the three application classifications. At a high-level provide details of your implementation. Make sure to document your design with a diagram along with addressing the questions.
 
 -   Workgroup Applications
 

@@ -145,7 +145,7 @@ Directions: With all participants at your table, respond to the following questi
 
     -   How can each part of their solution be backed up?
 
-    -   How can they sunset the use of tape archive?
+    -   How can they retire and move away from the use of tape archive?
 
     -   Can they continue to use their third-party backup vendor?
 
@@ -153,7 +153,7 @@ Directions: With all participants at your table, respond to the following questi
 
     -   What DR Solutions will be leveraged for the implementation at CI?
 
-4.  Design a HA and BDCR solution for each of the three application classifications. At a high-level, provide details of your implementation. Make sure to document your design with a diagram along with addressing the questions.
+4.  Design a HA and BCDR solution for each of the three application classifications. At a high-level, provide details of your implementation. Make sure to document your design with a diagram along with addressing the questions.
 
 -   Workgroup Applications
 
