@@ -381,17 +381,17 @@ In this exercise, you will create and configure the services that will make it p
 
     ![Screenshot of the Windows PowerShell ISE button.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image71.png "Windows PowerShell ISE button")
 
-33. Open the file `C:\HOL\Deployments\ASRRunBookVariable.ps1`. Review the script and enter the automation account name you created earlier. Then select the green play button to execute the script. You will need to authenticate to Azure.
+27. Open the file `C:\HOL\Deployments\ASRRunBookVariable.ps1`. Review the script and enter the automation account name you created earlier. Then select the green play button to execute the script. You will need to authenticate to Azure.
 
     ![In the Windows PowerShell ISE window, the green play button is selected, and a call out points to \"Your-Automation-Account-Name-Here\" in the script window.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image72.png "Windows PowerShell ISE window")
 
-    >**Note**: If you are using an account that has multiple subscriptions you may need to change the context of your login. You can comment out the **Login-AzureRmAccount** command in the script and complete the login and the use the **Get-AzureRmSubscription** and **Select-AzureRmSubscription** cmdlets to create the proper context for this HOL. For help, you can review this article: <https://docs.microsoft.com/en-us/powershell/azure/authenticate-azureps?view=azurermps-5.1.1> & <https://docs.microsoft.com/en-us/powershell/azure/manage-subscriptions-azureps?view=azurermps-5.1.1>.
+    >**Note**: If you are using an account that has multiple subscriptions you may need to change the subscription associated with your current Azure session. You can comment out the **Connect-AzAccount** command in the script and complete the login and the use the **Connect-AzAccount** and **Set-AzContext** cmdlets to create the proper context for this HOL. For help, you can review this article: <https://docs.microsoft.com/en-us/powershell/azure/manage-subscriptions-azureps?view=azps-2.7.0#change-the-active-subscription>.
 
-34. Once the script has run, you will see the following output from PowerShell ISE. This script created a variable that will be used with the PowerShell Runbook in Azure Automation to help with the Failover and Failback of the Azure IaaS environment.
+28. Once the script has run, you will see the following output from PowerShell ISE. This script created a variable that will be used with the PowerShell Runbook in Azure Automation to help with the Failover and Failback of the Azure IaaS environment.
 
     ![Screenshot of PowerShell ISE output.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image73.png "PowerShell ISE output")
 
-35. Move back to the Azure portal and locate the **Azure Automation** account. Select the **Variables** link in the **Shared Resources** section.
+29. Move back to the Azure portal and locate the **Azure Automation** account. Select the **Variables** link in the **Shared Resources** section.
 
     ![In the Automation Account blade, Variables is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image74.png "Automation Account blade")
 
