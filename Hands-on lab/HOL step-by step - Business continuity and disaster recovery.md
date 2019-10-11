@@ -1533,9 +1533,9 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![Visual Studio 2019 from the start menu displays.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image294.png "Visual Studio 2019")
 
-38. Select **File**, **Open**, and **Project/Solution**.
+38. Select **Open a project or solution**.
 
-    ![In Visual Studio, File / Open / Project/Solution is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image295.png "Visual Studio")
+    ![In Visual Studio, Open a project or solution is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image295.png "Visual Studio")
 
 39. Open the Solution located at `C:\HOL\WebApp\ContosoInsurance.sln`.
 
@@ -1553,7 +1553,7 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![In Solution Explorer, the right-click menu for ContosoInsurance displays, and Publish is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image298.png "Solution Explorer")
 
-42. On the **Publish** screen select **App Service** and then **Select Existing** and finally **Publish**.
+42. On the **Publish** screen select **App Service** and then **Select Existing** and finally **Create Profile**.
 
     ![On the Publish screen, App Service is selected. The radio button for Select Existing is selected as well.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image299.png "Publish screen")
 
@@ -1561,31 +1561,37 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![On the App Service screen, the web app under BCDRPaaSPrimarySite is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image300.png "App Service screen")
 
-44. Visual Studio will build the app and then publish to your Web App. The browser should open to the application.
+44. Select **Publish** to publish the *ContosoInsurance* application to Azure.
+    ![On the Publish tab, the Publish button is highlighted.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image300-b.png "Publish tab")
+
+45. Once the publish has succeeded, open the Azure Web App in a browser to see that it's running successfully.
 
     ![The Contoso Insurance PolicyConnect webpage displays.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image301.png "Contoso Insurance PolicyConnect webpage ")
 
-45. Select the **Current Policy Offerings** button, and the page should load with data showing. This means that you have successfully implemented the Web App and it has connected to the Failover Group database.
+46. Select the **Current Policy Offerings** button, and the page should load with data showing. This means that you have successfully implemented the Web App and it has connected to the Failover Group database.
 
     ![The Index webpage displays the insurance options.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image302.png "Index webpage")
 
-46. Right-click the **ContosoInsurance** Application and select **Publish**.
+47. Right-click the **ContosoInsurance** Application and select **Publish**.
 
     ![In Solution Explorer, the right-click menu for ContosoInsurance displays, and Publish is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image298.png "Solution Explorer")
 
-47. On the publish screen select **Create new profile**.
+48. On the publish screen select **Create new profile**.
 
-  ![On the Publish screen, New Profile is Selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image299.0.png "Publish screen New Profile")
+  ![On the Publish screen, New is Selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image299.0.png "Publish screen New")
 
-48. On the **Publish** screen, select **Microsoft Azure App Service** and then **Select Existing** and finally **Publish**.
+49. On the **Publish** screen, select **Microsoft Azure App Service** and then **Select Existing** and finally **Create Profile**.
 
     ![On the Publish screen, Microsoft Azure App Service is selected. The radio button for Select Existing is selected as well.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image299.png "Publish screen")
 
-49. This time, choose the Web App from the **Secondary** Site running in the **BCDRPaaSSecondarySite**. Select **OK**.
+50. This time, choose the Web App from the **Secondary** Site running in the **BCDRPaaSSecondarySite**. Select **OK**.
 
     ![On the App Service screen, the web app under BCDRPaaSSecondarySite is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image305.png "App Service screen")
 
-50. Visual Studio will build the app and then publish to your Web App. The browser should open to the application.
+44. Select **Publish** to publish the *ContosoInsurance* application to Azure.
+    ![On the Publish tab, the Publish button is highlighted.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image305-b.png "Publish tab")
+
+50. Once the publish has succeeded, open the Azure Web App in a browser to see that it's running successfully.
 
     ![The Contoso Insurance PolicyConnect webpage displays.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image306.png "Contoso Insurance PolicyConnect webpage")
 
@@ -1651,11 +1657,11 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![The Configuration tab is shown with the Add routing rules button highlighted.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image308-h.png "The Configuration tab is shown with the Add routing rules button highlighted.")
 
-62. On the **Add a rule** pane, enter the following values, then select **Add**:
+64. On the **Add a rule** pane, enter the following values, then select **Add**:
 
     - **Name**: BCDRPaaS
-
     - **Backend pool**: BCDRPaaS
+    - **Forwarding protocol**: Match request
 
     ![Add a rule pane.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image308-i.png "Add a rule pane")
 
