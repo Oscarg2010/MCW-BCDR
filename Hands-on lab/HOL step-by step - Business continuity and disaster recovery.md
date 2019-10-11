@@ -1985,7 +1985,7 @@ Now, that your applications have been made ready for high-availability and BCDR 
 
     ![In the Failover blade, call outs point to the From and To fields.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image386.png "Failover blade")
 
-7.  After the Failover is initiated close the blade and move to **Jobs**, then **Site Recovery Jobs**. Select the **Failover** job to monitor the progress.
+7.  After the Failover is initiated close the blade and select **Site Recovery Jobs** under **Monitoring**. Select the **Failover** job to monitor the progress.
 
     ![In the Site Recovery jobs blade, Failover is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image324.png "Site Recovery jobs blade")
 
@@ -2056,10 +2056,6 @@ Now, that your applications have been made ready for high-availability and BCDR 
     ![The BCDRIaaSPlan blade displays.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image398.png "BCDRIaaSPlan blade")
 
 25. The portal will submit a deployment. This process will take some time, by first committing the failover and then synchronizing the **WEBVM1** and **WEBVM2** back to the **Primary** Site. Once this process is complete, then you will be able to Fail over again from the **Primary** to **Secondary** site from the perspective of ASR.
-
-26. Select **Resource groups** in the Azure portal and notice that two new Resource groups have been created with -asr in their names. These are used by ASR for the Failover and Failback, so they should be left in place.
-
-    ![A list of Resource groups displays, two of which are: BCDRIaaSPrimarySite-asr, and BCDRIaaSPrimarySite-asr-1. ](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image399.png "Resource groups")
 
 27. Next, you need to reset the SQL AOG environment to ensure a proper failover. To do this open Remote Desktop to **BCDRDC1** and then jump to **SQLVM1** using Remote desktop.
 
