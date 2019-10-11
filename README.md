@@ -37,7 +37,7 @@ At the end of this hands-on lab, you will be better able to build a complex and 
 ## Azure services and related products
   -  Azure Site Recovery
   -  Azure Automation
-  -  Azure Frontdoor
+  -  Azure Front Door
   -  Azure SQL Server Always on Availability Groups
   -  Azure App Services
 
