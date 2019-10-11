@@ -1355,9 +1355,9 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![The FQDN name displays in Notepad. ](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image257.png "Notepad")
 
-5.  Use the Start menu to launch **Microsoft SQL Server Management Studio 17** and connect to the local instance of SQL Server (Located in the Microsoft SQL Server Tools 17 folder).
+5.  Use the Start menu in the LabVM to launch **Microsoft SQL Server Management Studio 18** and connect to the local instance of SQL Server (Located in the Microsoft SQL Server Tools 18 folder).
 
-    ![In the Start menu, Microsoft SQL Server Management Studio 17 is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image172.png "Start menu")
+    ![In the Start menu, Microsoft SQL Server Management Studio 18 is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image172.png "Start menu")
 
 6.  Select **Connect** to Sign On to the Local **SQLEXPRESS** on **LABVM**.
 
@@ -1430,6 +1430,8 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 20. Select **Close** once the database has been migrated to Azure SQL Database.
 
     ![On the Operation Complete screen, under Summary, all steps in the database import process have results of Success.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image273.png "Operation Complete screen")
+
+    >**Note:** If you get an error stating something similar to _"unresolved reference to the object #aspnet_Permissions"_ then select **Close** and retry the database import process again.
 
 21. Move back to the Azure portal on **LABVM**. Open the **BCDRPaaSPrimarySite** resource group and notice that there is a new SQL Database called **ContosoInsurance**.
 
@@ -1529,7 +1531,7 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
 37. On the LABVM open **Visual Studio**. You will be required to login to Visual Studio. If you don't have an account you can create a free account following the prompts.
 
-    ![Visual Studio 2017 from the start menu displays.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image294.png "Visual Studio 2017")
+    ![Visual Studio 2019 from the start menu displays.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image294.png "Visual Studio 2019")
 
 38. Select **File**, **Open**, and **Project/Solution**.
 
