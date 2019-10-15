@@ -183,7 +183,7 @@ In this exercise, you will use Azure ARM templates to deploy the following envir
 
     ![In the Custom deployment blade, Basics section, fields are set to the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image35.png "Custom deployment blade, Basics section")
 
-9.  Next, update the **Hyper-V Host DNS Name** in the **Settings** area. This will be the DNS name for the Hyper-V Host that will you will use for this simulated on-premises environment. The name will need to be lowercase and 3-24 characters consisting of letters & numbers and be unique to all of Azure. In the example, the name hypervhost8675309 was used.
+9.  Next, update the **Hyper-V Host DNS Name** in the **Settings** area. This will be the DNS name for the Hyper-V Host that you will use for this simulated on-premises environment. The name will need to be lowercase and 3-24 characters consisting of letters & numbers and be unique to all of Azure. In the example, the name hypervhost8675309 was used.
 
     ![In the Settings section, the Domain Controller DNS Name field is populated.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image36.png "Settings section")
 
@@ -407,7 +407,7 @@ Duration: 90 minutes
 
 In this exercise, you will configure the three environments to use BCDR technologies found in Azure. Each environment has unique configurations that must be completed to ensure their availability in the event of a disaster.
 
->**Note**: Make sure prior to starting each task that the deployment that you started in Exercise 1 has completed for each as you come to that task. This can be determined, but reviewing the deployments for each Resource group in the Azure portal. If it says Succeeded, then you can begin the task.
+>**Note**: Make sure prior to starting each task that the deployment that you started in Exercise 1 has completed for each as you come to that task. This can be determined by reviewing the deployments for each Resource group in the Azure portal. If it says Succeeded, then you can begin the task.
 
 ### Task 1: Configure on-premises to Azure IaaS failover for migration
 
@@ -1135,7 +1135,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     ![The Add a backend pane has the previously specified values set.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image213-e.png "Add a backend pane")
 
-79. Select **Add a backend** again, and add another backend host to the pool. Create it similar to before, but with the following settings:
+79. Select **Add a backend** again and add another backend host to the pool. Create it similar to before, but with the following settings:
 
     - **Backend host type**: Custom host
 
@@ -1539,7 +1539,7 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
 39. Open the Solution located at `C:\HOL\WebApp\ContosoInsurance.sln`.
 
-    >**Note**: You may see a security warning about opening projects from trustworthy sources. Click OK if prompted.
+    >**Note**: You may see a security warning about opening projects from trustworthy sources. Select OK if prompted.
 
     ![In the Open Project window, contosoinsurance.sln is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image296.png "Open Project")
 
@@ -1643,7 +1643,7 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![The Add a backend pane with previously specified values entered.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image308-f.png "The Add a backend pane with previously specified values entered.")
 
-59. Select the **Add a backend** link again, and add another backend host name with the following values, then click **Add**:
+59. Select the **Add a backend** link again, and add another backend host name with the following values, then select **Add**:
 
     - **Backend host type**: App service
 
@@ -1877,7 +1877,7 @@ Now, that your applications have been made ready for high-availability and BCDR 
 
 ![Diagram of the Azure PaaS failover and failback solution.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image361.png "Azure PaaS failover and failback solution")
 
-1.  Using the Azure portal, open the **BCDRPaaSPrimarySite** resource group. Locate the Azure Front Door and then click the hostname URL to ensure that the application is running.
+1.  Using the Azure portal, open the **BCDRPaaSPrimarySite** resource group. Locate the Azure Front Door and then select the hostname URL to ensure that the application is running.
 
     ![The Frontend host link is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image362.png "Frontend host link")
 
