@@ -74,13 +74,13 @@ Duration: 20 minutes
 
     -   **Password:** demo@pass123
     
-    >**Note:** You may want to click the small eyeball icon to ensure you've entered it correctly.
+    >**Note:** You may want to select the small eyeball icon to ensure you've entered it correctly.
     
     ![Fields in the Basics blade are set to the previously defined settings.](images/Setup/image6.png "Basics blade")
 
     >**Note:** If the Azure Subscription you are using has limits on the number of cores, you may wish to choose DS1\_V2.
 
-6. Click **Next: Disks**.
+6. Select **Next: Disks**.
 
     ![View of the Next: Disks Button.](images/Setup/image7.png "Disks button")
 
@@ -88,15 +88,15 @@ Duration: 20 minutes
 
     ![Premium SSD is selected, then Next : Networking](images/Setup/image8.png "Next: Networking>")
 
-8.  Click **Allow selected ports** and then choose **RDP** (3389) from the **Select  inbound ports** dropdown chooser.  This will enable remote desktop connections from the internet to LABVM.
+8.  Select **Allow selected ports** and then choose **RDP** (3389) from the **Select  inbound ports** dropdown chooser.  This will enable remote desktop connections from the internet to LABVM.
 
     ![Select public inbound ports dropdown with RDP (3389) selected](images/Setup/image27.png "Select public inbound ports dropdown")
 
-9.  Click **Review + create**.
+9.  Select **Review + create**.
 
     ![Review + create button](images/Setup/image28.png "Review + create button")
     
-10. After validation, click **Create**. The Azure deployment should begin provisioning. It may take 10+ minutes for the virtual machine provisioning to complete.
+10. After validation, select **Create**. The Azure deployment should begin provisioning. It may take 10+ minutes for the virtual machine provisioning to complete.
 
     ![Screenshot of the Deploying Visual Studio Community 2019.](images/Setup/image9.png "Your deployment is underway")
 
@@ -106,7 +106,7 @@ Duration: 20 minutes
 
     ![The Connect button is called out on the LABVM Virtual Machine blade top menu.](images/Setup/image10.png "LABVM Virtual Machine blade")
 
-12. Click **Download RDP File**, then open the `.rdp` file to connect to the VM.
+12. Choose **Download RDP File**, then open the `.rdp` file to connect to the VM.
 
 13. Log in to your newly created LABVM with the credentials specified during creation:
 
@@ -161,35 +161,35 @@ Duration: 20 minutes
 
     <https://www.microsoft.com/en-US/sql-server/sql-server-downloads>
 
-2.  Click **Download now** under the Express edition of SQL.
+2.  Select **Download now** under the Express edition of SQL.
 
     ![On the Download SQL Server 2017 for Windows webpage, Express edition is selected for download.](images/Setup/image17.png "Download SQL Server 2017 for Windows webpage")
 
-3.  Click **Run** when prompted after downloading.
+3.  Choose **Run** when prompted after downloading.
 
     ![Next to the message asking if you want to run or save SQLServer 2017, Run is selected.](images/Setup/image18.png "Run button")
 
-4.  When the installer starts, click **Basic**.
+4.  When the installer starts, select **Basic**.
 
     ![Basic is selected in the SQL Server 2017 Express Edition Installer wizard.](images/Setup/image19.png "SQL Server 2017 Express Edition Installer")
 
 5.  Accept the other defaults in the install wizard until SQL starts to install. This may take 5-10 minutes to complete.
 
-6.  Once the install completes, click the **Install SSMS** button. This will take you to a webpage where you can download and install SQL Server Management Studio (SSMS).
+6.  Once the install completes, select the **Install SSMS** button. This will take you to a webpage where you can download and install SQL Server Management Studio (SSMS).
 
     ![On the SQL Server 2017 Express Edition Installation Complete page, the Install SSMS button is selected.](images/Setup/image20.png "SQL Server 2017 Express Edition Installation Complete page")
 
-7.  Click the **Download SQL Server Management Studio** link. When prompted, click **Run**.
+7.  Select the **Download SQL Server Management Studio** link. When prompted, choose **Run**.
 
     ![On the Download SSMS page, the link to Download SQL Server Management Studio is selected.](images/Setup/image21.png "Download SSMS page")
 
-8.  Click **Install** when prompted to begin installing SSMS. This may take 5-10 minutes to complete.
+8.  Select **Install** when prompted to begin installing SSMS. This may take 5-10 minutes to complete.
 
     ![On the Install Microsoft SQL Server Management Studio Welcome page, the Install button is selected.](images/Setup/image22.png "Microsoft SQL Server Management Studio Welcome page")
 
-9.  Click **Close** when the installation of SMSS is complete.
+9.  Select **Close** when the installation of SMSS is complete.
 
-10. Click **Close** on the SQL Express Edition setup wizard.
+10. Select **Close** on the SQL Express Edition setup wizard.
 
 ### Task 5: Create Azure Resource Groups
 
