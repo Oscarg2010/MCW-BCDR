@@ -311,7 +311,7 @@ In this exercise, you will create and configure the services that will make it p
 
 10. Next, you'll need to install **AzureRM.Network version 5.4.2** from PowershellGallery (The lab requires a specific version). Open your browser and navigate to the following URL: <https://www.powershellgallery.com/packages/AzureRM.Network/5.4.2>.
 
-11. After the PowerShell gallery page loads, click on **Azure Automation** under *Installation Options*. A new **Deploy to Azure Automation** button will appear.
+11. After the PowerShell gallery page loads, select on **Azure Automation** under *Installation Options*. A new **Deploy to Azure Automation** button will appear.
 
     ![Screenshot of the AzureRM.Network 5.4.2 at PowershellGallery.com.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image52.png "AzureRM.Network link")
 
@@ -319,7 +319,7 @@ In this exercise, you will create and configure the services that will make it p
 
     ![Deploy to Azure Automation is highlighted in the AzureRM.Network page.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image53.png "AzureRM.Network blade")
 
-13. Enter your Azure credentials when prompted. Back in the Azure Portal Azure Automation blade, select the BCDR automation account created previously and click **OK**.
+13. Enter your Azure credentials when prompted. Back in the Azure Portal Azure Automation blade, select the BCDR automation account created previously and select **OK**.
 
     ![Screenshot of the Import blade with the Azure Automation account highlighted.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image54.png "Import blade")
 
@@ -641,7 +641,7 @@ In this task, the **OnPremVM** will be configured to replicate to Azure and be r
 
     >**Note:** Be sure to select **Premium** Performance or you may run into issues later in the lab.
 
-48. Select **+ Storage account** again and create a second storage account using the **Standard** performance tier, then click **OK**.
+48. Select **+ Storage account** again and create a second storage account using the **Standard** performance tier, then select **OK**.
 
 49. The portal will submit a deployment, and you must wait until this completes. It will be created in the **BCDRAzureSiteRecovery** resource group.
 
