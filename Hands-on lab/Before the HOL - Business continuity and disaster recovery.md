@@ -58,7 +58,7 @@ Duration: 20 minutes
 
 3.  Select **Create**.
 
-5.  Apply the following configuration items on the Basics tab and select **OK**:
+4.  Apply the following configuration items on the Basics tab and select **OK**:
 
     -   **Subscription**: If you have multiple subscriptions, choose the appropriate subscription in which to conduct the lab.
 
@@ -80,35 +80,35 @@ Duration: 20 minutes
 
     >**Note:** If the Azure Subscription you are using has limits on the number of cores, you may wish to choose DS1\_V2.
 
-6. Select **Next: Disks**.
+5. Select **Next: Disks**.
 
     ![View of the Next: Disks Button.](images/Setup/image7.png "Disks button")
 
-7.  Select **Premium SSD**, then **Next: Networking>**.
+6.  Select **Premium SSD**, then **Next: Networking>**.
 
     ![Premium SSD is selected, then Next : Networking](images/Setup/image8.png "Next: Networking>")
 
-8.  Select **Allow selected ports** and then choose **RDP** (3389) from the **Select  inbound ports** dropdown chooser.  This will enable remote desktop connections from the internet to LABVM.
+7.  Select **Allow selected ports** and then choose **RDP** (3389) from the **Select  inbound ports** dropdown chooser.  This will enable remote desktop connections from the internet to LABVM.
 
     ![Select public inbound ports dropdown with RDP (3389) selected](images/Setup/image27.png "Select public inbound ports dropdown")
 
-9.  Select **Review + create**.
+8.  Select **Review + create**.
 
     ![Review + create button](images/Setup/image28.png "Review + create button")
     
-10. After validation, select **Create**. The Azure deployment should begin provisioning. It may take 10+ minutes for the virtual machine provisioning to complete.
+9. After validation, select **Create**. The Azure deployment should begin provisioning. It may take 10+ minutes for the virtual machine provisioning to complete.
 
     ![Screenshot of the Deploying Visual Studio Community 2019.](images/Setup/image9.png "Your deployment is underway")
 
->**Note:** Please wait for the LABVM to be completely provisioned prior to moving to the next step.
+    >**Note:** Please wait for the LABVM to be completely provisioned prior to moving to the next step.
 
-11. Move back to the Portal page on your local machine and wait for **LABVM** to show the Status of **Running**. Select **Connect** to establish a new Remote Desktop Session.
+10. Move back to the Portal page on your local machine and wait for **LABVM** to show the Status of **Running**. Select **Connect** to establish a new Remote Desktop Session.
 
     ![The Connect button is called out on the LABVM Virtual Machine blade top menu.](images/Setup/image10.png "LABVM Virtual Machine blade")
 
-12. Choose **Download RDP File**, then open the `.rdp` file to connect to the VM.
+11. Choose **Download RDP File**, then open the `.rdp` file to connect to the VM.
 
-13. Log in to your newly created LABVM with the credentials specified during creation:
+12. Log in to your newly created LABVM with the credentials specified during creation:
 
     -   **User**: mcwadmin
 
@@ -116,23 +116,23 @@ Duration: 20 minutes
 
     ![Credentials fields are called out in the Windows Security Credentials section.](images/Setup/image11.png "Windows Security Credentials section")
 
-14. You will be presented with a Remote Desktop Connection warning because of a certificate trust issue. Select **Yes** to continue with the connection.
+13. You will be presented with a Remote Desktop Connection warning because of a certificate trust issue. Select **Yes** to continue with the connection.
 
     ![The Remote Desktop Connection Warning dialog box displays, letting you know that the remote computer's identity cannot be verified, and asking if you want to connect anyway.](images/Setup/image12.png "Remote Desktop Connection Warning dialog box")
 
-15. When logging on for the first time, you may be prompted about Windows network discovery. Select **No**.
+14. When logging on for the first time, you may be prompted about Windows network discovery. Select **No**.
 
     ![The Networks pop-up displays, asking if you want to turn on network discovery.](images/Setup/image13.png "Networks pop-up")
 
-16. Notice that Server Manager opens by default. On the left, select **Local Server** (LABVM).
+15. Notice that Server Manager opens by default. On the left, select **Local Server** (LABVM).
 
     ![On the Server Manager menu, Local Server is selected.](images/Setup/image14.png "Server Manager menu")
 
-17. On the right side of the pane, select **Off** next to **IE Enhanced Security Configuration**.
+16. On the right side of the pane, select **Off** next to **IE Enhanced Security Configuration**.
 
     ![IE Enhanced Security Configuration is set to Off, and is selected.](images/Setup/image15.png "IE Enhanced Security Configuration option")
 
-18. Change to **Off** for both Administrators and Users then select **OK**.
+17. Change to **Off** for both Administrators and Users then select **OK**.
 
     ![In the Internet Explorer Enhanced Security Configuration dialog box, Administrators is set to Off, and Users is set to Off.](images/Setup/image16.png "Internet Explorer Enhanced Security Configuration dialog box")
 
