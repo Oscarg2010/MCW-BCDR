@@ -311,7 +311,7 @@ In this exercise, you will create and configure the services that will make it p
 
 10. Next, you'll need to install **AzureRM.Network version 5.4.2** from PowershellGallery (The lab requires a specific version). Open your browser and navigate to the following URL: <https://www.powershellgallery.com/packages/AzureRM.Network/5.4.2>.
 
-11. After the PowerShell gallery page loads, select on **Azure Automation** under *Installation Options*. A new **Deploy to Azure Automation** button will appear.
+11. After the PowerShell gallery page loads, select **Azure Automation** under *Installation Options*. A new **Deploy to Azure Automation** button will appear.
 
     ![Screenshot of the AzureRM.Network 5.4.2 at PowershellGallery.com.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image52.png "AzureRM.Network link")
 
