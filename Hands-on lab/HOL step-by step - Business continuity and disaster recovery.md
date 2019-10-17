@@ -739,7 +739,7 @@ In this task, the **OnPremVM** will be configured to replicate to Azure and be r
 
     ![In the Replicated items blade, a call out points to the status of Protected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image134.png "Replicated items blade")
 
->**Note**: It will take about 15 minutes for the VM to replicate, so you can move on and come back to review the environment later.
+    >**Note**: It will take about 15 minutes for the VM to replicate, so you can move on and come back to review the environment later.
 
 65. Scroll down and review the Infrastructure view of the BCDR environment you have created for **OnPremVM**. You can select **Hyper-V Virtual Machine** to review what is protected.
 
