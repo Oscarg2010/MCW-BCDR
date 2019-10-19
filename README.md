@@ -6,7 +6,7 @@ Contoso also wants to insure they have the right breadth and depth of continuity
 
 Contoso's corporate data center in the US is in a hurricane-prone region, and they need a backup data center that mirrors the core functions they have here.
 
-September 2019
+October 2019
 
 ## Target audience
 - Infrastructure Architects
@@ -37,7 +37,7 @@ At the end of this hands-on lab, you will be better able to build a complex and 
 ## Azure services and related products
   -  Azure Site Recovery
   -  Azure Automation
-  -  Azure Frontdoor
+  -  Azure Front Door
   -  Azure SQL Server Always on Availability Groups
   -  Azure App Services
 

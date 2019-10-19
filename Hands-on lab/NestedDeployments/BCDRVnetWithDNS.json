@@ -6,8 +6,6 @@
     "BCDRVNetName": "BCDRVNet",
     "DNSIP": "10.0.3.4",
     "BCDRVNetPrefix": "10.0.0.0/16",
-    "BCDRVNetSubnet1Name": "GatewaySubnet",
-    "BCDRVNetSubnet1Prefix": "10.0.0.0/24",
     "BCDRVNetSubnet2Name": "WEB",
     "BCDRVNetSubnet2Prefix": "10.0.1.0/24",
     "BCDRVNetSubnet3Name": "DATA",
@@ -39,15 +37,6 @@
           ]
         },
         "subnets": [
-          {
-            "name": "[variables('BCDRVNetSubnet1Name')]",
-            "properties": {
-              "addressPrefix": "[variables('BCDRVNetSubnet1Prefix')]",
-              "networkSecurityGroup": {
-                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('DEFAULTNSGName'))]"
-              }
-            }
-          },
           {
             "name": "[variables('BCDRVNetSubnet2Name')]",
             "properties": {
