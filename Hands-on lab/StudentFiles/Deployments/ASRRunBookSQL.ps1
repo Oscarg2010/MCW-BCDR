@@ -28,10 +28,10 @@ workflow ASRSQLFailover
         [Object]$RecoveryPlanContext 
     ) 
     $connectionName = "AzureRunAsConnection" 
-    $ASRFailoverScriptPath = "https://raw.githubusercontent.com/crpietschmann/MCW-Business-continuity-and-disaster-recovery/master/Hands-on%20lab/StudentFiles/Deployments/ASRFailOver.ps1"
-	$ASRFailoverScriptPathSQLVM1 = "https://raw.githubusercontent.com/crpietschmann/MCW-Business-continuity-and-disaster-recovery/master/Hands-on%20lab/StudentFiles/Deployments/ASRFailOverSQLVM1.ps1"
-	$ASRFailoverScriptPathSQLVM2 = "https://raw.githubusercontent.com/crpietschmann/MCW-Business-continuity-and-disaster-recovery/master/Hands-on%20lab/StudentFiles/Deployments/ASRFailOverSQLVM2.ps1"
-    $ASRFailBackScriptPath = "https://raw.githubusercontent.com/crpietschmann/MCW-Business-continuity-and-disaster-recovery/master/Hands-on%20lab/StudentFiles/Deployments/ASRFailBack.ps1"
+    $ASRFailoverScriptPath = "https://raw.githubusercontent.com/Microsoft/MCW-Business-continuity-and-disaster-recovery/Update-March-2020/Hands-on%20lab/StudentFiles/Deployments/ASRFailOver.ps1"
+	$ASRFailoverScriptPathSQLVM1 = "https://raw.githubusercontent.com/Microsoft/MCW-Business-continuity-and-disaster-recovery/Update-March-2020/Hands-on%20lab/StudentFiles/Deployments/ASRFailOverSQLVM1.ps1"
+	$ASRFailoverScriptPathSQLVM2 = "https://raw.githubusercontent.com/Microsoft/MCW-Business-continuity-and-disaster-recovery/Update-March-2020/Hands-on%20lab/StudentFiles/Deployments/ASRFailOverSQLVM2.ps1"
+    $ASRFailBackScriptPath = "https://raw.githubusercontent.com/Microsoft/MCW-Business-continuity-and-disaster-recovery/Update-March-2020/Hands-on%20lab/StudentFiles/Deployments/ASRFailBack.ps1"
     
 Try 
  {
