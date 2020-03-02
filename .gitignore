@@ -328,3 +328,6 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+Hands-on lab/NestedDeployments/.DS_Store
+Hands-on lab/NestedDeployments/CustomScripts/.DS_Store
+Hands-on lab/NestedDeployments/.DS_Store
