@@ -4,7 +4,7 @@
   "parameters": {},
   "variables": {
     "GitHubScriptRepo": "microsoft/MCW-Business-continuity-and-disaster-recovery",
-    "GitHubScriptRepoBranch": "master",
+    "GitHubScriptRepoBranch": "Update-March-2020",
     "GitHubScriptRepoBranchURL": "[concat('https://raw.githubusercontent.com/', variables('GitHubScriptRepo'), '/', variables('GitHubScriptRepoBranch'), '/Hands-on lab/NestedDeployments/')]",
     "bcdrprimarysqlserverName": "[concat('bcdrprimarysqlserver', uniqueString(resourceGroup().id))]",
     "BCDRPrimarySiteContosoInsuranceName": "[concat('BCDRPrimarySiteContosoInsurance', uniqueString(resourceGroup().id))]",
