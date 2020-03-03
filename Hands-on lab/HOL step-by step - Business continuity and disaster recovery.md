@@ -299,9 +299,10 @@ In this exercise, you will create and configure the services that will make it p
 
     ![Import is selected in the AzureRM.profile blade.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image48.png "AzureRM.Profile blade")
 
-8.  Select the **I agree to update all of the Azure modules** and then select **OK**.
+8.  On the **Import** blade, select the **OK** button.
 
-    ![In the Import blade, the checkbox is selected for I agree to update all of the Azure modules.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image49.png "Import blade")
+    ![In the Import blade.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image49.png "Import blade")
+
 
 9.  It will take a few minutes to update the modules. Select **Modules** under Shared Resources, and you can wait the import has completed.
 
