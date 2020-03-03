@@ -42,7 +42,7 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
         - [Task 1: Create Azure recovery services vault](#task-1-create-azure-recovery-services-vault)
         - [Task 2: Deploy Azure automation](#task-2-deploy-azure-automation)
     - [Exercise 3: Configure environments for failover](#exercise-3-configure-environments-for-failover)
-        - [Task 1: Configure on-premises to Azure IaaS failover for migration](#task-1-configure-on-premises-to-azure-iaas-failover-for-migration)
+        - [Task 1: Configure on-premises to Azure IaaS failover](#task-1-configure-on-premises-to-azure-iaas-failover)
         - [Task 2: Configure IaaS SQL Always On availability groups for region to region failover](#task-2-configure-iaas-sql-always-on-availability-groups-for-region-to-region-failover)
         - [Task 3: Configure IaaS for region to region failover](#task-3-configure-iaas-for-region-to-region-failover)
         - [Task 4: Configure PaaS for region to region failover](#task-4-configure-paas-for-region-to-region-failover)
@@ -410,7 +410,7 @@ In this exercise, you will configure the three environments to use BCDR technolo
 
 >**Note**: Make sure prior to starting each task that the deployment that you started in Exercise 1 has completed for each as you come to that task. This can be determined by reviewing the deployments for each Resource group in the Azure portal. If it says Succeeded, then you can begin the task.
 
-### Task 1: Configure on-premises to Azure IaaS failover for migration
+### Task 1: Configure on-premises to Azure IaaS failover
 
 In this task, the **OnPremVM** will be configured to replicate to Azure and be ready to failover to the **BCDRIaaSSecondarySite**. This will consist of configuring your Hyper-V host with the ASR provider and then enabling replication of the VM to the Recovery Service Vault.
 
@@ -430,7 +430,7 @@ In this task, the **OnPremVM** will be configured to replicate to Azure and be r
 
     - **Where do you want to replicate your machines to?**: To Azure
 
-    - **Are you performing a migration?**: Yes
+    - **Are you performing a migration?**: No
 
     - **I understand, but I would like to continue with Azure Site Recovery**: *checked*
 
