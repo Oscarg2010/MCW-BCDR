@@ -840,7 +840,12 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     ![In the PowerShell ISE window, a call out points to AOGCLUSTER.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image153.png "PowerShell ISE window")
 
->**Note:** It is possible to use a wizard for this task, but the resulting cluster will require additional configuration to set the static IP address in Azure.
+    >**Note:** If you get a `The term 'New-Cluster' is not recognized` error, then run the following command to install the Failover Clusters feature and try again:
+    > ```
+    > Add-WindowsFeature RSAT-Clustering-PowerShell
+    > ```
+
+    >**Note:** It is possible to use a wizard for this task, but the resulting cluster will require additional configuration to set the static IP address in Azure.
 
 15. After the cluster has been created, select **Start** and then **Windows Administrative Tools**. Locate and open the **Failover Cluster Manager**.
 
