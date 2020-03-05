@@ -1443,29 +1443,43 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![In the Resource group blade, a call out points to ContosoInsurance.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image274.png "Resource group blade")
 
-22. Select **ContosoInsurance** to open the resource then select **Show database connection strings**.
+22. Select **ContosoInsurance** to open the resource.
+
+23. Under **Settings**, select **Configure**.
+
+    ![Configure option highlighted](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image274b.png "Configure option highlighted")
+
+24. On the **Configure** pane, select the **Premium** pricing tier category, then select **Yes** for the **Would you like to make this database zone redundant?** option.
+
+    ![The Premium pricing tier Zone Redundant option is highlighted](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image274c.png "The Premium pricing tier Zone Redundant option is highlighted")
+
+    This will configure the Azure SQL Database to span across Availability Zones within the Azure Region it is hosted, and offer higher availability.
+
+25. Select **Apply** to save the pricing tier changes.
+
+26. On the **ContosoInsurance** database resource, select the **Overview** pane, then select **Show database connection strings**.
 
     ![Under Connection strings, the link for Show database connection strings is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image275.png "Connection strings setting")
 
-23. Select the **Copy to clipboard** link to capture the connection string and then paste it to your **SQLSERVER.TXT** file.
+27. Select the **Copy to clipboard** link to capture the connection string and then paste it to your **SQLSERVER.TXT** file.
 
     ![On the ADO.NET tab, the database connection string is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image276.png "ADO.NET tab")
 
     ![The Database connection string for the newly migrated ContosoInsurance SQL Database displays in Notepad.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image277.png "Notepad")
 
-24. In the Azure portal, move back to the **BCDRPaaSPrimarySite** resource group and then select the **SQL Server** resource.
+28. In the Azure portal, move back to the **BCDRPaaSPrimarySite** resource group and then select the **SQL Server** resource.
 
     ![In the Resource group blade, the SQL Server resource is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image278.png "Resource group blade")
 
-25. Under **Settings**, select **Failover groups**.
+29. Under **Settings**, select **Failover groups**.
 
     ![In the SQL server blade, under Settings, Failover groups is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image279.png "SQL server blade")
 
-26. Select **+Add group**.
+30. Select **+Add group**.
 
     ![In the SQL server blade, Add group is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image280.png "SQL server blade")
 
-27. Complete the **Failover group** blade using these inputs and then select **Create:**
+31. Complete the **Failover group** blade using these inputs and then select **Create:**
 
     - **Failover group name:** Enter a lowercase unique name 3-24 characters using `bcdrpassfogxxx`.
 
@@ -1475,21 +1489,21 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![Fields in the Failover group blade display the previously defined settings, and in the Databases blade, the checkbox for the SQL Server database is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image281.png "Failover group and Databases blades")
 
-28. The portal will submit a deployment.
+32. The portal will submit a deployment.
 
     ![A Deployment in progress message displays.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image282.png "Deployment in progress message")
 
-29. The portal will update once the Failover group has been deployed. Select the **group**.
+33. The portal will update once the Failover group has been deployed. Select the **group**.
 
     ![In the SQL Server blade, the failover group displays.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image283.png "SQL Server blade")
 
-30. The Failover group (FOG) portal will appear. Copy the name of the Listener endpoint to your clipboard and then copy this to your **SQLSERVER.TXT** file.
+34. The Failover group (FOG) portal will appear. Copy the name of the Listener endpoint to your clipboard and then copy this to your **SQLSERVER.TXT** file.
 
     ![On the Configuration details tab, a map displays with dots marking the two server locations.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image284.png "Configuration details tab")
 
     ![In Notepad, a call out points to the Fog Listener Endpoint.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image285.png "Notepad")
 
-31. In the **SQLSERVER.TXT** file, **update the server name** in the connection string with the name of the FOG listener endpoint. Also, **change the user name and password** to the credentials for the SQL Server:
+35. In the **SQLSERVER.TXT** file, **update the server name** in the connection string with the name of the FOG listener endpoint. Also, **change the user name and password** to the credentials for the SQL Server:
 
     -   **Username:** mcwadmin
 
@@ -1499,21 +1513,21 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![The updated SQLServer.TXT file displays.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image287.png "SQLServer.TXT file")
 
-32. The new connection string will be used for the Web App. This will ensure that when the SQL Database is failed over that the server is always pointing to the Failover group. Open the Web App in the **BCDRPaaSPrimarySite** resource group.
+36. The new connection string will be used for the Web App. This will ensure that when the SQL Database is failed over that the server is always pointing to the Failover group. Open the Web App in the **BCDRPaaSPrimarySite** resource group.
 
     ![The New Connection String for the Web App is called out.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image288.png "New Connection String")
 
-33. Select the **URL**. The empty Web App will appear.
+37. Select the **URL**. The empty Web App will appear.
 
     ![The new URL link is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image289.png "URL")
 
     ![On the Microsoft Azure app service tab, a message says that your app service app is up and running.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image290.png "Microsoft Azure app service tab")
 
-34. Under **Settings**, select **Configuration**.
+38. Under **Settings**, select **Configuration**.
 
     ![Under Settings, Application settings is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image291.png "Settings section")
 
-35. Scroll down to the **Connection strings** settings and add a new connection string using the following inputs, then select **Save**.
+3965. Scroll down to the **Connection strings** settings and add a new connection string using the following inputs, then select **Save**.
 
     - **Name:** PolicyConnect
 
@@ -1525,7 +1539,7 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
   >**Note**: You must use the Name **PolicyConnect**. This is the name that is recognized by the Application in the source code.
 
-36. Repeat the same procedure on the Web App located in the **BCDRPaaSSecondarySite** resource group using the same connection string:
+40. Repeat the same procedure on the Web App located in the **BCDRPaaSSecondarySite** resource group using the same connection string:
 
     ![The New Connection String for the Web App is called out.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image293.png "New Connection String")
 
@@ -1535,81 +1549,81 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     - **Type:** SQLAzure
 
-37. On the LABVM open **Visual Studio**. You will be required to login to Visual Studio. If you don't have an account you can create a free account following the prompts.
+41. On the LABVM open **Visual Studio**. You will be required to login to Visual Studio. If you don't have an account you can create a free account following the prompts.
 
     ![Visual Studio 2019 from the start menu displays.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image294.png "Visual Studio 2019")
 
-38. Select **Open a project or solution**.
+42. Select **Open a project or solution**.
 
     ![In Visual Studio, Open a project or solution is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image295.png "Visual Studio")
 
-39. Open the Solution located at `C:\HOL\WebApp\ContosoInsurance.sln`.
+43. Open the Solution located at `C:\HOL\WebApp\ContosoInsurance.sln`.
 
     >**Note**: You may see a security warning about opening projects from trustworthy sources. Select OK if prompted.
 
     ![In the Open Project window, contosoinsurance.sln is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image296.png "Open Project")
 
-40. Locate the ContosoInsurance application in the Solution Explorer on the right-hand area of Visual Studio.
+44. Locate the ContosoInsurance application in the Solution Explorer on the right-hand area of Visual Studio.
 
     ![In Solution Explorer, ContosoInsurance is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image297.png "Solution Explorer")
 
     >**Note:** If for some reason the Solution Explorer is not seen you can select **View -\> Solution Explorer** on the Menu bar of Visual Studio.
 
-41. Right-click the **ContosoInsurance** Application and select **Publish**.
+45. Right-click the **ContosoInsurance** Application and select **Publish**.
 
     ![In Solution Explorer, the right-click menu for ContosoInsurance displays, and Publish is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image298.png "Solution Explorer")
 
-42. On the **Publish** screen select **App Service** and then **Select Existing** and finally **Create Profile**.
+46. On the **Publish** screen select **App Service** and then **Select Existing** and finally **Create Profile**.
 
     ![On the Publish screen, App Service is selected. The radio button for Select Existing is selected as well.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image299.png "Publish screen")
 
-43. On the App Service screen select the Web App under the **BCDRPaaSPrimarySite**. Then select **OK**. Ensure that the correct Visual Studio account is selected in the upper right corner of the Add Service wizard if you don't see BCDR HOLD resources.
+47. On the App Service screen select the Web App under the **BCDRPaaSPrimarySite**. Then select **OK**. Ensure that the correct Visual Studio account is selected in the upper right corner of the Add Service wizard if you don't see BCDR HOLD resources.
 
     ![On the App Service screen, the web app under BCDRPaaSPrimarySite is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image300.png "App Service screen")
 
-44. Select **Publish** to publish the *ContosoInsurance* application to Azure.
+48. Select **Publish** to publish the *ContosoInsurance* application to Azure.
     ![On the Publish tab, the Publish button is highlighted.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image300-b.png "Publish tab")
 
-45. Once the publish has succeeded, open the Azure Web App in a browser to see that it's running successfully.
+49. Once the publish has succeeded, open the Azure Web App in a browser to see that it's running successfully.
 
     ![The Contoso Insurance PolicyConnect webpage displays.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image301.png "Contoso Insurance PolicyConnect webpage ")
 
-46. Select the **Current Policy Offerings** button, and the page should load with data showing. This means that you have successfully implemented the Web App and it has connected to the Failover Group database.
+50. Select the **Current Policy Offerings** button, and the page should load with data showing. This means that you have successfully implemented the Web App and it has connected to the Failover Group database.
 
     ![The Index webpage displays the insurance options.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image302.png "Index webpage")
 
-47. Right-click the **ContosoInsurance** Application and select **Publish**.
+51. Right-click the **ContosoInsurance** Application and select **Publish**.
 
     ![In Solution Explorer, the right-click menu for ContosoInsurance displays, and Publish is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image298.png "Solution Explorer")
 
-48. On the publish screen select **Create new profile**.
+52. On the publish screen select **Create new profile**.
 
   ![On the Publish screen, New is Selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image299.0.png "Publish screen New")
 
-49. On the **Publish** screen, select **Microsoft Azure App Service** and then **Select Existing** and finally **Create Profile**.
+53. On the **Publish** screen, select **Microsoft Azure App Service** and then **Select Existing** and finally **Create Profile**.
 
     ![On the Publish screen, Microsoft Azure App Service is selected. The radio button for Select Existing is selected as well.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image299.png "Publish screen")
 
-50. This time, choose the Web App from the **Secondary** Site running in the **BCDRPaaSSecondarySite**. Select **OK**.
+54. This time, choose the Web App from the **Secondary** Site running in the **BCDRPaaSSecondarySite**. Select **OK**.
 
     ![On the App Service screen, the web app under BCDRPaaSSecondarySite is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image305.png "App Service screen")
 
-51. Select **Publish** to publish the *ContosoInsurance* application to Azure.
+55. Select **Publish** to publish the *ContosoInsurance* application to Azure.
     ![On the Publish tab, the Publish button is highlighted.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image305-b.png "Publish tab")
 
-52. Once the publish has succeeded, open the Azure Web App in a browser to see that it's running successfully.
+56. Once the publish has succeeded, open the Azure Web App in a browser to see that it's running successfully.
 
     ![The Contoso Insurance PolicyConnect webpage displays.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image306.png "Contoso Insurance PolicyConnect webpage")
 
-53. Select the **Current Policy Offerings** button, the page should load showing data (*(various coverage plans)). This means that you have successfully implemented the Web App, and it has connected to the Failover Group database.
+57. Select the **Current Policy Offerings** button, the page should load showing data (*(various coverage plans)). This means that you have successfully implemented the Web App, and it has connected to the Failover Group database.
 
     ![The Index webpage displays the insurance options.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image307.png "Index webpage")
 
-54. Close Visual Studio and move back to the Azure Portal. The next step will be to deploy a Front Door for this PaaS implementation. Select **+Create a resource** then search for and select **Front Door** in the Azure Marketplace.
+58. Close Visual Studio and move back to the Azure Portal. The next step will be to deploy a Front Door for this PaaS implementation. Select **+Create a resource** then search for and select **Front Door** in the Azure Marketplace.
 
     ![In the Azure Portal, select Create a resource, then search for Front Door.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image213.png "Azure Portal")
 
-55. Complete the **Basic** tab of the **Create a Front Door** blade using the following inputs, then select **Next: Configuration >**:
+59. Complete the **Basic** tab of the **Create a Front Door** blade using the following inputs, then select **Next: Configuration >**:
 
     - **Resource group:** Use existing / BCDRPaasPrimarySite.
 
@@ -1617,11 +1631,11 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![In the Create Front Door blade, fields display the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image308.png "Create Front Door blade")
 
-56. Select the **plus** button on the **Frontend hosts** box to set the host name of Front Door.
+60. Select the **plus** button on the **Frontend hosts** box to set the host name of Front Door.
 
     ![The configuration tab is shown with the add Frontend hosts button highlighted.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image308-b.png "The configuration tab is shown with the add Frontend hosts button highlighted.")
 
-57. In the **Add a frontend host** pane, enter the following values, then select **Add**:
+61. In the **Add a frontend host** pane, enter the following values, then select **Add**:
 
     - **Host name**: Enter a unique name with the prefix of `bcdrpaas###`.
 
@@ -1629,11 +1643,11 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     !["Add a front end host pane"](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image308-c.png "Add a front end host pane")
 
-58. Select the **plus** button on the **Backend pools** box to begin adding endpoints to the backend pool.
+62. Select the **plus** button on the **Backend pools** box to begin adding endpoints to the backend pool.
 
     ![The Configuration tab is shown with the Add backend pool button highlighted.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image308-d.png "The Configuration tab is shown with the Add backend pool button highlighted.")
 
-59. On the **Add a backend pool** pane, enter the following values, then select the **Add a backend** link:
+63. On the **Add a backend pool** pane, enter the following values, then select the **Add a backend** link:
 
     - **Name**: BCDRPaaS
 
@@ -1641,7 +1655,7 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![The Add a backend pool pane with the specified values entered.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image308-e.png "The Add a backend pool pane with the specified values entered.")
 
-60. On the **Add a backend** pane, enter the following values, then select **Add**:
+64. On the **Add a backend** pane, enter the following values, then select **Add**:
 
     - **Backend host type**: App service
 
@@ -1649,7 +1663,7 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![The Add a backend pane with previously specified values entered.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image308-f.png "The Add a backend pane with previously specified values entered.")
 
-61. Select the **Add a backend** link again, and add another backend host name with the following values, then select **Add**:
+65. Select the **Add a backend** link again, and add another backend host name with the following values, then select **Add**:
 
     - **Backend host type**: App service
 
@@ -1657,13 +1671,13 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![The Add a backend pane with previously specified values entered.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image308-g.png "The Add a backend pane with previously specified values entered.")
 
-62. Select **Add** to create the backend pool.
+66. Select **Add** to create the backend pool.
 
-63. Select the **plus** button on the **Routing rules** box.
+67. Select the **plus** button on the **Routing rules** box.
 
     ![The Configuration tab is shown with the Add routing rules button highlighted.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image308-h.png "The Configuration tab is shown with the Add routing rules button highlighted.")
 
-64. On the **Add a rule** pane, enter the following values, then select **Add**:
+68. On the **Add a rule** pane, enter the following values, then select **Add**:
 
     - **Name**: BCDRPaaS
     - **Backend pool**: BCDRPaaS
@@ -1671,13 +1685,13 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![Add a rule pane.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image308-i.png "Add a rule pane")
 
-65. Select **Review + Create**.
+69. Select **Review + Create**.
 
     ![Review + Create button is highlighted.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image308-j.png "Review + Create button is highlighted.")
 
-66. Once validation has completed, select **Create** to provision the Front Door service.
+70. Once validation has completed, select **Create** to provision the Front Door service.
 
-67. Select the DNS name of the Front Door, the Policy Connect web application will load. This is connecting to one of the two Web Apps running in the **Primary** Site or **Secondary** Site and talking to the Azure SQL Database Failover Group primary replica using the SQL FOG Listener.
+71. Select the DNS name of the Front Door, the Policy Connect web application will load. This is connecting to one of the two Web Apps running in the **Primary** Site or **Secondary** Site and talking to the Azure SQL Database Failover Group primary replica using the SQL FOG Listener.
 
     ![The Frontend host link is called out.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image315.png "Frontend host")
 
