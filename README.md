@@ -6,9 +6,10 @@ Contoso also wants to insure they have the right breadth and depth of continuity
 
 Contoso's corporate data center in the US is in a hurricane-prone region, and they need a backup data center that mirrors the core functions they have here.
 
-October 2019
+March 2020
 
 ## Target audience
+
 - Infrastructure Architects
 - Cloud Solution Architects
 
@@ -16,7 +17,7 @@ October 2019
 
 ### Workshop
 
-In this workshop, you will gain experience designing solutions using Azure business continuity and disaster recovery (BCDR) technologies. 
+In this workshop, you will gain experience designing solutions using Azure business continuity and disaster recovery (BCDR) technologies.
 
 Three different types of environments will be examined. The first will consist of on-premises VMs running applications that will be migrated to Azure IaaS. Next, Azure IaaS applications that need to be failed over from either on-premises to Azure, or between two Azure Regions. Finally, the use of automated failover technologies built into Azure PaaS services, App Service and SQL Database will be used for PaaS applications.
 
@@ -35,11 +36,12 @@ In the hands-on lab, you will implement three different environments and use Azu
 At the end of this hands-on lab, you will be better able to build a complex and robust IaaS BCDR solution.
 
 ## Azure services and related products
-  -  Azure Site Recovery
-  -  Azure Automation
-  -  Azure Front Door
-  -  Azure SQL Server Always on Availability Groups
-  -  Azure App Services
+
+- Azure Site Recovery
+- Azure Automation
+- Azure Front Door
+- Azure SQL Server Always on Availability Groups
+- Azure App Services
 
 ## Azure solutions
 
@@ -54,11 +56,11 @@ Business Continuity, Disaster Recovery
 We welcome feedback and comments from Microsoft SMEs & learning partners who deliver MCWs.  
 
 ***Having trouble?***
+
 - First, verify you have followed all written lab instructions (including the Before the Hands-on lab document).
 - Next, submit an issue with a detailed description of the problem.
-- Do not submit pull requests. Our content authors will make all changes and submit pull requests for approval.   
+- Do not submit pull requests. Our content authors will make all changes and submit pull requests for approval.
 
 If you are planning to present a workshop, *review and test the materials early*! We recommend at least two weeks prior.
 
 ### Please allow 5 - 10 business days for review and resolution of issues.
-
