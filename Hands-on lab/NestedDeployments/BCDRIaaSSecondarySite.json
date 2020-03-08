@@ -4,7 +4,7 @@
   "parameters": {},
   "variables": {
     "GitHubScriptRepo": "microsoft/MCW-Business-continuity-and-disaster-recovery",
-    "GitHubScriptRepoBranch": "Update-March-2020",
+    "GitHubScriptRepoBranch": "master",
     "GitHubScriptRepoBranchURL": "[concat('https://raw.githubusercontent.com/', variables('GitHubScriptRepo'), '/', variables('GitHubScriptRepoBranch'), '/Hands-on lab/NestedDeployments/')]",
     "GitHubMediaRepoBranchURL": "[concat('https://media.githubusercontent.com/media/', variables('GitHubScriptRepo'), '/', variables('GitHubScriptRepoBranch'), '/Hands-on lab/NestedDeployments/')]",
     "BCDRFOVNetName": "BCDRFOVNET",
