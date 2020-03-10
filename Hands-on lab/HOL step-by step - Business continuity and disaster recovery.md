@@ -1,4 +1,4 @@
-![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
+![Microsoft Cloud Workshops](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
 Business continuity and disaster recovery
@@ -247,9 +247,9 @@ In this exercise, you will create and configure the services that will make it p
 
     - **Name**: `BCDRRSV`
 
-    - **Resource Group**: **BCDRAzureSiteRecovery**
+    - **Resource Group**: BCDRAzureSiteRecovery
 
-    - **Location**: **Central US** *(your secondary region)*
+    - **Location**: Central US *(your secondary region)*
 
 4. Once the **BCDRRSV** Recovery Service Vault has been created, open it in the Azure portal. Select the "Site Recovery" tab.
 
@@ -275,10 +275,10 @@ In this exercise, you will create and configure the services that will make it p
 
 4. Complete the **Add Automation Account** blade using the following inputs and then select **Create**:
 
-    - **Name**: Enter a Globally unique name starting with `BCDR`
+    - **Name**: Enter a Globally unique name starting with `BCDR`.
     - **Resource group**: Use existing / **BCDRAzureAutomation**
     - **Location**: Select a site in your area *(but NOT your Primary site)*.
-    - **Create Azure Run As account**: **Yes**
+    - **Create Azure Run As account**: Yes
 
         ![Fields in the Add Automation Account blade are set to the previously defined values.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image45.png "Add Automation Account blade")
 
@@ -422,11 +422,11 @@ In this task, the **OnPremVM** will be configured to replicate to Azure and be r
 
 4. On **Step 1 Protection Goal** select the following inputs and then select **OK**:
 
-    - **Where are your machines located?**: **On-premises**
-    - **Where do you want to replicate your machines to?**: **To Azure**
-    - **Are you performing a migration?**: **No**
-    - **I understand, but I would like to continue with Azure Site Recovery**: *checked*
-    - **Are your machines virtualized?**: **Yes, with Hyper-V** [Your VM is running as a nested VM in Azure].
+    - **Where are your machines located?**: On-premises
+    - **Where do you want to replicate your machines to?**: To Azure
+    - **Are you performing a migration?**: No
+    - **I understand, but I would like to continue with Azure Site Recovery**: checked
+    - **Are your machines virtualized?**: Yes, with Hyper-V  (Your VM is running as a nested VM in Azure).
     - **Are you using System Center VMM to manage your Hyper-V hosts?**: No
 
     ![Fields in the Protection goal blade are set to the previously defined values.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image78.png "Protection goal blade")
@@ -477,8 +477,8 @@ In this task, the **OnPremVM** will be configured to replicate to Azure and be r
 
 15. Enter the credentials for the VM:
 
-    - **Username**: `mcwadmin`
-    - **Password**: `demo@pass123`
+    - **Username**: 'mcwadmin'
+    - **Password**: 'demo@pass123'
 
 16. You will be prompted with a warning about a certificate. Select **Yes** to connection (you can always select yes to these prompts during this HOL).
 
@@ -673,12 +673,12 @@ In this task, the **OnPremVM** will be configured to replicate to Azure and be r
 
 57. Complete the Target blade, select the following values:
 
-    - **Post-failover resource group**: **BCDRIaaSSecondarySite**
+    - **Post-failover resource group**: BCDRIaaSSecondarySite
     - **Storage Account**: Select the account you just created (**onpremvm8675309**).
     - **Storage Account for replication logs**: Create a *new* one using the prefix **bcdrasrrepllogs**.
-    - **Azure network**: **Configure now for selected machines.**
-    - **Post-failover Azure network**: **BCDRFOVNET**
-    - **Subnet**: **WEB (172.16.1.0/24)**
+    - **Azure network**: Configure now for selected machines.
+    - **Post-failover Azure network**: BCDRFOVNET
+    - **Subnet**: WEB (172.16.1.0/24)
 
     ![Fields in the Target blade are set to the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image126.png "Target blade")
 
@@ -688,9 +688,9 @@ In this task, the **OnPremVM** will be configured to replicate to Azure and be r
 
 59. Complete the **OnPremVM** selections of the **Configure properties** blade using these inputs and then select **OK**:
 
-    - **OS Type**: **Linux**
-    - **OS Disk**: **OnPremLinuxVM**
-    - **Disks to Replicate**: **OnPremLinuxVM \[127.00GB\]**
+    - **OS Type**: Linux
+    - **OS Disk**: OnPremLinuxVM
+    - **Disks to Replicate**: OnPremLinuxVM \[127.00GB\]
 
     ![Fields in the Configure properties blade are set to the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image128.png "Configure properties blade")
 
@@ -760,12 +760,12 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
 5. Complete the **Create storage account** form using the following details, then select **Review + create**:
 
-    - **Resource group**: **Use existing** / **BCDRAzureSiteRecovery**.
+    - **Resource group**: Use existing / BCDRAzureSiteRecovery.
     - **Storage account name:** Unique name starting with `bcdrcloudwitness`
-    - **Deployment model**: **Resource manager**
-    - **Account kind**: **Storage (general purpose v2)**
-    - **Performance**: **Standard**
-    - **Replication**: **Locally-redundant storage (LRS)**
+    - **Deployment model**: Resource manager
+    - **Account kind**: Storage (general purpose v2)
+    - **Performance**: Standard
+    - **Replication**: Locally-redundant storage (LRS)
     - **Location**: Any location in your area that is **NOT** your Primary or Secondary site.
 
     ![Fields in the Create storage account blade are set to the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image143.png "Create storage account blade")
@@ -842,7 +842,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
     ![In Failover Cluster Manager, a call out says to right-click the cluster name in the tree view, then click More Actions, and then click Configure Cluster Quorum Settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image159.png "Failover Cluster Manager")
 
-20. On the **Configure Cluster Quorum Wizard** select **Next**, then select **Select the quorum witness**. Then, select **Next** again.
+20. On the **Configure Cluster Quorum Wizard** select **Next**, then choose **Select the quorum witness**. Then, select **Next** again.
 
     ![On the Select Quorum Configuration Option screen of the Configure Cluster Quorum Wizard, the radio button for Select the quorum witness is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image160.png "Configure Cluster Quorum Wizard")
 
@@ -956,9 +956,9 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
 47. Add the following details:
 
-    - **Listener DNS Name**: `BCDRAOG`
-    - **Port**: `1433`
-    - **Network Mode**: **Static IP**
+    - **Listener DNS Name**: BCDRAOG
+    - **Port**: 1433
+    - **Network Mode**: Static IP
 
     ![Fields for the Listener details are set to the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image186.png "Listener details")
 
@@ -1074,7 +1074,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
 73. Complete the **Basics** tab of the **Create a Front Door** blade using the following inputs, then select **Next: Configuration >**:
 
-    - **Resource group**: **Use existing** / **BCDRIaasPrimarySite**
+    - **Resource group**: Use existing / **BCDRIaasPrimarySite**
     - **Location**: Automatically assigned based on the region of **BCDRIaaSPrimarySite**.
 
     ![Fields in the Create a Front Door blade are set to the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image214.png "Create Front Door blade")
@@ -1086,7 +1086,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 75. In the **Add a frontend host** pane, enter the following values, then select **Add**:
 
     - **Host name**: Enter a unique name with the prefix of `bcdriaas`
-    - **Session affinity**: **Disabled**
+    - **Session affinity**: Disabled
 
     ![Fields in the Add a frontend host pane are set to the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image214-b.png "Add a frontend host pane.")
 
@@ -1097,22 +1097,22 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 77. On the **Add a backend pool** pane, enter the following value, then select the **Add a backend** link.
 
     - **Name**: `BCDRIaaSPrimarySiteLB`
-    - **Health Probes - Protocol**: **HTTP**
+    - **Health Probes - Protocol**: HTTP
 
     ![The Add a backend pool pane has the Name set and Add a backend link highlighted.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image213-d.png "The Add a backend pool pane has the Name set and Add a backend link highlighted.")
 
 78. On the **Add a backend** pane, enter the following values, then select **Add**:
 
-    - **Backend host type**: **Custom host**
+    - **Backend host type**: Custom host
     - **Backend host name**: Paste in the DNS name for the Public IP Address (named **WWWEXTLB-PIP**) associated with the Load Balancer for the Web VMs within the **BCDRIaaSPrimarySite** resource group.
 
     ![The Add a backend pane has the previously specified values set.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image213-e.png "Add a backend pane")
 
 79. Select **Add a backend** again and add another backend host to the pool. Create it similar to before, but with the following settings:
 
-    - **Backend host type**: **Custom host**
+    - **Backend host type**: Custom host
     - **Backend host name**: Paste in the DNS name for the Public IP Address (named **WWWEXTLB-PIP**) associated with the Load Balancer for the Web VMs within the **BCDRIaaSSecondarySite** resource group.
-    - **Priority**: `2`
+    - **Priority**: 2
 
     ![The Add a backend pane has the previously specified values set.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image213-e-2.png "Add a backend pane")
 
@@ -1125,9 +1125,9 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 82. On the **Add a rule** pane, enter the following values, then select **Add**.
 
     - **Name**: `BCDRIaaS`
-    - **Accepted protocol**: **HTTP only**
-    - **Backend pool**: **BCDRIaaSPrimarySiteLB**
-    - **Forwarding protocol**: **HTTP Only**
+    - **Accepted protocol**: HTTP only
+    - **Backend pool**: BCDRIaaSPrimarySiteLB
+    - **Forwarding protocol**: HTTP Only
 
     ![Add a rule pane with the previously specified values entered in the fields.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image213-g.png "Add a rule pane")
 
@@ -1165,10 +1165,10 @@ In this task the WEBVM1 and WEBVM2 will be configured to replicate from the Prim
 
 4. On **Step 1 Source** select the following inputs and then select **OK**:
 
-    - **Source**: **Azure**
-    - **Source Location**: **East US 2** (*Your* Primary Region)
-    - **Azure virtual machine deployment model**: **Resource Manager**
-    - **Source resource group**: **BCDRIaaSPrimarySite**
+    - **Source**: Azure
+    - **Source Location**: East US 2 (*Your* Primary Region)
+    - **Azure virtual machine deployment model**: Resource Manager
+    - **Source resource group**: BCDRIaaSPrimarySite
 
     ![In the Source blade, fields are set to the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image226.png "Source blade")
 
@@ -1186,8 +1186,8 @@ In this task the WEBVM1 and WEBVM2 will be configured to replicate from the Prim
 
 8. Update the rest of the blade using the following inputs and the select **OK**:
 
-    - **Target resource group**: **BCDRIaaSSecondarySite**
-    - **Target virtual network**: **BCDRFOVNET**
+    - **Target resource group**: BCDRIaaSSecondarySite
+    - **Target virtual network**: BCDRFOVNET
     - **Replica Managed Disk:** Accept the new account.
     - **Cache Storage:** Accept the new account.
     - **Target Availability Type:**
@@ -1247,7 +1247,7 @@ In this task the WEBVM1 and WEBVM2 will be configured to replicate from the Prim
 19. Complete the rest of the blade using the following inputs and then select **OK**:
 
     - **Target**: Secondary region
-    - **Allow items with deployment model**: **Resource Manager**
+    - **Allow items with deployment model**: Resource Manager
     - **Select Items**: Select **WEBVM1** and **WEBVM2**
 
     ![Fields in the Create recovery plan blade are set to the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image243.png "Create recovery plan blade")
@@ -1369,9 +1369,9 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
 18. Update the remainder of the Deployment Settings screen using these inputs and then select **Next**:
 
-    - **Edition of Azure SQL database**: **Standard**
-    - **Maximum database size (GB)**: **1**
-    - **Service Objective**: **S1**
+    - **Edition of Azure SQL database**: Standard
+    - **Maximum database size (GB)**: 1
+    - **Service Objective**: S1
 
     ![Under Specify Target Connection, fields display the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image270.png "Specify Target Connection section")
 
@@ -1429,11 +1429,11 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
 31. Complete the **Failover group** blade using these inputs and then select **Create:**
 
-    - **Failover group name**: Enter a lowercase unique name 3-24 characters using the prefix `bcdrpassfog`
+    - **Failover group name**: Enter a lowercase unique name 3-24 characters using the prefix `bcdrpassfog`.
+    
+    - **Secondary Server**: Select the secondary SQL Server from your **BCDRPaaSSecondarySite**.
 
-    - **Secondary Server**: Select the secondary SQL Server from your **BCDRPaaSSecondarySite**
-
-    - **Database within the group**: **ContosoInsurance**
+    - **Database within the group**: ContosoInsurance
 
     ![Fields in the Failover group blade display the previously defined settings, and in the Databases blade, the checkbox for the SQL Server database is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image281.png "Failover group and Databases blades")
 
@@ -1558,7 +1558,7 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![The Contoso Insurance PolicyConnect webpage displays.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image306.png "Contoso Insurance PolicyConnect webpage")
 
-57. Select the **Current Policy Offerings** button, the page should load showing data (*(various coverage plans)). This means that you have successfully implemented the Web App, and it has connected to the Failover Group database.
+57. Select the **Current Policy Offerings** button, the page should load showing data (various coverage plans). This means that you have successfully implemented the Web App, and it has connected to the Failover Group database.
 
     ![The Index webpage displays the insurance options.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image307.png "Index webpage")
 
@@ -1568,8 +1568,8 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
 59. Complete the **Basics** tab of the **Create a Front Door** blade using the following inputs, then select **Next: Configuration >**:
 
-    - **Resource group**: **Use existing** / **BCDRPaasPrimarySite**
-    - **Resource group location**: Automatically assigned based on the **BCDRPaaSPrimarySite**
+    - **Resource group**: Use existing / **BCDRPaasPrimarySite**
+    - **Resource group location**: Automatically assigned based on the **BCDRPaaSPrimarySite**.
 
     ![In the Create Front Door blade, fields display the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image308.png "Create Front Door blade")
 
@@ -1580,9 +1580,9 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 61. In the **Add a frontend host** pane, enter the following values, then select **Add**:
 
     - **Host name**: Enter a unique name with the prefix of `bcdrpaas`.
-    - **Session affinity**: **Disabled**
+    - **Session affinity**: Disabled
 
-    !["Add a front end host pane"](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image308-c.png "Add a front end host pane")
+    ![The Add a front end host pane is shown with a unique host name filled out and the Session affinity disabled.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image308-c.png "Add a front end host pane")
 
 62. Select the **plus** button on the **Backend pools** box to begin adding endpoints to the backend pool.
 
@@ -1591,20 +1591,20 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 63. On the **Add a backend pool** pane, enter the following values, then select the **Add a backend** link:
 
     - **Name**: `BCDRPaaS`
-    - **Health Probes - Protocol**: **HTTP**
+    - **Health Probes - Protocol**: HTTP
 
     ![The Add a backend pool pane is populated with the specified values.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image308-e.png "The Add a backend pool pane with the specified values entered.")
 
 64. On the **Add a backend** pane, enter the following values, then select **Add**:
 
-    - **Backend host type**: **App service**
+    - **Backend host type**: App service
     - **Backend host name**: Select the Primary Web App (named like `bcdrprimarysiteXXX.azurewebsites.net`) that's in the *BCDRPaaSPrimarySite* resource group.
 
     ![The Add a backend pane form is displayed with the previously specified values entered.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image308-f.png "The Add a backend pane with previously specified values entered.")
 
 65. Select the **Add a backend** link again, and add another backend host name with the following values, then select **Add**:
 
-    - **Backend host type**: **App service**
+    - **Backend host type**: App service
     - **Backend host name**: Select the Secondary Web App (named like `bcdrsecondarysiteXXX.azurewebsites.net`) that's in the **BCDRPaaSSecondarySite** resource group.
 
     ![The Add a backend pane displays with the previously specified values entered.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image308-g.png "The Add a backend pane with previously specified values entered.")
@@ -1617,9 +1617,9 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
 68. On the **Add a rule** pane, enter the following values, then select **Add**:
 
-    - **Name**: `BCDRPaaS`
-    - **Backend pool**: **BCDRPaaS**
-    - **Forwarding protocol**: **Match request**
+    - **Name**: BCDRPaaS
+    - **Backend pool**: BCDRPaaS
+    - **Forwarding protocol**: Match request
 
     ![Add a rule pane is displayed with the previously specified fields populated.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image308-i.png "Add a rule pane")
 
