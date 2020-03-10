@@ -1,4 +1,4 @@
-![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
+![Microsoft Cloud Workshops](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
 Business continuity and disaster Recovery
@@ -90,11 +90,11 @@ Duration: 20 minutes
 
 8. Select **Premium SSD**.
 
-    ![Premium SSD is selected for OS disk type](images/Setup/image8.png "Disks Tab")
+    ![Premium SSD is selected for OS disk type.](images/Setup/image8.png "Disks Tab")
 
 9. Select **Review + create**.
 
-    ![Review + create button](images/Setup/image28.png "Review + create button")
+    ![View of the Review + create button.](images/Setup/image28.png "Review + create button")
 
 10. After validation, select **Create**. The Azure deployment should begin provisioning. It may take 10+ minutes for the virtual machine provisioning to complete.
 
