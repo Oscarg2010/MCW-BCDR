@@ -1,0 +1,14 @@
+#!/bin/bash
+
+PrimaryRegion=EastUS2
+SecondaryRegion=CentralUS
+
+az group create --name BCDRIaaSPrimarySite --location $PrimaryRegion
+az group create --name BCDROnPremPrimarySite --location $PrimaryRegion
+az group create --name BCDRPaaSPrimarySite --location $PrimaryRegion
+
+az group create --name BCDRIaaSSecondarySite --location $SecondaryRegion
+az group create --name BCDRPaaSSecondarySite --location $SecondaryRegion
+az group create --name BCDRAzureSiteRecovery --location $SecondaryRegion
+
+az group create --name BCDRAzureAutomation --location WestUS

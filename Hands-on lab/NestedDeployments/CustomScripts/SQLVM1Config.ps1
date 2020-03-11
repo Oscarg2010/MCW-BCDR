@@ -76,7 +76,8 @@ Node $nodeName
 		Invoke-Sqlcmd -ServerInstance Localhost -Database "master" -Query "ALTER LOGIN sa WITH PASSWORD = 'demo@pass123'"
 
 		# Get the Contoso Insurance database backup 
-		$dbsource = "https://www.dropbox.com/s/z90t4rpy8b8z1cq/ContosoInsurance.bak?dl=1"
+		$dbsource = "https://github.com/microsoft/MCW-Business-continuity-and-disaster-recovery/raw/Update-March-2020/Hands-on%20lab/NestedDeployments/CustomScripts/ContosoInsurance.bak"
+		#$dbsource = "https://www.dropbox.com/s/z90t4rpy8b8z1cq/ContosoInsurance.bak?dl=1"
 		$dbdestination = "C:\ContosoInsurance.bak"
 		Invoke-WebRequest $dbsource -OutFile $dbdestination
 

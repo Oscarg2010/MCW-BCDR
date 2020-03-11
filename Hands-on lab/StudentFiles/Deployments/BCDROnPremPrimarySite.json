@@ -12,6 +12,7 @@
     "GitHubScriptRepo": "microsoft/MCW-Business-continuity-and-disaster-recovery",
     "GitHubScriptRepoBranch": "master",
     "GitHubScriptRepoBranchURL": "[concat('https://raw.githubusercontent.com/', variables('GitHubScriptRepo'), '/', variables('GitHubScriptRepoBranch'), '/Hands-on lab/NestedDeployments/')]",
+    "GitHubMediaRepoBranchURL": "[concat('https://media.githubusercontent.com/media/', variables('GitHubScriptRepo'), '/', variables('GitHubScriptRepoBranch'), '/Hands-on lab/NestedDeployments/')]",
     "OnPremVNETPrefix": "10.0.0.0/16",
     "OnPremVNETSubnet1Name": "VMHOST",
     "OnPremVNETSubnet1Prefix": "10.0.0.0/24",
@@ -29,7 +30,7 @@
     "HyperVHost-PUBIPName": "[concat(variables('HyperVHostName'), '-PIP')]",
     "HyperVHostConfigArchiveFolder": ".",
     "HyperVHostConfigArchiveFileName": "HyperVHostConfig.zip",
-    "HyperVHostConfigURL": "[concat(variables('GitHubScriptRepoBranchURL'), 'CustomScripts/', variables('HyperVHostConfigArchiveFileName'))]",
+    "HyperVHostConfigURL": "[concat(variables('GitHubMediaRepoBranchURL'), 'CustomScripts/', variables('HyperVHostConfigArchiveFileName'))]",
     "HyperVHostInstallHyperVScriptFolder": ".",
     "HyperVHostInstallHyperVScriptFileName": "InstallHyperV.ps1",
     "HyperVHostInstallHyperVURL": "[concat(variables('GitHubScriptRepoBranchURL'), 'CustomScripts/', variables('HyperVHostInstallHyperVScriptFileName'))]"
@@ -202,5 +203,5 @@
       ]
     }
   ],
-  "outputs": {}
+  "outputs": { }
 }

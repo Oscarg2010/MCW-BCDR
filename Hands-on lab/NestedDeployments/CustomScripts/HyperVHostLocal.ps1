@@ -47,7 +47,7 @@ Configuration Main
 		
 			SetScript =
 			{
-$zipDownload = "https://deltadanscripts.blob.core.windows.net/scripts/OnPremLinuxVM.zip"
+$zipDownload = "https://github.com/microsoft/MCW-Business-continuity-and-disaster-recovery/raw/Update-March-2020/Hands-on%20lab/NestedDeployments/CustomScripts/OnPremLinuxVM.zip"
 $downloadedFile = "D:\OnPremLinuxVM.zip"
 $vmFolder = "C:\VM"
 Invoke-WebRequest $zipDownload -OutFile $downloadedFile

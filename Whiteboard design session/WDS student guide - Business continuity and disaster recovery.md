@@ -1,4 +1,4 @@
-![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
+![Microsoft Cloud Workshops](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
 Business continuity and disaster recovery
@@ -9,7 +9,7 @@ Whiteboard design session student guide
 </div>
 
 <div class="MCWHeader3">
-October 2019
+March 2020
 </div>
 
 Information in this document, including URLs and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -17,7 +17,8 @@ Information in this document, including URLs and other Internet Web site referen
 Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this document. Except as expressly provided in any written license agreement from Microsoft, the furnishing of this document does not give you any license to these patents, trademarks, copyrights, or other intellectual property.
 
 The names of manufacturers, products, or URLs are provided for informational purposes only and Microsoft makes no representations and warranties, either expressed, implied, or statutory, regarding these manufacturers or the use of the products with any Microsoft technologies. The inclusion of a manufacturer or product does not imply endorsement of Microsoft of the manufacturer or product. Links may be provided to third party sites. Such sites are not under the control of Microsoft and Microsoft is not responsible for the contents of any linked site or any link contained in a linked site, or any changes or updates to such sites. Microsoft is not responsible for webcasting or any other form of transmission received from any linked site. Microsoft is providing these links to you only as a convenience, and the inclusion of any link does not imply endorsement of Microsoft of the site or the products contained therein.
-© 2019 Microsoft Corporation. All rights reserved.
+
+© 2020 Microsoft Corporation. All rights reserved.
 
 Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.
 
@@ -26,20 +27,20 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 <!-- TOC -->
 
 - [Business continuity and disaster recovery whiteboard design session student guide](#business-continuity-and-disaster-recovery-whiteboard-design-session-student-guide)
-    - [Abstract](#abstract)
-    - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
-        - [Customer situation](#customer-situation)
-        - [Customer needs](#customer-needs)
-        - [Customer objections](#customer-objections)
-        - [Infographic for common scenarios](#infographic-for-common-scenarios)
-    - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution)
-    - [Step 3: Present the solution](#step-3-present-the-solution)
-    - [Wrap-up](#wrap-up)
-    - [Additional references](#additional-references)
+  - [Abstract](#abstract)
+  - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
+    - [Customer situation](#customer-situation)
+    - [Customer needs](#customer-needs)
+    - [Customer objections](#customer-objections)
+    - [Infographic for common scenarios](#infographic-for-common-scenarios)
+  - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution)
+  - [Step 3: Present the solution](#step-3-present-the-solution)
+  - [Wrap-up](#wrap-up)
+  - [Additional references](#additional-references)
 
 <!-- /TOC -->
 
-#  Business continuity and disaster recovery whiteboard design session student guide
+# Business continuity and disaster recovery whiteboard design session student guide
 
 ## Abstract
 
@@ -47,7 +48,7 @@ In this Whiteboard Design Session (WDS), you will work in a group to design a so
 
 At the end of this WDS, you will be better able to design a solution that leverages various Azure technologies together to build a complex and robust IaaS BCDR plan.
 
-## Step 1: Review the customer case study 
+## Step 1: Review the customer case study
 
 **Outcome**
 
@@ -57,11 +58,11 @@ Timeframe: 15 minutes
 
 Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips.
 
-1.  Meet your table participants and trainer.
+1. Meet your table participants and trainer.
 
-2.  Read all of the directions for steps 1-3 in the student guide.
+2. Read all of the directions for steps 1-3 in the student guide.
 
-3.  As a table team, review the following customer case study.
+3. As a table team, review the following customer case study.
 
 ### Customer situation
 
@@ -79,27 +80,27 @@ CI has completed a cloud assessment of their applications and have classified th
 
 **Global, Mobile, and API Web Applications:** CI has leveraged their experience with ASP.NET and SQL Server to build applications that are Azure PaaS ready. These applications primarily service their external customers and the mobile agents. These include applications for consumers and their employees in the field dealing with claims. "We have prototyped these applications in Azure App Services and SQL Database with success but need a plan for how they will be implemented for high-availability and automatic failover," says Ms. Simmons. "These applications are global, so we want to make sure that they are distributed around the world and that users will be directed to the closest point of presence (POP) but will never get an error if there is a local issue."
 
-### Customer needs 
+### Customer needs
 
-1.  CI needs to automate their backup and recovery of their solutions, not just individual components. They need a strategy not just point solutions. They are still backing up to tape and want to modernize this approach. The COB team is demanding that the recovery be testable before an event occurs.
+1. CI needs to automate their backup and recovery of their solutions, not just individual components. They need a strategy not just point solutions. They are still backing up to tape and want to modernize this approach. The COB team is demanding that the recovery be testable before an event occurs.
 
-2.  CI wants to insure they have the right breadth and depth of continuity protection. In the case of a lights-out event, they want to be able to control how the systems failover.
+2. CI wants to insure they have the right breadth and depth of continuity protection. In the case of a lights-out event, they want to be able to control how the systems failover.
 
-3.  CI wants to move very fast on some of their migrations to Azure. They need a plan for handling these migrations with very little downtime to the business.
+3. CI wants to move very fast on some of their migrations to Azure. They need a plan for handling these migrations with very little downtime to the business.
 
-4.  CI has struggled with DR solutions with respect to the Data tier of their application. They need to understand how this will work with IaaS and PaaS solutions for SQL Server and SQL DB.
+4. CI has struggled with DR solutions with respect to the Data tier of their application. They need to understand how this will work with IaaS and PaaS solutions for SQL Server and SQL DB.
 
-5.  CI's corporate data center in the US is in a hurricane-prone region, and they need a backup data center that mirrors the core functions they have here. They don't want to build another data center.
+5. CI's corporate data center in the US is in a hurricane-prone region, and they need a backup data center that mirrors the core functions they have here. They don't want to build another data center.
 
-### Customer objections 
+### Customer objections
 
-1.  With the move to the cloud, they are uncomfortable with any situation that assumes the cloud provider will handle their fail-over.
+1. With the move to the cloud, they are uncomfortable with any situation that assumes the cloud provider will handle their fail-over.
 
-2.  They have many systems that need to be accounted for and they aren't sure if the tools really exist to give them the business continuity they desire.
+2. They have many systems that need to be accounted for and they aren't sure if the tools really exist to give them the business continuity they desire.
 
-3.  They want to know their BCDR solution is secure.
+3. They want to know their BCDR solution is secure.
 
-4.  CI has heavily invested in a third-party backup solution but want to use Azure as their archive. Does Azure support this?
+4. CI has heavily invested in a third-party backup solution but want to use Azure as their archive. Does Azure support this?
 
 ### Infographic for common scenarios
 
@@ -125,9 +126,9 @@ Timeframe: 60 minutes
 
 Directions:  With all participants at your table, answer the following questions and list the answers on a flip chart:
 
-1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers?
+1. Who should you present this solution to? Who is your target customer audience? Who are the decision makers?
 
-2.  What customer business needs do you need to address with your solution?
+2. What customer business needs do you need to address with your solution?
 
 **Design**
 
@@ -135,79 +136,79 @@ Directions: With all participants at your table, respond to the following questi
 
 *Provide an overview of the technologies and the implementation at a high-level. How will you use Azure's BCDR technologies to meet the Customer's needs?*
 
-1.  Azure Regions
+1. Azure Regions
 
-    -   Which regions should be deployed in support of the goals of the client?
+    - Which regions should be deployed in support of the goals of the client?
 
-    -   Why did you select these particular regions?
+    - Why did you select these particular regions?
 
-2.  Backup
+2. Backup
 
-    -   How can each part of their solution be backed up?
+    - How can each part of their solution be backed up?
 
-    -   How can they retire and move away from the use of tape archive?
+    - How can they retire and move away from the use of tape archive?
 
-    -   Can they continue to use their third-party backup vendor?
+    - Can they continue to use their third-party backup vendor?
 
-3.  Disaster Recovery
+3. Disaster Recovery
 
-    -   What DR Solutions will be leveraged for the implementation at CI?
+    - What DR Solutions will be leveraged for the implementation at CI?
 
-4.  Design a HA and BCDR solution for each of the three application classifications. At a high-level, provide details of your implementation. Make sure to document your design with a diagram along with addressing the questions.
+4. Design a HA and BCDR solution for each of the three application classifications. At a high-level, provide details of your implementation. Make sure to document your design with a diagram along with addressing the questions.
 
--   Workgroup Applications
+   - Workgroup Applications
 
-    -   What Azure BCDR technologies will you implement for this classification?
+       - What Azure BCDR technologies will you implement for this classification?
 
-    -   How will you migrate these VMs to Azure?
+       - How will you migrate these VMs to Azure?
 
-    -   Can you test the migration before going live?
+       - Can you test the migration before going live?
 
-    -   Given this will be an IaaS implementation, provide details of how you will provide HA and Failover capabilities to these VMs once they are in Azure?
+       - Given this will be an IaaS implementation, provide details of how you will provide HA and Failover capabilities to these VMs once they are in Azure?
 
--   Enterprise Applications
+   - Enterprise Applications
 
-    -   What Azure BCDR technologies will you implement for this classification?
+       - What Azure BCDR technologies will you implement for this classification?
 
-    -   Document how you will implement both types of implementations:
+       - Document how you will implement both types of implementations:
 
-        -  Migrate to Azure and support Azure region-to-region failover
+           - Migrate to Azure and support Azure region-to-region failover
 
-        -  Remain on-premises for primary, but support Hyper-V to Azure Region Failover
+           - Remain on-premises for primary, but support Hyper-V to Azure Region Failover
 
-    -   How will SQL Always On Availability Groups be set up in order to support both of these scenarios?
+       - How will SQL Always On Availability Groups be set up in order to support both of these scenarios?
 
-    -   What Azure technology, which is complimentary to DR, will you implement to deal with application-specific tasks such as Pre-Actions and Post-Actions during a failover?
+       - What Azure technology, which is complimentary to DR, will you implement to deal with application-specific tasks such as Pre-Actions and Post-Actions during a failover?
 
-    -   Given this will be an IaaS implementation, provide details of how you will provide high availability (HA) and failover capabilities to these VMs once they are in Azure?
+       - Given this will be an IaaS implementation, provide details of how you will provide high availability (HA) and failover capabilities to these VMs once they are in Azure?
 
-    -   How will you direct web traffic to the active site?
+       - How will you direct web traffic to the active site?
 
--   Global, Mobile and API Web Applications
+   - Global, Mobile and API Web Applications
 
-    -   What Azure BCDR technologies will you implement for this classification?
+       - What Azure BCDR technologies will you implement for this classification?
 
-    -   Given this will be a PaaS implementation, provide details of how you will provide high availability (HA) and failover capabilities to these VMs once they are in Azure?
+       - Given this will be a PaaS implementation, provide details of how you will provide high availability (HA) and failover capabilities to these VMs once they are in Azure?
 
-    -   How will SQL Database be set up to support both scenarios?
+       - How will SQL Database be set up to support both scenarios?
 
-    -   What Azure technology and/or DevOps tools, will you implement to deal with application specific tasks such as Pre-Actions and Post-Actions during a failover?
+       - What Azure technology and/or DevOps tools, will you implement to deal with application specific tasks such as Pre-Actions and Post-Actions during a failover?
 
-    -   How will you direct web traffic to the different POPs around the world?
+       - How will you direct web traffic to the different POPs around the world?
 
 **Customer Objections**
 
-1.  Provide details on how you will address each of the objections that were put forward by the client.
+1. Provide details on how you will address each of the objections that were put forward by the client.
 
 **Prepare**
 
 Directions: With all participants at your table:
 
-1.  Identify any customer needs that are not addressed with the proposed solution.
+1. Identify any customer needs that are not addressed with the proposed solution.
 
-2.  Identify the benefits of your solution.
+2. Identify the benefits of your solution.
 
-3.  Determine how you will respond to the customer's objections.
+3. Determine how you will respond to the customer's objections.
 
 Prepare a 15-minute chalk-talk style presentation to the customer.
 
@@ -223,28 +224,29 @@ Timeframe: 30 minutes
 
 Directions:
 
-1.  Pair with another table.
+1. Pair with another table.
 
-2.  One table is the Microsoft team and the other table is the customer.
+2. One table is the Microsoft team and the other table is the customer.
 
-3.  The Microsoft team presents their proposed solution to the customer.
+3. The Microsoft team presents their proposed solution to the customer.
 
-4.  The customer makes one of the objections from the list of objections.
+4. The customer makes one of the objections from the list of objections.
 
-5.  The Microsoft team responds to the objection.
+5. The Microsoft team responds to the objection.
 
-6.  The customer team gives feedback to the Microsoft team.
+6. The customer team gives feedback to the Microsoft team.
 
-7.  Tables switch roles and repeat Steps 2-6.
+7. Tables switch roles and repeat Steps 2-6.
 
-##  Wrap-up 
+## Wrap-up
 
 Timeframe: 15 minutes
 
 Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
 
-##  Additional references
-|    |            |       
+## Additional references
+
+|    |            |
 |----------|:-------------:|
 | **Description** | **Links** |
 | Overview of Azure Site Recovery | <https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-overview/> |
@@ -260,4 +262,3 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 | Front Door Routing Methods | <https://docs.microsoft.com/en-us/azure/frontdoor/front-door-routing-methods> |
 | Backends and backend pools in Azure Front Door Service | <https://docs.microsoft.com/en-us/azure/frontdoor/front-door-backend-pool> |
 | Backup Solution Architectures | <https://azure.microsoft.com/en-us/solutions/architecture/backup-archive-on-premises-applications/> |
-
