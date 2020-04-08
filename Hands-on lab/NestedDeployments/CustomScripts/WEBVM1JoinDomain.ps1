@@ -20,7 +20,7 @@ Install-WindowsFeature -Name "web-server" `
                        -IncludeAllSubFeature
 
 #Download and Unpack the Website
-$zipDownload = "https://github.com/microsoft/MCW-Business-continuity-and-disaster-recovery/raw/Update-March-2020/Hands-on%20lab/NestedDeployments/CustomScripts/ContosoInsuranceIIS.zip"
+$zipDownload = "https://media.githubusercontent.com/media/microsoft/MCW-Business-continuity-and-disaster-recovery/master/Hands-on%20lab/NestedDeployments/CustomScripts/ContosoInsuranceIIS.zip"
 #$zipDownload = "https://www.dropbox.com/s/wcfnuf76h3tn3ws/ContosoInsuranceIIS.zip?dl=1"
 $downloadedFile = "D:\ContosoInsuranceIIS.zip"
 $inetpubFolder = "C:\inetpub\wwwroot"
