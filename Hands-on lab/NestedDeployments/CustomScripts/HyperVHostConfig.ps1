@@ -51,7 +51,7 @@ Configuration Main
 			SetScript =
 			{
 
-				$zipDownload = "https://github.com/microsoft/MCW-Business-continuity-and-disaster-recovery/raw/Update-March-2020/Hands-on%20lab/NestedDeployments/CustomScripts/OnPremLinuxVM.zip"
+				$zipDownload = "https://media.githubusercontent.com/media/microsoft/MCW-Business-continuity-and-disaster-recovery/master/Hands-on%20lab/NestedDeployments/CustomScripts/OnPremLinuxVM.zip"
 				# $zipDownload = "https://www.dropbox.com/s/0znu8ssjie4rbpl/OnPremLinuxVM.zip?dl=1"
 				$downloadedFile = "D:\OnPremLinuxVM.zip"
 				$vmFolder = "C:\VM"
