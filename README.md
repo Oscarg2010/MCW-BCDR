@@ -6,7 +6,7 @@ Contoso also wants to insure they have the right breadth and depth of continuity
 
 Contoso's corporate data center in the US is in a hurricane-prone region, and they need a backup data center that mirrors the core functions they have here.
 
-March 2020
+June 2020
 
 ## Target audience
 
