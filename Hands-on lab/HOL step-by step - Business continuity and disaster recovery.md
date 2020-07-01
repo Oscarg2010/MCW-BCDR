@@ -57,7 +57,7 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 <!-- /TOC -->
 
-# Business continuity and disaster recovery hands-on lab step-by-step 
+# Business continuity and disaster recovery hands-on lab step-by-step
 
 ## Abstract
 
@@ -97,7 +97,7 @@ Below are diagrams of the solution architecture you will build in this lab. Plea
 
 - **Goal using Azure BCDR:** Your goal for this environment is never to have the users experience any downtime if issues arise with your Web App or the SQL Database. The users will have one URL that they will use to connect to your application regardless of where the application or database is running.
 
-![Diagram of the Azure PaaS high availability with seamless failover solution.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image4.png "Azure PaaS high availability with seamless failover diagram")
+    ![Diagram of the Azure PaaS high availability with seamless failover solution.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image4.png "Azure PaaS high availability with seamless failover diagram")
 
 ## Requirements
 
@@ -229,7 +229,7 @@ In this exercise, you will use Azure ARM templates to deploy the following envir
 
     ![The check box I agree to the terms and conditions are checked. The Purchase button is selected.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image34.png "Purchase button")
 
-> **Note:** This deployment will take at least 10 minutes, but you can continue to the next task.
+    > **Note:** This deployment will take at least 10 minutes, but you can continue to the next task.
 
 ## Exercise 2: Configure BCDR services
 
@@ -396,7 +396,7 @@ In this exercise, you will create and configure the services that will make it p
 
     ![In the Automation Account blade, under Name, a call out highlights the BCDRIaaSPlan variable.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image75.png "Automation Account blade")
 
-> **Note:** When you configure the ASR Recovery Plan for the IaaS deployment you will use the SQL Runbook as a Pre-Failover Action and the Web Runbook as a Post-Failover action. They will run both ways and have been written to take the "Direction", of the failover into account when running.
+    > **Note:** When you configure the ASR Recovery Plan for the IaaS deployment you will use the SQL Runbook as a Pre-Failover Action and the Web Runbook as a Post-Failover action. They will run both ways and have been written to take the "Direction", of the failover into account when running.
 
 ## Exercise 3: Configure environments for failover
 
@@ -438,7 +438,7 @@ In this task, the **OnPremVM** will be configured to replicate to Azure and be r
 5. On **Step 2 Deployment planning**, confirm you have completed deployment planning by selecting **Yes, I have done it** then select **OK**.
 
     > **Note**: You can read more about planning an ASR to deployment here:
-    >
+
     > <https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-hyper-v-deployment-planner>
 
     ![In the Deployment planning blade, Yes, I have done it is selected from a dropdown list.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image79.png "Deployment planning blade")
@@ -740,7 +740,7 @@ In this task, the **OnPremVM** will be configured to replicate to Azure and be r
 
     ![The Compute properties dialog box displays with size set to the previously mentioned value.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image138.png "Compute properties dialog box")
 
-> **Note**: It could take a few minutes for these screens to populate, so be patient. You can come back to this step later to adjust the size if you wish.
+    > **Note**: It could take a few minutes for these screens to populate, so be patient. You can come back to this step later to adjust the size if you wish.
 
 ### Task 2: Configure IaaS SQL Always On availability groups for region to region failover
 
@@ -817,9 +817,10 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
     ![In the PowerShell ISE window, a call out points to AOGCLUSTER.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image153.png "PowerShell ISE window")
 
     >**Note:** If you get a `The term 'New-Cluster' is not recognized` error, then run the following command to install the Failover Clusters feature and try again:
-    > ```PowerShell
-    > Add-WindowsFeature RSAT-Clustering-PowerShell
-    > ```
+
+    ``` powershell
+    Add-WindowsFeature RSAT-Clustering-PowerShell
+    ```
 
     >**Note:** It is possible to use a wizard for this task, but the resulting cluster will require additional configuration to set the static IP address in Azure.
 
@@ -1068,7 +1069,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
     ![The Contoso Insurance Index webpage displays a list of offerings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image211.png "Contoso Insurance Index webpage")
 
     > **Note**: If you see the following screen shot then something is not configured correctly with your environment. The connection string of the application is configured to use the name of **bcdraog.contoso.com** which is the name for the SQL AOG listener. This configuration is part of the connection string located in the **web.config** file which is on **WEBVM1** and **WEBVM2** in the `C:\Inetpub\wwwroot` directory. If you for some reason you named something incorrectly you can make a change to this file and then `iisreset /restart` from the command line on the WEBVMs.
-    >
+
     > ![An Error message displays stating that an error occurred while processing your request.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image212.png "Error message")
 
 72. Once you have verified that the application is up and running, you will need to build a Front Door to direct traffic to the edge of your Primary and Secondary Site. Select **+Create a resource**, then search for and select **Front Door** within the Azure Portal.
@@ -1147,7 +1148,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
     ![The Contoso Insurance PolicyConnect webpage displays.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image224.png "Contoso Insurance PolicyConnect webpage ")
 
     > **Note:** Be sure to use **HTTP** to access the Azure Front Door **frontend host** URL. The lab configurations only supports HTTP for Front Door since WebVM1 and WebVM2 for the BCDRIaaS environment are only setup for HTTP support; not HTTPS (no SSL\TLS).
-
+    >
     > **Note:** If you get a "Our services aren't available right now" error (or a 404 type error) accessing the web application, then continue on with the lab and come back to this later. Sometime this can take a ~10 minutes for the routing rules to publish before it's "live".
     >
     > ![Error shown displaying Our services aren't available right now](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image224-b.png "Error shown displaying Our services aren't available right now")
@@ -1560,9 +1561,7 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
     ![In the Azure Portal, select Create a resource.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image213.png "Azure Portal")
 
-
     ![In the Create newblade, select search for Front Door.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image213-a.png "Create new resource blade")
-
 
     ![In the Front Door resource blade select Create.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image213-b.png "Front Door blade")
 
@@ -1829,7 +1828,7 @@ Now, that your applications have been made ready for high-availability and BCDR 
 
 15. Your on-premise virtual machine (**OnPremVM**) has been successfully migrated to Azure!
 
-> **Optional Task**: If desired, you can Remote Desktop back into the HYPERVHOST, and you will observe that the original on-premise VM has shutdown.
+    > **Optional Task**: If desired, you can Remote Desktop back into the HYPERVHOST, and you will observe that the original on-premise VM has shutdown.
 
 ### Task 3: Failover and failback Azure PaaS
 
@@ -2037,7 +2036,7 @@ Now, that your applications have been made ready for high-availability and BCDR 
 
     ![The Availability group dashboard displays, with SQLVM3 and its properties called out.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image403.png "Availability group dashboard")
 
-> **Note:** This task could have been done using the Azure Automation script during Failback, but more DBAs would prefer a good, clean failback and then do this manually once they are comfortable with the failback.
+    > **Note:** This task could have been done using the Azure Automation script during Failback, but more DBAs would prefer a good, clean failback and then do this manually once they are comfortable with the failback.
 
 ## After the hands-on lab
 
