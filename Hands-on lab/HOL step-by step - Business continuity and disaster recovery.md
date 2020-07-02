@@ -276,7 +276,7 @@ In this exercise, you will create and configure the services that will make it p
 4. Complete the **Add Automation Account** blade using the following inputs and then select **Create**:
 
     - **Name**: Enter a Globally unique name starting with `BCDR`.
-    - **Resource group**: Use existing / **BCDRAzureAutomation**
+    - **Resource group**: Use existing **BCDRAzureAutomation**
     - **Location**: Select a site in your area *(but NOT your Primary site)*.
     - **Create Azure Run As account**: Yes
 
@@ -426,9 +426,7 @@ In this task, the **OnPremVM** will be configured to replicate to Azure and be r
     - **Where do you want to replicate your machines to?**: To Azure
     - **Are you performing a migration?**: No
 
-        > **Note**: You may see a checkbox that says
-
-        > **I understand, but I would like to continue with Azure Site Recovery**: checked
+        > **Note**: You may see a checkbox that says, **I understand, but I would like to continue with Azure Site Recovery** checked.
 
     - **Are your machines virtualized?**: Yes, with Hyper-V  (Your VM is running as a nested VM in Azure).
     - **Are you using System Center VMM to manage your Hyper-V hosts?**: No
@@ -437,9 +435,7 @@ In this task, the **OnPremVM** will be configured to replicate to Azure and be r
 
 5. On **Step 2 Deployment planning**, confirm you have completed deployment planning by selecting **Yes, I have done it** then select **OK**.
 
-    > **Note**: You can read more about planning an ASR to deployment here:
-
-    > <https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-hyper-v-deployment-planner>
+    > **Note**: You can read more about planning an ASR to deployment here: <https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-hyper-v-deployment-planner>.
 
     ![In the Deployment planning blade, Yes, I have done it is selected from a dropdown list.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image79.png "Deployment planning blade")
 
@@ -481,8 +477,8 @@ In this task, the **OnPremVM** will be configured to replicate to Azure and be r
 
 15. Enter the credentials for the VM:
 
-    - **Username**: 'mcwadmin'
-    - **Password**: 'demo@pass123'
+    - **Username**: `mcwadmin`
+    - **Password**: `demo@pass123`
 
 16. You will be prompted with a warning about a certificate. Select **Yes** to connection (you can always select yes to these prompts during this HOL).
 
@@ -764,7 +760,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
 5. Complete the **Create storage account** form using the following details, then select **Review + create**:
 
-    - **Resource group**: Use existing / BCDRAzureSiteRecovery.
+    - **Resource group**: Use existing BCDRAzureSiteRecovery.
     - **Storage account name:** Unique name starting with `bcdrcloudwitness`
     - **Location**: Any location in your area that is **NOT** your Primary or Secondary site.
     - **Performance**: Standard
@@ -1078,7 +1074,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
 73. Complete the **Basics** tab of the **Create a Front Door** blade using the following inputs, then select **Next: Configuration >**:
 
-    - **Resource group**: Use existing / **BCDRIaasPrimarySite**
+    - **Resource group**: Use existing **BCDRIaasPrimarySite**
     - **Location**: Automatically assigned based on the region of **BCDRIaaSPrimarySite**.
 
     ![Fields in the Create a Front Door blade are set to the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image214.png "Create Front Door blade")
@@ -1089,7 +1085,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
 
 75. In the **Add a frontend host** pane, enter the following values, then select **Add**:
 
-    - **Host name**: Enter a unique name with the prefix of `bcdriaas`
+    - **Host name**: Enter a unique name with the prefix of `bcdriaas`.
     - **Session affinity**: Disabled
 
     ![Fields in the Add a frontend host pane are set to the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image214-b.png "Add a frontend host pane.")
@@ -1567,7 +1563,7 @@ In this task you will deploy the website to App Services using Visual Studio, mi
 
 57. Complete the **Basics** tab of the **Create a Front Door** blade using the following inputs, then select **Next: Configuration >**:
 
-    - **Resource group**: Use existing / **BCDRPaasPrimarySite**
+    - **Resource group**: Use existing **BCDRPaasPrimarySite**
     - **Resource group location**: Automatically assigned based on the **BCDRPaaSPrimarySite**.
 
     ![In the Create Front Door blade, fields display the previously defined settings.](images/Hands-onlabstep-bystep-Businesscontinuityanddisasterrecoveryimages/media/image308.png "Create Front Door blade")
