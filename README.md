@@ -1,4 +1,4 @@
-## Effective December 1, 2020 this workshop will be archived.  Materials remain available through November but are no longer being maintained.
+## This workshop is archived and is no longer being maintained. Content is read-only.
 
 # Business continuity and disaster recovery
 
